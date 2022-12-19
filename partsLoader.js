@@ -46,6 +46,7 @@ class PartsLoader {
 			);
 			tex.onLoadObservable.add(() => {
 				tex.name = fileName;
+                tex.hasAlpha = true;
 				this.#loadedTextures.push(tex);
 
 				mat.albedoTexture = tex;
