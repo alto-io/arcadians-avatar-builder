@@ -105,6 +105,7 @@ class PartsLoader {
 						list.push(file);
 					}
 				}
+
 				instance.list[key] = list;
 			};
 

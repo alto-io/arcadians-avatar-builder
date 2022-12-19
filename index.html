@@ -13,8 +13,8 @@
 			}
 
 			#renderCanvas {
-				width: 512px;
-				height: 512px;
+				width: 960px;
+				height: 720px;
 				touch-action: none;
 			}
 		</style>
@@ -55,6 +55,9 @@
 			<button onclick="cycleParts('Left Hand')">Cycle Left Hand</button>
 			<button onclick="cycleParts('Right Hand')">Cycle Right Hand</button>
 			<button onclick="cycleParts('Bottom')">Cycle Bottom</button>
+			<br />
+			<button onclick="showMenu()">Test Grid</button>
+			<button onclick="createSpritesheet()">Create Spritesheet</button>
 			<br /><br />
 		</div>
 
@@ -64,7 +67,9 @@
 
 		<script src="screenshotHandler.js"></script>
 		<script src="keyboardHandler.js"></script>
+		<script src="uiManager.js"></script>
 		<script src="partsLoader.js"></script>
+		<script src="partsDisplay.js"></script>
 		<script src="index.js"></script>
 	</body>
 </html>
