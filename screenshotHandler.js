@@ -39,10 +39,12 @@ class ScreenshotHandler {
 			if (forceScreenshot || !skipFrame) {
 				skipCounter = 0;
 
+                const size = 128;
+
 				BABYLON.Tools.CreateScreenshotUsingRenderTarget(
 					engine,
 					g_camera,
-					256,
+                    { height: size, width: size, precision: 1},
 					this.screenshotSuccess,
 					"image/png",
 					8,

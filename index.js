@@ -24,11 +24,12 @@ function initialize() {
 	g_scene = new BABYLON.Scene(g_engine);
 	g_camera = new BABYLON.UniversalCamera(
 		"Camera",
-		new BABYLON.Vector3(0, 1, 4),
+		new BABYLON.Vector3(0, 1, 10),
 		g_scene
 	);
 
-	g_camera.setTarget(new BABYLON.Vector3(0, 1.3, 0));
+	g_camera.setTarget(new BABYLON.Vector3(0, 1, 0));
+    g_camera.fov = 0.5
 
 	var light1 = new BABYLON.HemisphericLight(
 		"light1",
@@ -37,7 +38,7 @@ function initialize() {
 	);
 
     //var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {}, g_scene);
-    //var postProcess = new BABYLON.PassPostProcess("Scene copy", 0.5, g_camera, BABYLON.Texture.NEAREST_SAMPLINGMODE);
+    //var postProcess = new BABYLON.PassPostProcess("Scene copy", 1.0, g_camera, BABYLON.Texture.NEAREST_SAMPLINGMODE);
 
 	// for debugging
 	//g_camera.attachControl(g_canvas, true);

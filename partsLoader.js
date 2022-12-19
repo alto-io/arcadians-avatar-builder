@@ -16,6 +16,12 @@ class PartsLoader {
 			this.infoList = {};
 			this.#getPartsInfo(isMale);
 			completedCallback(true);
+
+            for (var n of g_scene.rootNodes) {
+                if (n.name == "__root__") {
+                    n.position = new BABYLON.Vector3(0,-1,0);
+                }
+            }
 		});
 	}
 
