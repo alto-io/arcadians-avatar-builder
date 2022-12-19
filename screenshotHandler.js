@@ -42,7 +42,7 @@ class ScreenshotHandler {
 				BABYLON.Tools.CreateScreenshotUsingRenderTarget(
 					engine,
 					g_camera,
-					200,
+					256,
 					this.screenshotSuccess,
 					"image/png",
 					8,

@@ -36,6 +36,9 @@ function initialize() {
 		g_scene
 	);
 
+    //var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {}, g_scene);
+    //var postProcess = new BABYLON.PassPostProcess("Scene copy", 0.5, g_camera, BABYLON.Texture.NEAREST_SAMPLINGMODE);
+
 	// for debugging
 	//g_camera.attachControl(g_canvas, true);
 	//g_scene.debugLayer.show();

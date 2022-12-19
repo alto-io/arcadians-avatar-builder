@@ -36,7 +36,8 @@ class PartsLoader {
 				info.path + fileName,
 				g_scene,
 				true,
-				false
+				false,
+                BABYLON.Texture.NEAREST_SAMPLINGMODE
 			);
 			tex.onLoadObservable.add(() => {
 				tex.name = fileName;
