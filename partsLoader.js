@@ -1,7 +1,7 @@
 class AvatarConfig {
 	list = [];
 
-	getById (id) {
+	getById(id) {
 		var info = this.list.find((x) => x.id == id);
 		return info;
 	}
@@ -29,27 +29,32 @@ class PartsLoader {
 
 	loadAvatar(id, callback) {
 		this.#reset();
-		
+
 		var config = new AvatarConfig();
 		config.list = g_config.list;
 
 		var avatarInfo = config.getById(id);
-		if(avatarInfo == null) return;
+		if (avatarInfo == null) return;
 
 		this.currAvatar = avatarInfo;
 
-		BABYLON.SceneLoader.Append(avatarInfo.gltfPath, avatarInfo.gltfFileName, g_scene, () => {
-			this.matList = avatarInfo.materials;
-			this.#getPartsList(id);
+		BABYLON.SceneLoader.Append(
+			avatarInfo.gltfPath,
+			avatarInfo.gltfFileName,
+			g_scene,
+			() => {
+				this.matList = avatarInfo.materials;
+				this.#getPartsList(id);
 
-			for (var n of g_scene.rootNodes) {
-                if (n.name == "__root__") {
-                    n.position = new BABYLON.Vector3(0,-1,0);
-                }
-            }
+				for (var n of g_scene.rootNodes) {
+					if (n.name == "__root__") {
+						n.position = new BABYLON.Vector3(0, -1, 0);
+					}
+				}
 
-			callback(true);
-		});
+				callback(true);
+			}
+		);
 	}
 
 	replaceParts(key, fileName) {
@@ -71,13 +76,13 @@ class PartsLoader {
 				g_scene,
 				true,
 				false,
-                BABYLON.Texture.NEAREST_SAMPLINGMODE
+				BABYLON.Texture.NEAREST_SAMPLINGMODE
 			);
 			tex.onLoadObservable.add(() => {
 				g_isLoaded = true;
 
 				tex.name = fileName;
-                tex.hasAlpha = true;
+				tex.hasAlpha = true;
 				this.#loadedTextures.push(tex);
 
 				mat.albedoTexture = tex;
@@ -114,13 +119,13 @@ class PartsLoader {
 		}
 	}
 
-    #getFiles(gender, part) {
-        for (var i of g_fileList.List) {
-            if (i.Gender == gender && i.Part == part) {
-                return i.Files;
-            }
-        }
-    }
+	#getFiles(gender, part) {
+		for (var i of g_fileList.List) {
+			if (i.Gender == gender && i.Part == part) {
+				return i.Files;
+			}
+		}
+	}
 
 	#getPartsList(id) {
 		for (var i = 0; i < this.matList.length; i++) {

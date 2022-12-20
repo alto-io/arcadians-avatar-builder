@@ -28,7 +28,7 @@ function initialize() {
 	);
 
 	g_camera.setTarget(new BABYLON.Vector3(0, 1, 0));
-    g_camera.fov = 0.5
+	g_camera.fov = 0.5;
 
 	var light1 = new BABYLON.HemisphericLight(
 		"light1",
@@ -36,8 +36,8 @@ function initialize() {
 		g_scene
 	);
 
-    //var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {}, g_scene);
-    //var postProcess = new BABYLON.PassPostProcess("Scene copy", 1.0, g_camera, BABYLON.Texture.NEAREST_SAMPLINGMODE);
+	//var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {}, g_scene);
+	//var postProcess = new BABYLON.PassPostProcess("Scene copy", 1.0, g_camera, BABYLON.Texture.NEAREST_SAMPLINGMODE);
 
 	// for debugging
 	//g_camera.attachControl(g_canvas, true);
@@ -74,7 +74,9 @@ function initEvents() {
 }
 
 function playAnim(animName) {
-	var info = g_partsLoader.currAvatar.animations.find((x) => x.name == animName);
+	var info = g_partsLoader.currAvatar.animations.find(
+		(x) => x.name == animName
+	);
 	if (info == null) return;
 
 	var anim = g_scene.getAnimationGroupByName(info.id);
