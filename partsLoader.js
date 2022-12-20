@@ -48,14 +48,17 @@ class PartsLoader {
 
 				for (var n of g_scene.rootNodes) {
 					if (n.name == "__root__") {
-						n.position = new BABYLON.Vector3(0, -1, 0);
+						n.position = new BABYLON.Vector3(
+                            avatarInfo.position.x,
+                            avatarInfo.position.y,
+                            avatarInfo.position.z);
 					}
 				}
 
                 for (var m of g_scene.materials) {
                     if (m != null && m.albedoTexture != null) {
-                        console.log(m);
-                        m.albedoTexture.updateSamplingMode(BABYLON.Texture.NEAREST_SAMPLINGMODE);
+                        m.albedoTexture.updateSamplingMode(
+                            BABYLON.Texture.NEAREST_SAMPLINGMODE);
                     }
                 }
 
