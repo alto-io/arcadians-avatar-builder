@@ -1,7 +1,7 @@
 class ScreenshotHandler {
 	screenshotData = [];
 
-	startScreenshotsCr = function* (engine, scene, animationGroup) {
+	startScreenshotsCr = function* (engine, scene, camera, animationGroup) {
 		let config = g_config.spritesheet;
 		this.screenshotData.length = 0;
 
@@ -37,7 +37,7 @@ class ScreenshotHandler {
 
 			BABYLON.Tools.CreateScreenshotUsingRenderTarget(
 				engine,
-				g_camera,
+				camera,
 				{
 					height: config.sizeX,
 					width: config.sizeY,

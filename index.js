@@ -114,6 +114,11 @@ function loadAvatar(id) {
 
 function createSpritesheet() {
 	g_scene.onBeforeRenderObservable.runCoroutineAsync(
-		g_screenshotHandler.startScreenshotsCr(g_engine, g_scene, g_animPrev)
+		g_screenshotHandler.startScreenshotsCr(
+			g_engine,
+			g_scene,
+			g_camera,
+			g_animPrev
+		)
 	);
 }
