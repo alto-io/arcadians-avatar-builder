@@ -72,5 +72,10 @@ g_config = {
 				{ id: "f.atkWiz", name: "Attack - Wizard" },
 			],
 		},
+		{
+			id: "ScreenshotSize",
+			x: 128,
+			y: 128,
+		},
 	],
 };
