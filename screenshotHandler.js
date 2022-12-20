@@ -35,19 +35,16 @@ class ScreenshotHandler {
 			animationGroup.goToFrame(i);
 			yield;
 
-			BABYLON.Tools.CreateScreenshotUsingRenderTarget(
+			BABYLON.Tools.CreateScreenshot(
 				engine,
 				camera,
 				{
-					height: config.sizeX,
 					width: config.sizeY,
+					height: config.sizeX,
 					precision: 1,
 				},
 				this.screenshotSuccess,
-				"image/png",
-				8,
-				false,
-				"screenshot.png"
+				"image/png"
 			);
 		}
 
