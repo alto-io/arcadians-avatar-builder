@@ -50,8 +50,6 @@ function initialize() {
 		g_scene.render();
 	});
 
-	UIManager.initialize();
-
 	loadModel("./gltf/Male/", "ArcadianAvatar.gltf", true);
 }
 
@@ -113,10 +111,6 @@ function loadModel(path, fileName, male) {
 		// play idle by default
 		playAnim("idle");
 	});
-}
-
-function showMenu() {
-	UIManager.showMenu("PartsDisplay");
 }
 
 function createSpritesheet() {
