@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <script>
+
+        var canvas = null;
+        var context = null;
+        var frameId = 0;
+        var img;
+
+        function init() {
+            canvas = document.getElementById('canvas');
+            context = canvas.getContext("2d");
+
+            context.mozImageSmoothingEnabled = false;
+            context.webkitImageSmoothingEnabled = false;
+            context.msImageSmoothingEnabled = false;
+            context.imageSmoothingEnabled = false;
+
+            img = new Image();
+            img.src = "sprites/sheet.png";
+            img.onload = function () {
+                window.setInterval(render, 30);
+                render();
+            }
+        }
+
+        function render() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            const size = 128;
+            var count = img.width / size;
+
+            var x = frameId * size;
+
+            context.drawImage(img, x, 0, size, size, 0, 0, size * 2, size * 2);
+
+            frameId = (frameId + 1) % count;
+        }
+
+        window.onload = function () {
+            init();
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+</body>
+
+</html>
