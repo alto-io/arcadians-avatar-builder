@@ -1,9 +1,4 @@
 class ScreenshotHandler {
-	ZIP_FILE_NAME = "YourArcadian.zip";
-	SPRITE_SHEET_FILE_NAME = "Sheet.png";
-	SPRITE_SUB_FOLDER = "sprites/";
-	CONFIG = g_config.screenshotConfig;
-
 	screenshotData = [];
 
 	startScreenshotsCr = function* (engine, scene, animationGroup) {
@@ -41,12 +36,13 @@ class ScreenshotHandler {
 			if (forceScreenshot || !skipFrame) {
 				skipCounter = 0;
 
+				let config = g_config.spritesheet;
 				BABYLON.Tools.CreateScreenshotUsingRenderTarget(
 					engine,
 					g_camera,
 					{
-						height: this.CONFIG.sizeX,
-						width: this.CONFIG.sizeY,
+						height: config.sizeX,
+						width: config.sizeY,
 						precision: 1,
 					},
 					this.screenshotSuccess,
@@ -76,20 +72,22 @@ class ScreenshotHandler {
 	}
 
 	async zipAndSaveScreenshots() {
+		let config = g_config.spritesheet;
+
 		// reposition screenshots so they appear side by side in the final image output
 		let arrangedImageData = [];
 		for (let i = 0; i < this.screenshotData.length; i++) {
 			arrangedImageData.push({
 				src: this.screenshotData[i],
-				x: i * this.CONFIG.sizeX,
+				x: i * config.sizeX,
 				y: 0,
 			});
 		}
 
 		let finalImage;
 		await mergeImages(arrangedImageData, {
-			width: this.screenshotData.length * this.CONFIG.sizeX,
-			height: this.CONFIG.sizeY,
+			width: this.screenshotData.length * config.sizeX,
+			height: config.sizeY,
 		}).then((output) => {
 			finalImage = output;
 		});
@@ -99,11 +97,11 @@ class ScreenshotHandler {
 		let b64 = finalImage.substring(22);
 
 		const zip = new JSZip();
-		zip.file(this.SPRITE_SUB_FOLDER + this.SPRITE_SHEET_FILE_NAME, b64, {
+		zip.file(config.spritesSubFolder + config.sheetfileName, b64, {
 			base64: true,
 		});
 
-		let zipName = this.ZIP_FILE_NAME;
+		let zipName = config.zipFileName;
 		zip.generateAsync({ type: "blob" }).then(function (content) {
 			saveAs(content, zipName);
 		});

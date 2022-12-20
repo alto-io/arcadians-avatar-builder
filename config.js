@@ -1,5 +1,5 @@
 g_config = {
-	screenshotConfig: {
+	spritesheet: {
 		/**Size of each individual sprite*/
 		sizeX: 128,
 		/**Size of each individual sprite*/
@@ -7,6 +7,10 @@ g_config = {
 
 		/**How many frames to skip for the duration of the anim*/
 		framesToSkip: 1,
+
+		zipFileName: "YourArcadian.zip",
+		spritesSubFolder: "sprites/",
+		sheetfileName: "sheet.png",
 	},
 
 	list: [
