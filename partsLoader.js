@@ -59,10 +59,13 @@ class PartsLoader {
 		if (info == null) return;
 
 		var mat = g_scene.getMaterialByName(info.id);
+		if (mat == null) return;
+
 		var tex = this.#loadedTextures.find((x) => x.name == fileName);
 		if (tex != null) {
 			mat.albedoTexture = tex;
 		} else {
+			g_isLoaded = false;
 			tex = new BABYLON.Texture(
 				"arcadian-parts/" + fileName,
 				g_scene,
@@ -71,6 +74,8 @@ class PartsLoader {
                 BABYLON.Texture.NEAREST_SAMPLINGMODE
 			);
 			tex.onLoadObservable.add(() => {
+				g_isLoaded = true;
+
 				tex.name = fileName;
                 tex.hasAlpha = true;
 				this.#loadedTextures.push(tex);
