@@ -1,4 +1,14 @@
 g_config = {
+	screenshotConfig: {
+		/**Size of each individual sprite*/
+		sizeX: 128,
+		/**Size of each individual sprite*/
+		sizeY: 128,
+
+		/**How many frames to skip for the duration of the anim*/
+		framesToSkip: 1,
+	},
+
 	list: [
 		{
 			id: "Male",
@@ -71,17 +81,6 @@ g_config = {
 				{ id: "f.atkTec", name: "Attack - Tech" },
 				{ id: "f.atkWiz", name: "Attack - Wizard" },
 			],
-		},
-		{
-			id: "ScreenshotConfig",
-
-			/**Size of each individual sprite*/
-			sizeX: 128,
-			/**Size of each individual sprite*/
-			sizeY: 128,
-
-			/**How many frames to skip for the duration of the anim*/
-			framesToSkip: 1,
 		},
 	],
 };

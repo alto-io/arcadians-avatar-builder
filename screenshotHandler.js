@@ -2,7 +2,7 @@ class ScreenshotHandler {
 	ZIP_FILE_NAME = "YourArcadian.zip";
 	SPRITE_SHEET_FILE_NAME = "Sheet.png";
 	SPRITE_SUB_FOLDER = "sprites/";
-	CONFIG = g_config.list.find((x) => x.id == "ScreenshotConfig");
+	CONFIG = g_config.screenshotConfig;
 
 	screenshotData = [];
 
