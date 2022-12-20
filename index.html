@@ -31,17 +31,17 @@
 	<body>
 		<div>
 			<br />
-			<button onclick="playAnim('idle')">Anim Idle</button>
-			<button onclick="playAnim('walk')">Anim Walk</button>
-			<button onclick="playAnim('atkKni')">Anim Attack</button>
+			<button onclick="playAnim('Idle')">Anim Idle</button>
+			<button onclick="playAnim('Walk')">Anim Walk</button>
+			<button onclick="playAnim('Attack')">Anim Attack</button>
 			<br /><br />
 			<button
-				onclick="loadModel('./gltf/Male/', 'ArcadianAvatar.gltf', true)"
+				onclick="loadAvatar('Male')"
 			>
 				Load Male Model
 			</button>
 			<button
-				onclick="loadModel('./gltf/Female/', 'ArcadianAvatar - Female.gltf', false)"
+				onclick="loadAvatar('Female')"
 			>
 				Load Female Model
 			</button>
@@ -65,6 +65,7 @@
 		</div>
 
         <script src="files.js"></script>
+		<script src="config.js"></script>
 		<script src="screenshotHandler.js"></script>
 		<script src="keyboardHandler.js"></script>
 		<script src="uiManager.js"></script>

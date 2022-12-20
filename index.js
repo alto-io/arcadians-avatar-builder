@@ -7,7 +7,6 @@ var g_canvas = document.getElementById("renderCanvas");
 var g_scene = null;
 var g_engine = null;
 var g_camera = null;
-var g_isMale = false;
 var g_isLoaded = false;
 var g_partsIdx = 0;
 var g_keyboardHandler = new KeyboardHandler();
@@ -50,7 +49,7 @@ function initialize() {
 		g_scene.render();
 	});
 
-	loadModel("./gltf/Male/", "ArcadianAvatar.gltf", true);
+	loadAvatar("Male");
 }
 
 function initEvents() {
@@ -75,10 +74,10 @@ function initEvents() {
 }
 
 function playAnim(animName) {
-	if (g_isMale) animName = "m." + animName;
-	else animName = "f." + animName;
+	var info = g_partsLoader.currAvatar.animations.find((x) => x.name == animName);
+	if (info == null) return;
 
-	var anim = g_scene.getAnimationGroupByName(animName);
+	var anim = g_scene.getAnimationGroupByName(info.id);
 	if (anim == null) return;
 
 	if (g_animPrev != null) g_animPrev.stop();
@@ -102,14 +101,12 @@ function cycleParts(key) {
 	g_partsLoader.replaceParts(key, dir);
 }
 
-function loadModel(path, fileName, male) {
-	g_isMale = male;
-
-	g_partsLoader.loadParts(path, fileName, male, () => {
+function loadAvatar(id) {
+	g_partsLoader.loadAvatar(id, () => {
 		g_isLoaded = true;
 
 		// play idle by default
-		playAnim("idle");
+		playAnim("Idle");
 	});
 }
 

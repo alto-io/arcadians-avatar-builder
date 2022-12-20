@@ -1,38 +1,64 @@
+class AvatarConfig {
+	list = [];
+
+	getById (id) {
+		var info = this.list.find((x) => x.id == id);
+		return info;
+	}
+}
+
+class AvatarInfo {
+	id = "";
+	gltfPath = "";
+	gltfFileName = "";
+	materials = [];
+	animations = [];
+}
+
 class PartInfo {
-	matName = "";
+	id = "";
+	name = "";
 }
 
 class PartsLoader {
+	currAvatar = null;
 	list = {};
-	infoList = {};
+	matList = [];
 
 	#loadedTextures = [];
 
-	loadParts(path, fileName, isMale, completedCallback) {
+	loadAvatar(id, callback) {
 		this.#reset();
+		
+		var config = new AvatarConfig();
+		config.list = g_config.list;
 
-		BABYLON.SceneLoader.Append(path, fileName, g_scene, () => {
-			this.list = {};
-			this.infoList = {};
-			this.#getPartsInfo(isMale);
-			completedCallback(true);
+		var avatarInfo = config.getById(id);
+		if(avatarInfo == null) return;
 
-            for (var n of g_scene.rootNodes) {
+		this.currAvatar = avatarInfo;
+
+		BABYLON.SceneLoader.Append(avatarInfo.gltfPath, avatarInfo.gltfFileName, g_scene, () => {
+			this.matList = avatarInfo.materials;
+			this.#getPartsList(id);
+
+			for (var n of g_scene.rootNodes) {
                 if (n.name == "__root__") {
                     n.position = new BABYLON.Vector3(0,-1,0);
                 }
             }
+
+			callback(true);
 		});
 	}
 
 	replaceParts(key, fileName) {
 		if (!key || !fileName) return;
 
-		var info = this.infoList[key];
+		var info = this.matList.find((x) => x.name == key);
 		if (info == null) return;
-		if (!info.matName) return;
 
-		var mat = g_scene.getMaterialByName(info.matName);
+		var mat = g_scene.getMaterialByName(info.id);
 		var tex = this.#loadedTextures.find((x) => x.name == fileName);
 		if (tex != null) {
 			mat.albedoTexture = tex;
@@ -56,6 +82,9 @@ class PartsLoader {
 
 	#reset() {
 		if (g_scene == null) return;
+
+		this.list = {};
+		this.matList = {};
 
 		// dispose skeletons
 		if (g_scene.skeletons != null) {
@@ -87,87 +116,10 @@ class PartsLoader {
         }
     }
 
-	#getPartsInfo(isMale) {
-		if (isMale) this.#getMaleParts();
-		else this.#getFemaleParts();
-
-        var gender = isMale ? "Male" : "Female";
-
-		// Get parts collection
-		for (var key in this.infoList) {
-            this.list[key] = this.#getFiles(gender, key);
+	#getPartsList(id) {
+		for (var i = 0; i < this.matList.length; i++) {
+			let mat = this.matList[i];
+			this.list[mat.name] = this.#getFiles(id, mat.name);
 		}
-	}
-
-	// PROTOTYPE: Use manual loading for now
-	#getMaleParts() {
-		var skin = new PartInfo();
-		skin.matName = "mat.mskin";
-
-		var eyes = new PartInfo();
-		eyes.matName = "mat.meyes";
-
-		var head = new PartInfo();
-		head.matName = "mat.mhead";
-
-		var mouth = new PartInfo();
-		mouth.matName = "mat.mmouth";
-
-		var top = new PartInfo();
-		top.matName = "mat.mtop";
-
-		var leftHand = new PartInfo();
-		leftHand.matName = "mat.mleft";
-
-		var rightHand = new PartInfo();
-		rightHand.matName = "mat.mright";
-
-		var bot = new PartInfo();
-		bot.matName = "mat.mbot";
-
-		this.infoList["Skin"] = skin;
-		this.infoList["Eyes"] = eyes;
-		this.infoList["Head"] = head;
-		this.infoList["Mouth"] = mouth;
-		this.infoList["Top"] = top;
-		this.infoList["Left Hand"] = leftHand;
-		this.infoList["Right Hand"] = rightHand;
-		this.infoList["Bottom"] = bot;
-	}
-
-	// PROTOTYPE: Use manual loading for now
-	#getFemaleParts() {
-		var skin = new PartInfo();
-		skin.matName = "mat.femskin";
-
-		var eyes = new PartInfo();
-		eyes.matName = "mat.femeyes";
-
-		var head = new PartInfo();
-		head.matName = "mat.femhead";
-
-		var mouth = new PartInfo();
-		mouth.matName = "mat.femmouth";
-
-		var top = new PartInfo();
-		top.matName = "mat.femtop";
-
-		var leftHand = new PartInfo();
-		leftHand.matName = "mat.femleft";
-
-		var rightHand = new PartInfo();
-		rightHand.matName = "mat.femright";
-
-		var bot = new PartInfo();
-		bot.matName = "mat.fembottom";
-
-		this.infoList["Skin"] = skin;
-		this.infoList["Eyes"] = eyes;
-		this.infoList["Head"] = head;
-		this.infoList["Mouth"] = mouth;
-		this.infoList["Top"] = top;
-		this.infoList["Left Hand"] = leftHand;
-		this.infoList["Right Hand"] = rightHand;
-		this.infoList["Bottom"] = bot;
 	}
 }
