@@ -18,7 +18,22 @@ g_config = {
 			"animations": [
                 { "id": "m.idle", "name": "Idle"},
                 { "id": "m.walk", "name": "Walk"},
-                { "id": "m.atkKni", "name": "Attack"},
+                { "id": "m.talk", "name": "Talk"},
+                { "id": "m.talkpositive", "name": "Talk - Positive"},
+                { "id": "m.talknegative", "name": "Talk - Negative"},
+                { "id": "m.hit", "name": "Hit"},
+                { "id": "m.stun", "name": "Stun"},
+                { "id": "m.death", "name": "Death"},
+                { "id": "m.win", "name": "Win"},
+                { "id": "m.lose", "name": "Lose"},
+                { "id": "m.skillBuff", "name": "Skill - Buff"},
+                { "id": "m.skillMelee", "name": "Skill - Melee"},
+                { "id": "m.skillRanged", "name": "Skill - Ranged"},
+                { "id": "m.atkAss", "name": "Attack - Assassin"},
+                { "id": "m.atkGun", "name": "Attack - Gunner"},
+                { "id": "m.atkKni", "name": "Attack - Knight"},
+                { "id": "m.atkTec", "name": "Attack - Tech"},
+                { "id": "m.atkWiz", "name": "Attack - Wizard"},
             ]
 		},
 		{
@@ -39,7 +54,22 @@ g_config = {
 			"animations": [
                 { "id": "f.idle", "name": "Idle"},
                 { "id": "f.walk", "name": "Walk"},
-                { "id": "f.atkKni", "name": "Attack"},
+                { "id": "f.talk", "name": "Talk"},
+                { "id": "f.talkpositive", "name": "Talk - Positive"},
+                { "id": "f.talknegative", "name": "Talk - Negative"},
+                { "id": "f.hit", "name": "Hit"},
+                { "id": "f.stun", "name": "Stun"},
+                { "id": "f.death", "name": "Death"},
+                { "id": "f.win", "name": "Win"},
+                { "id": "f.lose", "name": "Lose"},
+                { "id": "f.skillBuff", "name": "Skill - Buff"},
+                { "id": "f.skillMelee", "name": "Skill - Melee"},
+                { "id": "f.skillRanged", "name": "Skill - Ranged"},
+                { "id": "f.atkAss", "name": "Attack - Assassin"},
+                { "id": "f.atkGun", "name": "Attack - Gunner"},
+                { "id": "f.atkKni", "name": "Attack - Knight"},
+                { "id": "f.atkTec", "name": "Attack - Tech"},
+                { "id": "f.atkWiz", "name": "Attack - Wizard"},
             ]
 		}
 	]
