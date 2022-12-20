@@ -1,8 +1,9 @@
 class ScreenshotHandler {
-	SPRITE_SUB_FOLDER = "sprites/";
 	ZIP_FILE_NAME = "YourArcadian.zip";
+	SPRITE_SHEET_FILE_NAME = "Sheet.png";
+	SPRITE_SUB_FOLDER = "sprites/";
+	CONFIG = g_config.list.find((x) => x.id == "ScreenshotConfig");
 
-	/**Babylon scripts have to reference this outside of ScreenshotHandler, after creating a screenshot.*/
 	screenshotData = [];
 
 	startScreenshotsCr = function* (engine, scene, animationGroup) {
@@ -30,7 +31,6 @@ class ScreenshotHandler {
 		yield;
 
 		let firstFrame = totalFrames;
-		let imgConfig = g_config.list.find((x) => x.id == "ScreenshotSize");
 
 		while (totalFrames >= 0) {
 			// take screenshot of the first and last frame
@@ -44,7 +44,11 @@ class ScreenshotHandler {
 				BABYLON.Tools.CreateScreenshotUsingRenderTarget(
 					engine,
 					g_camera,
-					{ height: imgConfig.x, width: imgConfig.y, precision: 1 },
+					{
+						height: this.CONFIG.sizeX,
+						width: this.CONFIG.sizeY,
+						precision: 1,
+					},
 					this.screenshotSuccess,
 					"image/png",
 					8,
@@ -66,11 +70,9 @@ class ScreenshotHandler {
 	};
 
 	screenshotSuccess(imageData) {
-		let b64 = imageData; //.substring(22);
-
 		// since this function is called by Babylon, referencing 'this' throws an error.
 		// reference the global var in index.js insted
-		g_screenshotHandler.screenshotData.push(b64);
+		g_screenshotHandler.screenshotData.push(imageData);
 	}
 
 	async zipAndSaveScreenshots() {
@@ -79,15 +81,15 @@ class ScreenshotHandler {
 		for (let i = 0; i < this.screenshotData.length; i++) {
 			arrangedImageData.push({
 				src: this.screenshotData[i],
-				x: i * 128,
+				x: i * this.CONFIG.sizeX,
 				y: 0,
 			});
 		}
 
 		let finalImage;
 		await mergeImages(arrangedImageData, {
-			width: this.screenshotData.length * 128,
-			height: 128,
+			width: this.screenshotData.length * this.CONFIG.sizeX,
+			height: this.CONFIG.sizeY,
 		}).then((output) => {
 			finalImage = output;
 		});
@@ -97,7 +99,7 @@ class ScreenshotHandler {
 		let b64 = finalImage.substring(22);
 
 		const zip = new JSZip();
-		zip.file(this.SPRITE_SUB_FOLDER + "Sheet.png", b64, {
+		zip.file(this.SPRITE_SUB_FOLDER + this.SPRITE_SHEET_FILE_NAME, b64, {
 			base64: true,
 		});
 

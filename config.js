@@ -73,9 +73,15 @@ g_config = {
 			],
 		},
 		{
-			id: "ScreenshotSize",
-			x: 128,
-			y: 128,
+			id: "ScreenshotConfig",
+
+			/**Size of each individual sprite*/
+			sizeX: 128,
+			/**Size of each individual sprite*/
+			sizeY: 128,
+
+			/**How many frames to skip for the duration of the anim*/
+			framesToSkip: 1,
 		},
 	],
 };
