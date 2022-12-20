@@ -52,6 +52,13 @@ class PartsLoader {
 					}
 				}
 
+                for (var m of g_scene.materials) {
+                    if (m != null && m.albedoTexture != null) {
+                        console.log(m);
+                        m.albedoTexture.updateSamplingMode(BABYLON.Texture.NEAREST_SAMPLINGMODE);
+                    }
+                }
+
 				callback(true);
 			}
 		);
