@@ -1,8 +1,9 @@
 class ScreenshotHandler {
-	SPRITE_SUB_FOLDER = "sprites/";
 	ZIP_FILE_NAME = "YourArcadian.zip";
+	SPRITE_SHEET_FILE_NAME = "Sheet.png";
+	SPRITE_SUB_FOLDER = "sprites/";
+	CONFIG = g_config.list.find((x) => x.id == "ScreenshotConfig");
 
-	/**Babylon scripts have to reference this outside of ScreenshotHandler, after creating a screenshot.*/
 	screenshotData = [];
 
 	startScreenshotsCr = function* (engine, scene, animationGroup) {
@@ -30,6 +31,7 @@ class ScreenshotHandler {
 		yield;
 
 		let firstFrame = totalFrames;
+
 		while (totalFrames >= 0) {
 			// take screenshot of the first and last frame
 			// totalFrames may not be a whole number
@@ -39,12 +41,14 @@ class ScreenshotHandler {
 			if (forceScreenshot || !skipFrame) {
 				skipCounter = 0;
 
-				const size = 128;
-
 				BABYLON.Tools.CreateScreenshotUsingRenderTarget(
 					engine,
 					g_camera,
-					{ height: size, width: size, precision: 1 },
+					{
+						height: this.CONFIG.sizeX,
+						width: this.CONFIG.sizeY,
+						precision: 1,
+					},
 					this.screenshotSuccess,
 					"image/png",
 					8,
@@ -66,33 +70,43 @@ class ScreenshotHandler {
 	};
 
 	screenshotSuccess(imageData) {
-		// remove the first few chars of the data url string, which looks like:
-		// "data:image/png;base64,"
-		let b64 = imageData.substring(22);
-
 		// since this function is called by Babylon, referencing 'this' throws an error.
 		// reference the global var in index.js insted
-		g_screenshotHandler.screenshotData.push(b64);
+		g_screenshotHandler.screenshotData.push(imageData);
 	}
 
-	zipAndSaveScreenshots() {
-		const zip = new JSZip();
+	async zipAndSaveScreenshots() {
+		// reposition screenshots so they appear side by side in the final image output
+		let arrangedImageData = [];
 		for (let i = 0; i < this.screenshotData.length; i++) {
-			zip.file(
-				this.SPRITE_SUB_FOLDER + i + ".png",
-				this.screenshotData[i],
-				{
-					base64: true,
-				}
-			);
+			arrangedImageData.push({
+				src: this.screenshotData[i],
+				x: i * this.CONFIG.sizeX,
+				y: 0,
+			});
 		}
+
+		let finalImage;
+		await mergeImages(arrangedImageData, {
+			width: this.screenshotData.length * this.CONFIG.sizeX,
+			height: this.CONFIG.sizeY,
+		}).then((output) => {
+			finalImage = output;
+		});
+
+		// remove the first few chars of the data url string, which looks like:
+		// "data:image/png;base64,"
+		let b64 = finalImage.substring(22);
+
+		const zip = new JSZip();
+		zip.file(this.SPRITE_SUB_FOLDER + this.SPRITE_SHEET_FILE_NAME, b64, {
+			base64: true,
+		});
 
 		let zipName = this.ZIP_FILE_NAME;
 		zip.generateAsync({ type: "blob" }).then(function (content) {
 			saveAs(content, zipName);
 		});
-
-		console.log("Screenshots success!");
 	}
 
 	getTotalFramesOfAnim(engine, animationGroup) {
