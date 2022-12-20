@@ -88,6 +88,7 @@ class PartsLoader {
 	#reset() {
 		if (g_scene == null) return;
 
+		this.currAvatar = null;
 		this.list = {};
 		this.matList = {};
 
