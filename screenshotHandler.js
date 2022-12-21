@@ -157,6 +157,10 @@ class ScreenshotHandler {
 			finalImage = output;
 		});
 
+		// TO DO: FIGURE OUT WHY AT THIS POINT THE SCREENSHOT DATA GETS ONE EXTRA SCREENSHOT
+		let lastAnimIdx = allScreenshotData.length - 1;
+		allScreenshotData[lastAnimIdx].length -= 1;
+
 		// remove the first few chars of the data url string, which looks like:
 		// "data:image/png;base64,"
 		let b64 = finalImage.substring(22);
