@@ -27,6 +27,11 @@ class PartsLoader {
 
 	#loadedTextures = [];
 
+	/**
+	 * Loads the avatar and the list of materials and the collection of parts
+	 * @param {string} id - ID of the avatar this is defined in config.js
+	 * @param {function} callback - Callback for when the gtlf is finished loading
+	 */
 	loadAvatar(id, callback) {
 		this.#reset();
 
@@ -67,6 +72,11 @@ class PartsLoader {
 		);
 	}
 
+	/**
+	 * Replaces the texture of a selected part material
+	 * @param {string} key - The key for the material of the part to be replaced this is defined in the config.js
+	 * @param {string} fileName - Name of the file with a file format suffix (FileName.png)
+	 */
 	replaceParts(key, fileName) {
 		if (!key || !fileName) return;
 
@@ -100,6 +110,11 @@ class PartsLoader {
 		}
 	}
 
+	/**
+	 * Diposes skeletons, materials and animationGroups
+	 * 
+	 * Resets cached parts collection and material list
+	 */
 	#reset() {
 		if (g_scene == null) return;
 
@@ -129,14 +144,24 @@ class PartsLoader {
 		}
 	}
 
-	#getFiles(gender, part) {
+	/**
+	 * Gets the list of textures for a specific part/material
+	 * @param {string} id - Avatar ID
+	 * @param {string} matName - Material name/key
+	 * @returns Array of string
+	 */
+	#getFiles(id, matName) {
 		for (var i of g_fileList.List) {
-			if (i.Gender == gender && i.Part == part) {
+			if (i.Gender == id && i.Part == matName) {
 				return i.Files;
 			}
 		}
 	}
 
+	/**
+	 * Gets the list of parts/materials
+	 * @param {string} id - Avatar ID 
+	 */
 	#getPartsList(id) {
 		for (var i = 0; i < this.matList.length; i++) {
 			let mat = this.matList[i];
