@@ -8,6 +8,12 @@ g_config = {
 		/**How many frames to skip for the duration of the anim*/
 		framesToSkip: 3,
 
+		/**
+		 * Which animations to use as reference for the spritesheet.
+		 * Their order in the array determins their vertical order on the sheet
+		 */
+		targetAnimations: ["Idle", "Walk", "Attack - Knight"],
+
 		zipFileName: "YourArcadian.zip",
 		spritesSubFolder: "sprites/",
 		sheetfileName: "sheet.png",
