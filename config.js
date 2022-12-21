@@ -18,7 +18,7 @@ g_config = {
 			id: "Male",
 			gltfPath: "./gltf/Male/",
 			gltfFileName: "ArcadianAvatar.gltf",
-            position: { x: 0, y: -1, z: 0 },
+			position: { x: 0, y: -1, z: 0 },
 			materials: [
 				{ id: "mat.mskin", name: "Skin" },
 				{ id: "mat.meyes", name: "Eyes" },
@@ -55,7 +55,7 @@ g_config = {
 			id: "Female",
 			gltfPath: "./gltf/Female/",
 			gltfFileName: "ArcadianAvatar - Female.gltf",
-            position: { x: 0, y: -1, z: 0 },
+			position: { x: 0, y: -1, z: 0 },
 			materials: [
 				{ id: "mat.femskin", name: "Skin" },
 				{ id: "mat.femeyes", name: "Eyes" },

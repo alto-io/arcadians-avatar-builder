@@ -5,8 +5,13 @@ class ScreenshotHandler {
 		let config = g_config.spritesheet;
 		this.screenshotData.length = 0;
 
-        var postProcessScale = config.sizeX/g_canvas.width;
-        var postProcess = new BABYLON.PassPostProcess("Scene copy", postProcessScale, g_camera, BABYLON.Texture.NEAREST_SAMPLINGMODE);
+		var postProcessScale = config.sizeX / g_canvas.width;
+		var postProcess = new BABYLON.PassPostProcess(
+			"Scene copy",
+			postProcessScale,
+			g_camera,
+			BABYLON.Texture.NEAREST_SAMPLINGMODE
+		);
 
 		let prevBgColor = scene.clearColor;
 		scene.clearColor = new BABYLON.Color4(0, 0, 0, 0);
@@ -57,7 +62,7 @@ class ScreenshotHandler {
 		else console.error("Screenshots failed! No screenshots were taken.");
 
 		scene.clearColor = prevBgColor;
-        postProcess.dispose();
+		postProcess.dispose();
 	};
 
 	screenshotSuccess(imageData) {

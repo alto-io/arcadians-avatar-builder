@@ -54,18 +54,20 @@ class PartsLoader {
 				for (var n of g_scene.rootNodes) {
 					if (n.name == "__root__") {
 						n.position = new BABYLON.Vector3(
-                            avatarInfo.position.x,
-                            avatarInfo.position.y,
-                            avatarInfo.position.z);
+							avatarInfo.position.x,
+							avatarInfo.position.y,
+							avatarInfo.position.z
+						);
 					}
 				}
 
-                for (var m of g_scene.materials) {
-                    if (m != null && m.albedoTexture != null) {
-                        m.albedoTexture.updateSamplingMode(
-                            BABYLON.Texture.NEAREST_SAMPLINGMODE);
-                    }
-                }
+				for (var m of g_scene.materials) {
+					if (m != null && m.albedoTexture != null) {
+						m.albedoTexture.updateSamplingMode(
+							BABYLON.Texture.NEAREST_SAMPLINGMODE
+						);
+					}
+				}
 
 				callback(true);
 			}
@@ -112,7 +114,7 @@ class PartsLoader {
 
 	/**
 	 * Diposes skeletons, materials and animationGroups
-	 * 
+	 *
 	 * Resets cached parts collection and material list
 	 */
 	#reset() {
@@ -160,7 +162,7 @@ class PartsLoader {
 
 	/**
 	 * Gets the list of parts/materials
-	 * @param {string} id - Avatar ID 
+	 * @param {string} id - Avatar ID
 	 */
 	#getPartsList(id) {
 		for (var i = 0; i < this.matList.length; i++) {

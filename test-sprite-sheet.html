@@ -1,51 +1,58 @@
 <html>
+	<head>
+		<script>
+			var canvas = null;
+			var context = null;
+			var frameId = 0;
+			var img;
 
-<head>
-    <script>
+			function init() {
+				canvas = document.getElementById("canvas");
+				context = canvas.getContext("2d");
 
-        var canvas = null;
-        var context = null;
-        var frameId = 0;
-        var img;
+				context.mozImageSmoothingEnabled = false;
+				context.webkitImageSmoothingEnabled = false;
+				context.msImageSmoothingEnabled = false;
+				context.imageSmoothingEnabled = false;
 
-        function init() {
-            canvas = document.getElementById('canvas');
-            context = canvas.getContext("2d");
+				img = new Image();
+				img.src = "sprites/sheet.png";
+				img.onload = function () {
+					window.setInterval(render, 30);
+					render();
+				};
+			}
 
-            context.mozImageSmoothingEnabled = false;
-            context.webkitImageSmoothingEnabled = false;
-            context.msImageSmoothingEnabled = false;
-            context.imageSmoothingEnabled = false;
+			function render() {
+				context.clearRect(0, 0, canvas.width, canvas.height);
 
-            img = new Image();
-            img.src = "sprites/sheet.png";
-            img.onload = function () {
-                window.setInterval(render, 30);
-                render();
-            }
-        }
+				const size = 128;
+				var count = img.width / size;
 
-        function render() {
-            context.clearRect(0, 0, canvas.width, canvas.height);
+				var x = frameId * size;
 
-            const size = 128;
-            var count = img.width / size;
+				context.drawImage(
+					img,
+					x,
+					0,
+					size,
+					size,
+					0,
+					0,
+					size * 2,
+					size * 2
+				);
 
-            var x = frameId * size;
+				frameId = (frameId + 1) % count;
+			}
 
-            context.drawImage(img, x, 0, size, size, 0, 0, size * 2, size * 2);
+			window.onload = function () {
+				init();
+			};
+		</script>
+	</head>
 
-            frameId = (frameId + 1) % count;
-        }
-
-        window.onload = function () {
-            init();
-        }
-    </script>
-</head>
-
-<body>
-    <canvas id="canvas" width="400" height="400"></canvas>
-</body>
-
+	<body>
+		<canvas id="canvas" width="400" height="400"></canvas>
+	</body>
 </html>
