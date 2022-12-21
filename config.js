@@ -10,13 +10,14 @@ g_config = {
 
 		/**
 		 * Which animations to use as reference for the spritesheet.
-		 * Their order in the array determins their vertical order on the sheet
+		 * Their order in the array determines their vertical order on the sheet
 		 */
 		targetAnimations: ["Idle", "Walk", "Attack - Knight"],
 
 		zipFileName: "YourArcadian.zip",
 		spritesSubFolder: "sprites/",
 		sheetfileName: "sheet.png",
+		sheetJsonName: "properties.json",
 	},
 
 	list: [

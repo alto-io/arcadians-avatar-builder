@@ -103,6 +103,30 @@ class ScreenshotHandler {
 	}
 
 	async zipAndSaveScreenshots(allScreenshotData) {
+		const zip = new JSZip();
+
+		let spritesheet = await this.mergeScreenshots(allScreenshotData);
+		zip.file(
+			this.CONFIG.spritesSubFolder + this.CONFIG.sheetfileName,
+			spritesheet,
+			{
+				base64: true,
+			}
+		);
+
+		let propertiesJson = this.createPropertiesJson(allScreenshotData);
+		zip.file(
+			this.CONFIG.spritesSubFolder + this.CONFIG.sheetJsonName,
+			propertiesJson
+		);
+
+		let zipName = this.CONFIG.zipFileName;
+		zip.generateAsync({ type: "blob" }).then(function (content) {
+			saveAs(content, zipName);
+		});
+	}
+
+	async mergeScreenshots(allScreenshotData) {
 		// reposition screenshots so they appear side by side in the final image output
 		// animations are grouped by row
 		let arrangedImageData = [];
@@ -137,19 +161,33 @@ class ScreenshotHandler {
 		// "data:image/png;base64,"
 		let b64 = finalImage.substring(22);
 
-		const zip = new JSZip();
-		zip.file(
-			this.CONFIG.spritesSubFolder + this.CONFIG.sheetfileName,
-			b64,
-			{
-				base64: true,
-			}
-		);
+		return b64;
+	}
 
-		let zipName = this.CONFIG.zipFileName;
-		zip.generateAsync({ type: "blob" }).then(function (content) {
-			saveAs(content, zipName);
-		});
+	createPropertiesJson(allScreenshotData) {
+		let properties = {
+			spriteWidth: this.CONFIG.spriteWidth,
+			spriteHeight: this.CONFIG.spriteHeight,
+			animations: [],
+		};
+		console.log(allScreenshotData);
+		for (let i = 0; i < this.CONFIG.targetAnimations.length; i++) {
+			// i should be one to one between targetAnimations and allScreenshotData
+			let newEntry = {
+				name: this.CONFIG.targetAnimations[i],
+				rowIndex: i,
+				totalFrames: allScreenshotData[i].length,
+			};
+
+			console.log(i);
+			console.log(allScreenshotData[i]);
+
+			properties.animations.push(newEntry);
+		}
+
+		let json = JSON.stringify(properties);
+		console.log(json);
+		return json;
 	}
 
 	clearPostProcessing(scene) {
