@@ -157,7 +157,7 @@ class ScreenshotHandler {
 			finalImage = output;
 		});
 
-		// TO DO: FIGURE OUT WHY AT THIS POINT THE SCREENSHOT DATA GETS ONE EXTRA SCREENSHOT PAST THIS POINT
+		// TO DO: FIGURE OUT WHY THE LAST SCREENSHOT SET GETS ONE EXTRA SCREENSHOT PAST THIS POINT
 		let lastAnimIdx = allScreenshotData.length - 1;
 		allScreenshotData[lastAnimIdx].length -= 1;
 
