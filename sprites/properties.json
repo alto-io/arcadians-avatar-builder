@@ -1,1 +1,1 @@
-{"spriteWidth":128,"spriteHeight":128,"animations":[{"name":"Idle","rowIndex":0,"totalFrames":16},{"name":"Walk","rowIndex":1,"totalFrames":16},{"name":"Attack - Knight","rowIndex":2,"totalFrames":7}]}
+{"spriteWidth":128,"spriteHeight":128,"animations":[{"name":"Idle","rowIndex":0,"totalFrames":15},{"name":"Walk","rowIndex":1,"totalFrames":15},{"name":"Attack - Knight","rowIndex":2,"totalFrames":8}]}

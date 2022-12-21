@@ -47,10 +47,8 @@ class ScreenshotHandler {
 			for (let i = 1; i <= totalFrames; i++) {
 				let skipInterval = this.CONFIG.framesToSkip;
 				let skipFrame = skipInterval > 0 && skipCounter < skipInterval;
-				// force a screenshot on the last frame
-				let isLastFrame = i == totalFrames;
 
-				if (skipFrame && !isLastFrame) {
+				if (skipFrame) {
 					skipCounter++;
 					continue;
 				}
@@ -61,6 +59,7 @@ class ScreenshotHandler {
 				animationGroup.goToFrame(i);
 				yield;
 
+				let waitForScreenshot = true;
 				BABYLON.Tools.CreateScreenshot(
 					engine,
 					camera,
@@ -69,10 +68,15 @@ class ScreenshotHandler {
 						height: this.CONFIG.spriteWidth,
 						precision: 1,
 					},
-					(imgData) =>
-						g_screenshotHandler.screenshotSet.push(imgData),
+					(imgData) => {
+						waitForScreenshot = false;
+						g_screenshotHandler.screenshotSet.push(imgData);
+					},
 					"image/png"
 				);
+
+				// wait for screenshot api to finish
+				while (waitForScreenshot) yield;
 			}
 
 			console.log("Total sprite count: " + this.screenshotSet.length);
@@ -156,10 +160,6 @@ class ScreenshotHandler {
 		}).then((output) => {
 			finalImage = output;
 		});
-
-		// TO DO: FIGURE OUT WHY THE LAST SCREENSHOT SET GETS ONE EXTRA SCREENSHOT PAST THIS POINT
-		let lastAnimIdx = allScreenshotData.length - 1;
-		allScreenshotData[lastAnimIdx].length -= 1;
 
 		// remove the first few chars of the data url string, which looks like:
 		// "data:image/png;base64,"
