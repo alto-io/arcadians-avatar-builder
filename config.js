@@ -1,9 +1,9 @@
 g_config = {
 	spritesheet: {
 		/**Size of each individual sprite*/
-		sizeX: 128,
+		spriteWidth: 128,
 		/**Size of each individual sprite*/
-		sizeY: 128,
+		spriteHeight: 128,
 
 		/**How many frames to skip for the duration of the anim*/
 		framesToSkip: 3,

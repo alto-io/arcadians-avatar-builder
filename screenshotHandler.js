@@ -64,8 +64,8 @@ class ScreenshotHandler {
 					engine,
 					camera,
 					{
-						width: this.CONFIG.sizeY,
-						height: this.CONFIG.sizeX,
+						width: this.CONFIG.spriteWidth,
+						height: this.CONFIG.spriteWidth,
 						precision: 1,
 					},
 					(imgData) =>
@@ -93,7 +93,7 @@ class ScreenshotHandler {
 		this.prevBgColor = scene.clearColor;
 		scene.clearColor = new BABYLON.Color4(0, 0, 0, 0);
 
-		var postProcessScale = this.CONFIG.sizeX / canvas.width;
+		var postProcessScale = this.CONFIG.spriteWidth / canvas.width;
 		this.postProcess = new BABYLON.PassPostProcess(
 			"Scene copy",
 			postProcessScale,
@@ -118,20 +118,21 @@ class ScreenshotHandler {
 			) {
 				arrangedImageData.push({
 					src: this.allScreenshotData[animIdx][imgIdx],
-					x: imgIdx * this.CONFIG.sizeX,
-					y: animIdx * this.CONFIG.sizeY,
+					x: imgIdx * this.CONFIG.spriteWidth,
+					y: animIdx * this.CONFIG.spriteHeight,
 				});
 			}
 		}
 
+		// base width of final image to the longest set of sprites
 		let longestSet = 0;
 		for (let animData of this.allScreenshotData)
 			if (animData.length > longestSet) longestSet = animData.length;
 
 		let finalImage;
 		await mergeImages(arrangedImageData, {
-			width: longestSet * this.CONFIG.sizeX,
-			height: this.allScreenshotData.length * this.CONFIG.sizeY,
+			width: longestSet * this.CONFIG.spriteWidth,
+			height: this.allScreenshotData.length * this.CONFIG.spriteHeight,
 		}).then((output) => {
 			finalImage = output;
 		});
