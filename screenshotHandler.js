@@ -37,6 +37,7 @@ class ScreenshotHandler {
 			// wait for the frame to load
 			animationGroup.goToFrame(i);
 			yield;
+			yield;
 
 			BABYLON.Tools.CreateScreenshot(
 				engine,

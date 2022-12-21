@@ -6,7 +6,7 @@ g_config = {
 		sizeY: 128,
 
 		/**How many frames to skip for the duration of the anim*/
-		framesToSkip: 1,
+		framesToSkip: 3,
 
 		zipFileName: "YourArcadian.zip",
 		spritesSubFolder: "sprites/",
