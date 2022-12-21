@@ -9,7 +9,7 @@ class ScreenshotHandler {
 
 	startScreenshotsCr = function* (canvas, engine, scene, camera) {
 		// Nested array, separating screenshot sets by animation
-		let allScreenshotData = [[]];
+		let allScreenshotData = [];
 
 		// wait for post processing to finish
 		this.setupScreenshots(canvas, scene, camera);
