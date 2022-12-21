@@ -73,6 +73,10 @@ function initEvents() {
 	*/
 }
 
+/**
+	 * Plays the animation of an avatar
+	 * @param {string} animName - Name of the animation this is defined in config.js
+*/
 function playAnim(animName) {
 	var info = g_partsLoader.currAvatar.animations.find(
 		(x) => x.name == animName
@@ -88,6 +92,10 @@ function playAnim(animName) {
 	g_animPrev = anim;
 }
 
+/**
+	 * Cycles through each texture and replace a specific part 
+	 * @param {string} key - The key for the material of the part to be replaced this is defined in the config.js
+ */
 function cycleParts(key) {
 	if (!g_isLoaded) return;
 
@@ -100,9 +108,22 @@ function cycleParts(key) {
 	}
 
 	var dir = arr[g_partsIdx];
-	g_partsLoader.replaceParts(key, dir);
+	this.replaceParts(key, dir);
 }
 
+/**
+	 * Replaces the texture of a selected part material
+	 * @param {string} key - The key for the material of the part to be replaced this is defined in the config.js
+	 * @param {string} fileName - Name of the file with a file format suffix (FileName.png)
+ */
+function replaceParts(key, fileName) {
+	g_partsLoader.replaceParts(key, fileName);
+}
+
+/**
+	 * Loads the avatar and the list of materials and the collection of parts, additionally sets the animation to 'Idle' by default
+	 * @param {string} id - ID of the avatar this is defined in config.js
+*/
 function loadAvatar(id) {
 	g_partsLoader.loadAvatar(id, () => {
 		g_isLoaded = true;
