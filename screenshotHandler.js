@@ -170,7 +170,7 @@ class ScreenshotHandler {
 			spriteHeight: this.CONFIG.spriteHeight,
 			animations: [],
 		};
-		console.log(allScreenshotData);
+
 		for (let i = 0; i < this.CONFIG.targetAnimations.length; i++) {
 			// i should be one to one between targetAnimations and allScreenshotData
 			let newEntry = {
@@ -179,14 +179,10 @@ class ScreenshotHandler {
 				totalFrames: allScreenshotData[i].length,
 			};
 
-			console.log(i);
-			console.log(allScreenshotData[i]);
-
 			properties.animations.push(newEntry);
 		}
 
 		let json = JSON.stringify(properties);
-		console.log(json);
 		return json;
 	}
 
