@@ -1,8 +1,6 @@
 class ScreenshotHandler {
 	CONFIG = g_config.spritesheet;
 
-	/**Nested array, separating screenshot sets by animation*/
-	allScreenshotData = [[]];
 	prevBgColor;
 	postProcess;
 
@@ -10,6 +8,9 @@ class ScreenshotHandler {
 	screenshotSet = [];
 
 	startScreenshotsCr = function* (canvas, engine, scene, camera) {
+		// Nested array, separating screenshot sets by animation
+		let allScreenshotData = [[]];
+
 		// wait for post processing to finish
 		this.setupScreenshots(canvas, scene, camera);
 		yield;
@@ -75,12 +76,13 @@ class ScreenshotHandler {
 			}
 
 			console.log("Total sprite count: " + this.screenshotSet.length);
-			this.allScreenshotData.push(this.screenshotSet);
+			allScreenshotData.push(this.screenshotSet);
 		}
 
 		// merge into a single png, zip, and save
-		console.log("Total animation count: " + this.allScreenshotData.length);
-		if (this.allScreenshotData.length > 0) this.zipAndSaveScreenshots();
+		console.log("Total animation count: " + allScreenshotData.length);
+		if (allScreenshotData.length > 0)
+			this.zipAndSaveScreenshots(allScreenshotData);
 		else console.error("Screenshots failed! No screenshots were taken.");
 
 		// clear
@@ -88,8 +90,6 @@ class ScreenshotHandler {
 	};
 
 	setupScreenshots(canvas, scene, camera) {
-		this.allScreenshotData.length = 0;
-
 		this.prevBgColor = scene.clearColor;
 		scene.clearColor = new BABYLON.Color4(0, 0, 0, 0);
 
@@ -102,22 +102,18 @@ class ScreenshotHandler {
 		);
 	}
 
-	async zipAndSaveScreenshots() {
+	async zipAndSaveScreenshots(allScreenshotData) {
 		// reposition screenshots so they appear side by side in the final image output
 		// animations are grouped by row
 		let arrangedImageData = [];
-		for (
-			let animIdx = 0;
-			animIdx < this.allScreenshotData.length;
-			animIdx++
-		) {
+		for (let animIdx = 0; animIdx < allScreenshotData.length; animIdx++) {
 			for (
 				let imgIdx = 0;
-				imgIdx < this.allScreenshotData[animIdx].length;
+				imgIdx < allScreenshotData[animIdx].length;
 				imgIdx++
 			) {
 				arrangedImageData.push({
-					src: this.allScreenshotData[animIdx][imgIdx],
+					src: allScreenshotData[animIdx][imgIdx],
 					x: imgIdx * this.CONFIG.spriteWidth,
 					y: animIdx * this.CONFIG.spriteHeight,
 				});
@@ -126,13 +122,13 @@ class ScreenshotHandler {
 
 		// base width of final image to the longest set of sprites
 		let longestSet = 0;
-		for (let animData of this.allScreenshotData)
+		for (let animData of allScreenshotData)
 			if (animData.length > longestSet) longestSet = animData.length;
 
 		let finalImage;
 		await mergeImages(arrangedImageData, {
 			width: longestSet * this.CONFIG.spriteWidth,
-			height: this.allScreenshotData.length * this.CONFIG.spriteHeight,
+			height: allScreenshotData.length * this.CONFIG.spriteHeight,
 		}).then((output) => {
 			finalImage = output;
 		});
