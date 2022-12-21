@@ -3,10 +3,17 @@
 		<script>
 			var canvas = null;
 			var context = null;
-			var frameId = 0;
+			var frameIds = [];
 			var img;
+			var properties;
 
-			function init() {
+			async function init() {
+				await fetch("./sprites/properties.json")
+					.then((response) => response.json())
+					.then((json) => (properties = json));
+
+				for (let animData of properties.animations) frameIds.push(0);
+
 				canvas = document.getElementById("canvas");
 				context = canvas.getContext("2d");
 
@@ -26,24 +33,27 @@
 			function render() {
 				context.clearRect(0, 0, canvas.width, canvas.height);
 
-				const size = 128;
-				var count = img.width / size;
+				var spriteWidth = properties.spriteWidth;
+				var spriteHeight = properties.spriteHeight;
 
-				var x = frameId * size;
+				for (let i = 0; i < properties.animations.length; i++) {
+					var count = properties.animations[i].totalFrames;
+					if (frameIds[i] >= count) frameIds[i] = 0;
 
-				context.drawImage(
-					img,
-					x,
-					0,
-					size,
-					size,
-					0,
-					0,
-					size * 2,
-					size * 2
-				);
+					context.drawImage(
+						img,
+						frameIds[i] * spriteWidth,
+						i * spriteHeight,
+						spriteWidth,
+						spriteHeight,
+						i * spriteWidth,
+						0,
+						spriteWidth,
+						spriteHeight
+					);
 
-				frameId = (frameId + 1) % count;
+					frameIds[i] += 1;
+				}
 			}
 
 			window.onload = function () {
@@ -53,6 +63,6 @@
 	</head>
 
 	<body>
-		<canvas id="canvas" width="400" height="400"></canvas>
+		<canvas id="canvas" width="384" height="128"></canvas>
 	</body>
 </html>
