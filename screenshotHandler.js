@@ -12,6 +12,7 @@ class ScreenshotHandler {
 			g_camera,
 			BABYLON.Texture.NEAREST_SAMPLINGMODE
 		);
+		yield;
 
 		let prevBgColor = scene.clearColor;
 		scene.clearColor = new BABYLON.Color4(0, 0, 0, 0);
@@ -41,7 +42,6 @@ class ScreenshotHandler {
 
 			// wait for the frame to load
 			animationGroup.goToFrame(i);
-			yield;
 			yield;
 
 			BABYLON.Tools.CreateScreenshot(
