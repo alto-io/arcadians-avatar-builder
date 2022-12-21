@@ -13,6 +13,7 @@ class ScreenshotHandler {
 			BABYLON.Texture.NEAREST_SAMPLINGMODE
 		);
 		yield;
+		yield;
 
 		let prevBgColor = scene.clearColor;
 		scene.clearColor = new BABYLON.Color4(0, 0, 0, 0);
@@ -30,10 +31,12 @@ class ScreenshotHandler {
 
 		let skipCounter = skipInterval;
 
-		for (let i = 0; i < totalFrames; i++) {
+		for (let i = 1; i <= totalFrames; i++) {
 			let skipFrame = skipInterval > 0 && skipCounter < skipInterval;
+			// force a screenshot on the last frame
+			let isLastFrame = i == totalFrames;
 
-			if (skipFrame) {
+			if (skipFrame && !isLastFrame) {
 				skipCounter++;
 				continue;
 			}
