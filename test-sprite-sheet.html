@@ -18,7 +18,7 @@
 				img = new Image();
 				img.src = "sprites/sheet.png";
 				img.onload = function () {
-					window.setInterval(render, 30);
+					window.setInterval(render, 1000 / 15); // 1000 milliseconds, 15 frames per sec
 					render();
 				};
 			}
