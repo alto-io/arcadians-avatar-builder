@@ -44,7 +44,7 @@ function initialize() {
 	//g_scene.debugLayer.show();
 
 	initEvents();
-    initGender();
+	initGender();
 
 	g_engine.runRenderLoop(() => {
 		g_scene.render();
@@ -75,17 +75,17 @@ function initEvents() {
 }
 
 function initGender() {
-    var element = document.getElementById("gender");
-    if (element == null) return;
+	var element = document.getElementById("gender");
+	if (element == null) return;
 
-    element.innerHTML = "";
+	element.innerHTML = "";
 
-    for (var g of g_config.list) {
-        var button = document.createElement("button");
-        button.innerText = g.id;
-        button.setAttribute("onClick", `loadAvatar('${g.id}')`);
-        element.appendChild(button);
-    }
+	for (var g of g_config.list) {
+		var button = document.createElement("button");
+		button.innerText = g.id;
+		button.setAttribute("onClick", `loadAvatar('${g.id}')`);
+		element.appendChild(button);
+	}
 }
 
 /**

@@ -40,8 +40,8 @@ g_config = {
 				{ id: "Cheer", name: "Cheer" },
 				{ id: "Attack", name: "Attack" },
 			],
-		}
-	]
+		},
+	],
 };
 
 g_fileList = {
@@ -92,10 +92,7 @@ g_fileList = {
 		{
 			Gender: "Male",
 			Part: "Top",
-			Files: [
-				"v2/male/parts/top/top0.png",
-				"v2/male/parts/top/top1.png",
-			],
+			Files: ["v2/male/parts/top/top0.png", "v2/male/parts/top/top1.png"],
 		},
 	],
 };

@@ -53,16 +53,16 @@ class PartsLoader {
 
 				for (var n of g_scene.rootNodes) {
 					if (n.name == "__root__") {
-						n.position = new BABYLON.Vector3(
+						(n.position = new BABYLON.Vector3(
 							avatarInfo.position.x,
 							avatarInfo.position.y,
 							avatarInfo.position.z
-						),
-						n.scaling = new BABYLON.Vector3(
-							avatarInfo.scaling.x,
-							avatarInfo.scaling.y,
-							avatarInfo.scaling.z
-						);
+						)),
+							(n.scaling = new BABYLON.Vector3(
+								avatarInfo.scaling.x,
+								avatarInfo.scaling.y,
+								avatarInfo.scaling.z
+							));
 					}
 				}
 
@@ -74,41 +74,41 @@ class PartsLoader {
 					}
 				}
 
-                this.addAnimationButtons(avatarInfo);
-                this.addPartsButtons(avatarInfo);
+				this.addAnimationButtons(avatarInfo);
+				this.addPartsButtons(avatarInfo);
 
 				callback(true);
 			}
 		);
 	}
 
-    addAnimationButtons(avatarInfo) {
-        var element = document.getElementById("animations");
-        if (element == null) return;
+	addAnimationButtons(avatarInfo) {
+		var element = document.getElementById("animations");
+		if (element == null) return;
 
-        element.innerHTML = "";
+		element.innerHTML = "";
 
-        for (var a of avatarInfo.animations) {
-            var button = document.createElement("button");
-            button.innerText = a.name;
-            button.setAttribute("onClick", `playAnim('${a.name}')`);
-            element.appendChild(button);
-        }
-    }
+		for (var a of avatarInfo.animations) {
+			var button = document.createElement("button");
+			button.innerText = a.name;
+			button.setAttribute("onClick", `playAnim('${a.name}')`);
+			element.appendChild(button);
+		}
+	}
 
-    addPartsButtons(avatarInfo) {
-        var element = document.getElementById("parts");
-        if (element == null) return;
+	addPartsButtons(avatarInfo) {
+		var element = document.getElementById("parts");
+		if (element == null) return;
 
-        element.innerHTML = "";
+		element.innerHTML = "";
 
-        for (var m of avatarInfo.materials) {
-            var button = document.createElement("button");
-            button.innerText = m.name;
-            button.setAttribute("onClick", `cycleParts('${m.name}')`);
-            element.appendChild(button);
-        }
-    }
+		for (var m of avatarInfo.materials) {
+			var button = document.createElement("button");
+			button.innerText = m.name;
+			button.setAttribute("onClick", `cycleParts('${m.name}')`);
+			element.appendChild(button);
+		}
+	}
 
 	/**
 	 * Replaces the texture of a selected part material

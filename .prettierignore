@@ -1,3 +1,5 @@
 .vs/*
 gltf/*
 sprites/*
+v2/*
+*.gltf

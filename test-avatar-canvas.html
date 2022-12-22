@@ -4,36 +4,37 @@
 	</head>
 
 	<body>
-        <script>
+		<script>
+			var fps = 30;
+			var canvas = null;
+			var context = null;
+			var avatar = null;
+			window.onload = function () {
+				canvas = document.getElementById("canvas");
+				context = this.canvas.getContext("2d");
 
-            var fps = 30;
-            var canvas = null;
-            var context = null;
-            var avatar = null;
-            window.onload = function() {
-                canvas = document.getElementById("canvas");
-                context = this.canvas.getContext("2d");
+				context.mozImageSmoothingEnabled = false;
+				context.webkitImageSmoothingEnabled = false;
+				context.msImageSmoothingEnabled = false;
+				context.imageSmoothingEnabled = false;
 
-                context.mozImageSmoothingEnabled = false;
-                context.webkitImageSmoothingEnabled = false;
-                context.msImageSmoothingEnabled = false;
-                context.imageSmoothingEnabled = false;
+				avatar = new avatarCanvas();
+				avatar.scale = 2;
+				avatar.load(
+					context,
+					"./sprites/test2/properties.json",
+					"./sprites/test2/sheet.png"
+				);
 
-                avatar = new avatarCanvas();
-                avatar.scale = 2;
-                avatar.load(context, './sprites/test2/properties.json', './sprites/test2/sheet.png');
+				window.setInterval(render, 1000 / fps);
+			};
 
-                window.setInterval(render, 1000/fps);
-            }
-
-            function render() {
-                context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-                avatar.update(1.0/fps);
-                avatar.draw();
-            }
-
-        </script>
-
+			function render() {
+				context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+				avatar.update(1.0 / fps);
+				avatar.draw();
+			}
+		</script>
 
 		<canvas id="canvas" width="768" height="256"></canvas>
 
