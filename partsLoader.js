@@ -57,6 +57,11 @@ class PartsLoader {
 							avatarInfo.position.x,
 							avatarInfo.position.y,
 							avatarInfo.position.z
+						),
+						n.scaling = new BABYLON.Vector3(
+							avatarInfo.scaling.x,
+							avatarInfo.scaling.y,
+							avatarInfo.scaling.z
 						);
 					}
 				}
@@ -94,7 +99,7 @@ class PartsLoader {
 		} else {
 			g_isLoaded = false;
 			tex = new BABYLON.Texture(
-				"arcadian-parts/" + fileName,
+				fileName,
 				g_scene,
 				true,
 				false,
