@@ -44,6 +44,7 @@ function initialize() {
 	//g_scene.debugLayer.show();
 
 	initEvents();
+    initGender();
 
 	g_engine.runRenderLoop(() => {
 		g_scene.render();
@@ -71,6 +72,20 @@ function initEvents() {
 		console.log("Enter was pressed!");
 	});
 	*/
+}
+
+function initGender() {
+    var element = document.getElementById("gender");
+    if (element == null) return;
+
+    element.innerHTML = "";
+
+    for (var g of g_config.list) {
+        var button = document.createElement("button");
+        button.innerText = g.id;
+        button.setAttribute("onClick", `loadAvatar('${g.id}')`);
+        element.appendChild(button);
+    }
 }
 
 /**

@@ -12,6 +12,10 @@
 				text-align: center;
 			}
 
+            button {
+                margin: 5px;
+            }
+
 			#renderCanvas {
 				width: 512px;
 				height: 512px;
@@ -32,65 +36,33 @@
 	<body>
 		<div>
 			<h2>Animations</h2>
-			<button onclick="playAnim('Idle')">Idle</button>
-			<button onclick="playAnim('Walk')">Walk</button>
-			<button onclick="playAnim('Talk')">Talk</button>
-			<button onclick="playAnim('Talk - Positive')">
-				Talk (Positive)
-			</button>
-			<button onclick="playAnim('Talk - Negative')">
-				Talk (Negative)
-			</button>
-			<br />
-			<button onclick="playAnim('Hit')">Hit</button>
-			<button onclick="playAnim('Stun')">Stun</button>
-			<button onclick="playAnim('Death')">Death</button>
-			<button onclick="playAnim('Win')">Win</button>
-			<button onclick="playAnim('Lose')">Lose</button>
-			<br />
-			<button onclick="playAnim('Skill - Buff')">Skill (Buff)</button>
-			<button onclick="playAnim('Skill - Melee')">Skill (Melee)</button>
-			<button onclick="playAnim('Skill - Ranged')">Skill (Ranged)</button>
-			<br />
-			<button onclick="playAnim('Attack - Assassin')">
-				Attack (Assassin)
-			</button>
-			<button onclick="playAnim('Attack - Gunner')">
-				Attack (Gunner)
-			</button>
-			<button onclick="playAnim('Attack - Knight')">
-				Attack (Knight)
-			</button>
-			<button onclick="playAnim('Attack - Tech')">Attack (Tech)</button>
-			<button onclick="playAnim('Attack - Wizard')">
-				Attack (Wizard)
-			</button>
-			<h2>Gender</h2>
-			<button onclick="loadAvatar('Male')">Load Male Model</button>
-			<button onclick="loadAvatar('Female')">Load Female Model</button>
-			<h2>Parts</h2>
-			<button onclick="cycleParts('Skin')">Cycle Skin</button>
-			<button onclick="cycleParts('Eyes')">Cycle Eyes</button>
-			<button onclick="cycleParts('Head')">Cycle Head</button>
-			<button onclick="cycleParts('Mouth')">Cycle Mouth</button>
-			<br />
-			<button onclick="cycleParts('Top')">Cycle Top</button>
-			<button onclick="cycleParts('Left Hand')">Cycle Left Hand</button>
-			<button onclick="cycleParts('Right Hand')">Cycle Right Hand</button>
-			<button onclick="cycleParts('Bottom')">Cycle Bottom</button>
-			<br />
-			<button onclick="createSpritesheet()">Create Spritesheet</button>
-			<br /><br />
-		</div>
+            <div id="animations">
+                <!-- added dynamically in partsLoader -->
+            </div>
 
-		<div>
-			<canvas id="renderCanvas"></canvas>
-		</div>
+            <h2>Gender</h2>
+            <div id="gender">
+                <!-- added dynamically in index.js -->
+            </div>
 
-		<script src="config.js"></script>
-		<script src="screenshotHandler.js"></script>
-		<script src="keyboardHandler.js"></script>
-		<script src="partsLoader.js"></script>
-		<script src="index.js"></script>
-	</body>
+            <h2>Parts</h2>
+            <div id="parts">
+                <!-- added dynamically in partsLoader -->
+            </div>
+
+            <br />
+            <button onclick="createSpritesheet()">Create Spritesheet</button>
+            <br /><br />
+        </div>
+
+        <div>
+            <canvas id="renderCanvas"></canvas>
+        </div>
+
+        <script src="config.js"></script>
+        <script src="screenshotHandler.js"></script>
+        <script src="keyboardHandler.js"></script>
+        <script src="partsLoader.js"></script>
+        <script src="index.js"></script>
+    </body>
 </html>

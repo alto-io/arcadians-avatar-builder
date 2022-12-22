@@ -12,7 +12,7 @@ g_config = {
 		 * Which animations to use as reference for the spritesheet.
 		 * Their order in the array determines their vertical order on the sheet
 		 */
-		targetAnimations: ["Idle", "Walk", "Attack"],
+		targetAnimations: ["Idle", "Cheer", "Attack"],
 
 		zipFileName: "YourArcadian.zip",
 		spritesSubFolder: "sprites/",
@@ -37,8 +37,8 @@ g_config = {
 			],
 			animations: [
 				{ id: "Idle", name: "Idle" },
-				{ id: "Cheer", name: "Walk" },
-				{ id: "Attack", name: "Talk" },
+				{ id: "Cheer", name: "Cheer" },
+				{ id: "Attack", name: "Attack" },
 			],
 		}
 	]
