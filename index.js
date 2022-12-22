@@ -15,7 +15,7 @@ var g_partsLoader = new PartsLoader();
 var g_animPrev = null;
 
 /**
- * Main initialize function. 
+ * Main initialize function.
  */
 function initialize() {
 	g_engine = new BABYLON.Engine(g_canvas, true, {

@@ -48,7 +48,7 @@ class PartsLoader {
 			avatarInfo.gltfFileName,
 			g_scene,
 			() => {
-                this.#onAppendSuccess(avatarInfo, id);
+				this.#onAppendSuccess(avatarInfo, id);
 				callback(true);
 			}
 		);
@@ -56,42 +56,42 @@ class PartsLoader {
 
 	/**
 	 * Call this after loading the GLTF successfully
-     */
-    #onAppendSuccess(avatarInfo, id) {
-        this.matList = avatarInfo.materials;
-        this.#getPartsList(id);
+	 */
+	#onAppendSuccess(avatarInfo, id) {
+		this.matList = avatarInfo.materials;
+		this.#getPartsList(id);
 
-        for (var n of g_scene.rootNodes) {
-            if (n.name == "__root__") {
-                (n.position = new BABYLON.Vector3(
-                    avatarInfo.position.x,
-                    avatarInfo.position.y,
-                    avatarInfo.position.z
-                )),
-                    (n.scaling = new BABYLON.Vector3(
-                        avatarInfo.scaling.x,
-                        avatarInfo.scaling.y,
-                        avatarInfo.scaling.z
-                    ));
-            }
-        }
+		for (var n of g_scene.rootNodes) {
+			if (n.name == "__root__") {
+				(n.position = new BABYLON.Vector3(
+					avatarInfo.position.x,
+					avatarInfo.position.y,
+					avatarInfo.position.z
+				)),
+					(n.scaling = new BABYLON.Vector3(
+						avatarInfo.scaling.x,
+						avatarInfo.scaling.y,
+						avatarInfo.scaling.z
+					));
+			}
+		}
 
-        for (var m of g_scene.materials) {
-            if (m != null && m.albedoTexture != null) {
-                m.albedoTexture.updateSamplingMode(
-                    BABYLON.Texture.NEAREST_SAMPLINGMODE
-                );
-            }
-        }
+		for (var m of g_scene.materials) {
+			if (m != null && m.albedoTexture != null) {
+				m.albedoTexture.updateSamplingMode(
+					BABYLON.Texture.NEAREST_SAMPLINGMODE
+				);
+			}
+		}
 
-        this.#addAnimationButtons(avatarInfo);
-        this.#addPartsButtons(avatarInfo);
-    }
+		this.#addAnimationButtons(avatarInfo);
+		this.#addPartsButtons(avatarInfo);
+	}
 
 	/**
 	 * Add animation buttons to the html
-     */
-    #addAnimationButtons(avatarInfo) {
+	 */
+	#addAnimationButtons(avatarInfo) {
 		var element = document.getElementById("animations");
 		if (element == null) return;
 
@@ -107,8 +107,8 @@ class PartsLoader {
 
 	/**
 	 * Add different parts buttons to the html
-     */
-    #addPartsButtons(avatarInfo) {
+	 */
+	#addPartsButtons(avatarInfo) {
 		var element = document.getElementById("parts");
 		if (element == null) return;
 
