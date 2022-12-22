@@ -9,6 +9,12 @@ g_config = {
 		framesToSkip: 3,
 
 		/**
+		 * Default frame rate of the animations to play.
+		 * Used with framesToSkip to generate properties.json
+		 */
+		defaultFrameRate: 60,
+
+		/**
 		 * Which animations to use as reference for the spritesheet.
 		 * Their order in the array determines their vertical order on the sheet
 		 */

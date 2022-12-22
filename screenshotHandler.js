@@ -172,6 +172,8 @@ class ScreenshotHandler {
 		let properties = {
 			spriteWidth: this.CONFIG.spriteWidth,
 			spriteHeight: this.CONFIG.spriteHeight,
+			framesPerSec:
+				this.CONFIG.defaultFrameRate / (this.CONFIG.framesToSkip + 1),
 			animations: [],
 		};
 
