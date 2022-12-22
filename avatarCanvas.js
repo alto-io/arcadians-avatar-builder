@@ -56,8 +56,9 @@ function playAnim(animName) {
 	if (this.interval != null) {
 		clearInterval(this.interval);
 	}
-	
-	this.interval = window.setInterval(render, 1000 / 15, animName); // 1000 milliseconds, 15 frames per sec
+
+	let timeout = 1000 / this.properties.framesPerSec;
+	this.interval = window.setInterval(render, timeout, animName);
 }
 
 window.onload = function () {
