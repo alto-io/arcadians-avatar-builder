@@ -19,26 +19,26 @@ function render(animName) {
 	this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
 	var anim = this.properties.animations.find((x) => x.name == animName);
-	if(anim == null) return;
+	if (anim == null) return;
 
 	var spriteWidth = this.properties.spriteWidth;
 	var spriteHeight = this.properties.spriteHeight;
 
-	if(frame >= anim.totalFrames) this.frame = 0;
+	if (frame >= anim.totalFrames) this.frame = 0;
 
-		this.context.drawImage(
-			this.img,
-			this.frame * spriteWidth,
-			anim.rowIndex * spriteHeight,
-			spriteWidth,
-			spriteHeight,
-			spriteWidth * 2,
-			0,
-			spriteWidth * 2,
-			spriteHeight * 2
-		);
+	this.context.drawImage(
+		this.img,
+		this.frame * spriteWidth,
+		anim.rowIndex * spriteHeight,
+		spriteWidth,
+		spriteHeight,
+		spriteWidth * 2,
+		0,
+		spriteWidth * 2,
+		spriteHeight * 2
+	);
 
-		this.frame++;
+	this.frame++;
 }
 
 async function loadAvatar(properties, spriteSheet) {
@@ -63,4 +63,4 @@ function playAnim(animName) {
 
 window.onload = function () {
 	init();
-}
+};
