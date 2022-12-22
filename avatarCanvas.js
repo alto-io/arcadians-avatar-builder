@@ -1,66 +1,65 @@
-var canvas = null;
-var context = null;
-var frame = 0;
-var img;
-var properties;
-var interval;
+class avatarCanvas {
 
-async function init() {
-	this.canvas = document.getElementById("canvas");
-	this.context = this.canvas.getContext("2d");
+    context = null;
+    frame = 0;
+    img;
+    properties;
+    interval;
+    position = { x: 0, y: 0 };
+    scale = 1;
 
-	this.context.mozImageSmoothingEnabled = false;
-	this.context.webkitImageSmoothingEnabled = false;
-	this.context.msImageSmoothingEnabled = false;
-	this.context.imageSmoothingEnabled = false;
+    animName = "";
+    animInterval = 0;
+    animFrameTime = 0;
+
+    update(deltaSecs) {
+        this.animFrameTime += deltaSecs;
+        while (this.animFrameTime > this.animInterval) {
+            this.frame++;
+            this.animFrameTime -= this.animInterval;
+        }
+    }
+
+    draw() {
+        if (this.context == null) return;
+
+        var anim = this.properties.animations.find((x) => x.name == this.animName);
+        if (anim == null) return;
+
+        var spriteWidth = this.properties.spriteWidth;
+        var spriteHeight = this.properties.spriteHeight;
+
+        if (this.frame >= anim.totalFrames) this.frame = 0;
+
+        this.context.drawImage(
+            this.img,
+            this.frame * spriteWidth,
+            anim.rowIndex * spriteHeight,
+            spriteWidth,
+            spriteHeight,
+            this.position.x,
+            this.position.y,
+            spriteWidth * this.scale,
+            spriteHeight * this.scale
+        );
+    }
+
+    async load(context, properties, spriteSheet) {
+        this.context = context;
+
+        await fetch(properties)
+            .then((response) => response.json())
+            .then((json) => (this.properties = json));
+
+        this.img = new Image();
+        this.img.src = spriteSheet;
+        this.img.onload = this.playAnim("Idle");
+    }
+
+    playAnim(animName) {
+        this.animName = animName;
+        this.animInterval = 1.0 / this.properties.framesPerSec;
+    }
+
 }
 
-function render(animName) {
-	this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
-	var anim = this.properties.animations.find((x) => x.name == animName);
-	if (anim == null) return;
-
-	var spriteWidth = this.properties.spriteWidth;
-	var spriteHeight = this.properties.spriteHeight;
-
-	if (frame >= anim.totalFrames) this.frame = 0;
-
-	this.context.drawImage(
-		this.img,
-		this.frame * spriteWidth,
-		anim.rowIndex * spriteHeight,
-		spriteWidth,
-		spriteHeight,
-		spriteWidth * 2,
-		0,
-		spriteWidth * 2,
-		spriteHeight * 2
-	);
-
-	this.frame++;
-}
-
-async function loadAvatar(properties, spriteSheet) {
-	await fetch(properties)
-		.then((response) => response.json())
-		.then((json) => (this.properties = json));
-
-	this.img = new Image();
-	this.img.src = spriteSheet;
-	this.img.onload = playAnim("Idle");
-}
-
-function playAnim(animName) {
-	// To prevent animation speed up
-	if (this.interval != null) {
-		clearInterval(this.interval);
-	}
-
-	let timeout = 1000 / this.properties.framesPerSec;
-	this.interval = window.setInterval(render, timeout, animName);
-}
-
-window.onload = function () {
-	init();
-};
