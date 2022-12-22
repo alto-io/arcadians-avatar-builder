@@ -14,6 +14,9 @@ var g_screenshotHandler = new ScreenshotHandler();
 var g_partsLoader = new PartsLoader();
 var g_animPrev = null;
 
+/**
+ * Main initialize function. 
+ */
 function initialize() {
 	g_engine = new BABYLON.Engine(g_canvas, true, {
 		preserveDrawingBuffer: true, // for screenshots
@@ -36,9 +39,6 @@ function initialize() {
 		g_scene
 	);
 
-	//var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {}, g_scene);
-	//var postProcess = new BABYLON.PassPostProcess("Scene copy", 1.0, g_camera, BABYLON.Texture.NEAREST_SAMPLINGMODE);
-
 	// for debugging
 	//g_camera.attachControl(g_canvas, true);
 	//g_scene.debugLayer.show();
@@ -53,6 +53,9 @@ function initialize() {
 	loadAvatar("Male");
 }
 
+/**
+ * Initialize event handling
+ */
 function initEvents() {
 	g_scene.onKeyboardObservable.add((kbInfo) => {
 		//console.log(kbInfo.event.key);
@@ -74,6 +77,9 @@ function initEvents() {
 	*/
 }
 
+/**
+ * Add gender buttons to the html
+ */
 function initGender() {
 	var element = document.getElementById("gender");
 	if (element == null) return;
