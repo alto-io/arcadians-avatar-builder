@@ -1,68 +1,15 @@
 <html>
 	<head>
-		<script>
-			var canvas = null;
-			var context = null;
-			var frameIds = [];
-			var img;
-			var properties;
-
-			async function init() {
-				await fetch("./sprites/properties.json")
-					.then((response) => response.json())
-					.then((json) => (properties = json));
-
-				for (let animData of properties.animations) frameIds.push(0);
-
-				canvas = document.getElementById("canvas");
-				context = canvas.getContext("2d");
-
-				context.mozImageSmoothingEnabled = false;
-				context.webkitImageSmoothingEnabled = false;
-				context.msImageSmoothingEnabled = false;
-				context.imageSmoothingEnabled = false;
-
-				img = new Image();
-				img.src = "sprites/sheet.png";
-				img.onload = function () {
-					window.setInterval(render, 1000 / 15); // 1000 milliseconds, 15 frames per sec
-					render();
-				};
-			}
-
-			function render() {
-				context.clearRect(0, 0, canvas.width, canvas.height);
-
-				var spriteWidth = properties.spriteWidth;
-				var spriteHeight = properties.spriteHeight;
-
-				for (let i = 0; i < properties.animations.length; i++) {
-					var count = properties.animations[i].totalFrames;
-					if (frameIds[i] >= count) frameIds[i] = 0;
-
-					context.drawImage(
-						img,
-						frameIds[i] * spriteWidth,
-						i * spriteHeight,
-						spriteWidth,
-						spriteHeight,
-						i * spriteWidth * 2,
-						0,
-						spriteWidth * 2,
-						spriteHeight * 2
-					);
-
-					frameIds[i] += 1;
-				}
-			}
-
-			window.onload = function () {
-				init();
-			};
-		</script>
+		<script src="avatarCanvas.js"></script>
 	</head>
 
 	<body>
+		<h3>DEBUG BUTTONS</h3>
+		<button onclick="loadAvatar('./sprites/test2/properties.json', './sprites/test2/sheet.png')">Load Male Avatar</button>
+		<button onclick="loadAvatar('./sprites/test1/properties.json', './sprites/test1/sheet.png')">Load Female Avatar</button>
+		<button onclick="playAnim('Idle')">Idle</button>
+		<button onclick="playAnim('Walk')">Walk</button>
+		<button onclick="playAnim('Attack - Knight')">Attack</button>
 		<canvas id="canvas" width="768" height="256"></canvas>
 	</body>
 </html>
