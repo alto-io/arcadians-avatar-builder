@@ -19,9 +19,14 @@ This project will be embedded to the Arcadians v2 mint site. It shows an animate
 
 ## Config file
 
-- `src/config.js` has been provided as a starting point that contains the v1 Arcadians data
+- [`config.js`](src/config.js) has been provided as a starting point that contains the v1 Arcadians data
 - It contains settings on the following:
     - exporting the sprite sheet
     - list of gltf files, materials and animations
     - list of parts
 - The config file contains documentation comments on the important sections
+
+## Avatar Canvas Game Lego
+
+- [`avatarCanvas.js`](src/avatarCanvas.js) is a reusable game lego for drawing and playing animations from the exported sprite sheet
+- [Demo page](test-avatar-canvas.html) has been provided as a sample how to use this class
