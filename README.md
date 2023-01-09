@@ -16,3 +16,12 @@ This project will be embedded to the Arcadians v2 mint site. It shows an animate
 - Clone the repository
 - Run any http server on the working directory (i.e. `http-server`)
 - Open http://localhost:8080
+
+## Config file
+
+- `src/config.js` has been provided as a starting point that contains the v1 Arcadians data
+- It contains settings on the following:
+    - exporting the sprite sheet
+    - list of gltf files, materials and animations
+    - list of parts
+- The config file contains documentation comments on the important sections
