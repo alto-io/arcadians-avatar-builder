@@ -1,12 +1,16 @@
 g_config = {
 	spritesheet: {
-		/**Size of each individual sprite*/
-		spriteWidth: 128,
-		/**Size of each individual sprite*/
+
+		/** Size of each individual sprite*/
+		spriteWidth: 128,  
 		spriteHeight: 128,
 
-		/**How many frames to skip for the duration of the anim*/
-		framesToSkip: 3,
+		/** 
+		 * How many frames to skip for the duration of the anim
+		 * Increasing this number will result in fewer frames on the sprite sheet
+		 * Decreasing this number will result in more frames on the sprite sheet
+		 */
+		framesToSkip: 3,   
 
 		/**
 		 * Default frame rate of the animations to play.
@@ -20,20 +24,27 @@ g_config = {
 		 */
 		targetAnimations: ["Idle", "Walk", "Attack - Knight"],
 
+		/** Export settings for the spritesheet */
 		zipFileName: "YourArcadian.zip",
 		spritesSubFolder: "",
 		sheetfileName: "sheet.png",
 		sheetJsonName: "properties.json",
 	},
 
+	/** List of avatar gltf files. Right now there's one for male and female */
 	list: [
 		{
 			id: "Male",
-			gltfPath: "./v1/gltf/Male/",
-			gltfFileName: "ArcadianAvatar.gltf",
-			position: { x: 0, y: -1, z: 0 },
-			scaling: { x: 1, y: 1, z: -1 },
+			gltfPath: "./v1/gltf/Male/",         /** folder to the gltf */
+			gltfFileName: "ArcadianAvatar.gltf", /** filename of the gltf */
+			position: { x: 0, y: -1, z: 0 },     /** Position on the scene */
+			scaling: { x: 1, y: 1, z: -1 },      /** Scale of the avatar */
 			materials: [
+
+				/** 
+				 * id - material names defined in Blender
+				 * name - friendly name to be shown on the html page 
+				 */
 				{ id: "mat.mskin", name: "Skin" },
 				{ id: "mat.meyes", name: "Eyes" },
 				{ id: "mat.mhead", name: "Head" },
@@ -45,6 +56,10 @@ g_config = {
 				{ id: "mat.mshad", name: "Shadow" },
 			],
 			animations: [
+				/** 
+				 * id - animation names defined in Blender
+				 * name - friendly name to be shown on the html page 
+				 */
 				{ id: "m.idle", name: "Idle" },
 				{ id: "m.walk", name: "Walk" },
 				{ id: "m.talk", name: "Talk" },
@@ -106,6 +121,11 @@ g_config = {
 	],
 };
 
+/**
+ * This contains a list of files per avatar part.
+ * Currently this is the most reliable way to list the parts so that the 
+ * code can know what parts are available.
+ */
 g_fileList = {
 	List: [
 		{
