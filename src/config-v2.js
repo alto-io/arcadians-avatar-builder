@@ -15,7 +15,7 @@ g_config = {
 		targetAnimations: ["Idle", "Cheer", "Attack"],
 
 		zipFileName: "YourArcadian.zip",
-		spritesSubFolder: "sprites/",
+		spritesSubFolder: "",
 		sheetfileName: "sheet.png",
 		sheetJsonName: "properties.json",
 	},
