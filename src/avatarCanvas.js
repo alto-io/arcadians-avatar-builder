@@ -1,9 +1,7 @@
-
-/** 
+/**
  * Game Lego for loading the avatar spritesheet using Canvas
  */
 class avatarCanvas {
-
 	// Reference to the context
 	context = null;
 
