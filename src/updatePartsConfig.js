@@ -1,10 +1,11 @@
-//Run with node
+//	Run with node
 
-//Part pngs must be arranged in ./v1/arcadian-parts as:
-//[Gender]/[BodyPart]/[PartName].png
+//	Part pngs must be arranged in arcadianPartsPath as:
+//	[Gender]/[BodyPart]/[PartName].png
+//	Output is at arcadianPartsPath/partsConfigFileName
 
 const arcadianPartsPath = "./v2/arcadian-parts";
-const partsConfigPath = "./src/partsConfig.json";
+const partsConfigFileName = "partsConfig.json";
 const fs = require("fs");
 
 generatePartsConfig();
@@ -13,9 +14,12 @@ generatePartsConfig();
 function generatePartsConfig() {
 	let output = getAvatarFiles();
 	let json = JSON.stringify(output, null, "\t");
-	fs.writeFile(partsConfigPath, json, function (error) {
+
+	let path = arcadianPartsPath + "/" + partsConfigFileName;
+
+	fs.writeFile(path, json, function (error) {
 		if (error) throw error;
-		console.log("Saved at " + partsConfigPath);
+		console.log("Saved at " + path);
 	});
 }
 

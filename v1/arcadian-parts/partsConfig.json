@@ -1,0 +1,2302 @@
+[
+	{
+		"Gender": "Female",
+		"Parts": [
+			{
+				"Name": "Bottom",
+				"Files": [
+					{
+						"Name": "Alien-Queen-Bottom",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Alien-Queen-Bottom.png"
+					},
+					{
+						"Name": "Amazon-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Amazon-Leggings.png"
+					},
+					{
+						"Name": "Barbarian-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Barbarian-Leggings.png"
+					},
+					{
+						"Name": "Black-Leather-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Black-Leather-Leggings.png"
+					},
+					{
+						"Name": "Bloodmage-Dress",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Bloodmage-Dress.png"
+					},
+					{
+						"Name": "Blue-Legging",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Blue-Legging.png"
+					},
+					{
+						"Name": "Challenger-Dominiel-Armor",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Challenger-Dominiel-Armor.png"
+					},
+					{
+						"Name": "Challenger-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Challenger-Leggings.png"
+					},
+					{
+						"Name": "Cyberpunk-Legging",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Cyberpunk-Legging.png"
+					},
+					{
+						"Name": "Darkmage-Dress",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Darkmage-Dress.png"
+					},
+					{
+						"Name": "Deedlit-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Deedlit-Leggings.png"
+					},
+					{
+						"Name": "Emo-Goth-Punk-Legging",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Emo-Goth-Punk-Legging.png"
+					},
+					{
+						"Name": "Fishnets-Legging",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Fishnets-Legging.png"
+					},
+					{
+						"Name": "Formal-Tuxedo-Legging",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Formal-Tuxedo-Legging.png"
+					},
+					{
+						"Name": "Green-Fishnet-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Green-Fishnet-Leggings.png"
+					},
+					{
+						"Name": "Green-Legging",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Green-Legging.png"
+					},
+					{
+						"Name": "Kerrigan-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Kerrigan-Leggings.png"
+					},
+					{
+						"Name": "Khaki-Shorts",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Khaki-Shorts.png"
+					},
+					{
+						"Name": "Kimono--Legging",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Kimono--Legging.png"
+					},
+					{
+						"Name": "Kunimitsu-Legging",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Kunimitsu-Legging.png"
+					},
+					{
+						"Name": "Magical-Girl-Bottom",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Magical-Girl-Bottom.png"
+					},
+					{
+						"Name": "Mechanic-Blue-Legging",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Mechanic-Blue-Legging.png"
+					},
+					{
+						"Name": "Metroid-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Metroid-Leggings.png"
+					},
+					{
+						"Name": "Nier-Automata-Legging",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Nier-Automata-Legging.png"
+					},
+					{
+						"Name": "Orange-Skirt",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Orange-Skirt.png"
+					},
+					{
+						"Name": "Priestess-Robe-Dress",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Priestess-Robe-Dress.png"
+					},
+					{
+						"Name": "Priestess-Steel-Boots",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Priestess-Steel-Boots.png"
+					},
+					{
+						"Name": "Ranger-Bottom",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Ranger-Bottom.png"
+					},
+					{
+						"Name": "Ranger-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Ranger-Leggings.png"
+					},
+					{
+						"Name": "Samurai-Legging",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Samurai-Legging.png"
+					},
+					{
+						"Name": "Samurai-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Samurai-Leggings.png"
+					},
+					{
+						"Name": "Soldier-Army-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Soldier-Army-Leggings.png"
+					},
+					{
+						"Name": "White--Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/White--Leggings.png"
+					},
+					{
+						"Name": "Witcher-Leggings",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Witcher-Leggings.png"
+					},
+					{
+						"Name": "Yellow-Robe-Armor",
+						"Path": "./v1/arcadian-parts/Female/Bottom/Yellow-Robe-Armor.png"
+					}
+				]
+			},
+			{
+				"Name": "Eyes",
+				"Files": [
+					{
+						"Name": "Angry",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Angry.png"
+					},
+					{
+						"Name": "Bushy-Eyebrows",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Bushy-Eyebrows.png"
+					},
+					{
+						"Name": "Eyepatch",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Eyepatch.png"
+					},
+					{
+						"Name": "Fiery-Stare",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Fiery-Stare.png"
+					},
+					{
+						"Name": "Fiiery-Star",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Fiiery-Star.png"
+					},
+					{
+						"Name": "Glasses-and-Eyebrows",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Glasses-and-Eyebrows.png"
+					},
+					{
+						"Name": "Happy",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Happy.png"
+					},
+					{
+						"Name": "Icy-Stare",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Icy-Stare.png"
+					},
+					{
+						"Name": "Mischief",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Mischief.png"
+					},
+					{
+						"Name": "Original",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Original.png"
+					},
+					{
+						"Name": "Poison-Stare",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Poison-Stare.png"
+					},
+					{
+						"Name": "Poison",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Poison.png"
+					},
+					{
+						"Name": "Scar",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Scar.png"
+					},
+					{
+						"Name": "Shellsocked",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Shellsocked.png"
+					},
+					{
+						"Name": "Sneaky",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Sneaky.png"
+					},
+					{
+						"Name": "Sunglasses",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Sunglasses.png"
+					},
+					{
+						"Name": "uwu-Eyes",
+						"Path": "./v1/arcadian-parts/Female/Eyes/uwu-Eyes.png"
+					},
+					{
+						"Name": "White-Glasses",
+						"Path": "./v1/arcadian-parts/Female/Eyes/White-Glasses.png"
+					},
+					{
+						"Name": "Winking",
+						"Path": "./v1/arcadian-parts/Female/Eyes/Winking.png"
+					}
+				]
+			},
+			{
+				"Name": "Head",
+				"Files": [
+					{
+						"Name": "Bald-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Bald-Hair.png"
+					},
+					{
+						"Name": "Black-Cat",
+						"Path": "./v1/arcadian-parts/Female/Head/Black-Cat.png"
+					},
+					{
+						"Name": "Black-Hoodie",
+						"Path": "./v1/arcadian-parts/Female/Head/Black-Hoodie.png"
+					},
+					{
+						"Name": "Black-with-Ombre-Green-Tips-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Black-with-Ombre-Green-Tips-Hair.png"
+					},
+					{
+						"Name": "Black-with-Ombre-Green-Tips-Long-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Black-with-Ombre-Green-Tips-Long-Hair.png"
+					},
+					{
+						"Name": "Blindfold",
+						"Path": "./v1/arcadian-parts/Female/Head/Blindfold.png"
+					},
+					{
+						"Name": "Blonde-Bandana",
+						"Path": "./v1/arcadian-parts/Female/Head/Blonde-Bandana.png"
+					},
+					{
+						"Name": "Blonde-Bun",
+						"Path": "./v1/arcadian-parts/Female/Head/Blonde-Bun.png"
+					},
+					{
+						"Name": "Brow-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Brow-Hair.png"
+					},
+					{
+						"Name": "Brown-Cat",
+						"Path": "./v1/arcadian-parts/Female/Head/Brown-Cat.png"
+					},
+					{
+						"Name": "Brown-Hair-with-Black-Green-Razer-Cat-Headphones",
+						"Path": "./v1/arcadian-parts/Female/Head/Brown-Hair-with-Black-Green-Razer-Cat-Headphones.png"
+					},
+					{
+						"Name": "Brown-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Brown-Hair.png"
+					},
+					{
+						"Name": "Cat-Ears",
+						"Path": "./v1/arcadian-parts/Female/Head/Cat-Ears.png"
+					},
+					{
+						"Name": "Centurion-Helmet",
+						"Path": "./v1/arcadian-parts/Female/Head/Centurion-Helmet.png"
+					},
+					{
+						"Name": "Elecktra-Pony",
+						"Path": "./v1/arcadian-parts/Female/Head/Elecktra-Pony.png"
+					},
+					{
+						"Name": "Green-Headset",
+						"Path": "./v1/arcadian-parts/Female/Head/Green-Headset.png"
+					},
+					{
+						"Name": "Green-Hoodie",
+						"Path": "./v1/arcadian-parts/Female/Head/Green-Hoodie.png"
+					},
+					{
+						"Name": "Green-Pony",
+						"Path": "./v1/arcadian-parts/Female/Head/Green-Pony.png"
+					},
+					{
+						"Name": "Headset",
+						"Path": "./v1/arcadian-parts/Female/Head/Headset.png"
+					},
+					{
+						"Name": "High-Pony",
+						"Path": "./v1/arcadian-parts/Female/Head/High-Pony.png"
+					},
+					{
+						"Name": "Kabuki-Makeup",
+						"Path": "./v1/arcadian-parts/Female/Head/Kabuki-Makeup.png"
+					},
+					{
+						"Name": "Kerrigan-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Kerrigan-Hair.png"
+					},
+					{
+						"Name": "Light-Blond-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Light-Blond-Hair.png"
+					},
+					{
+						"Name": "Long-Blond-Pigtails",
+						"Path": "./v1/arcadian-parts/Female/Head/Long-Blond-Pigtails.png"
+					},
+					{
+						"Name": "Mechanic-Brown-Rat",
+						"Path": "./v1/arcadian-parts/Female/Head/Mechanic-Brown-Rat.png"
+					},
+					{
+						"Name": "Metroid-Helmet",
+						"Path": "./v1/arcadian-parts/Female/Head/Metroid-Helmet.png"
+					},
+					{
+						"Name": "Metroid-Inspired-Helmet",
+						"Path": "./v1/arcadian-parts/Female/Head/Metroid-Inspired-Helmet.png"
+					},
+					{
+						"Name": "Mohawk-Data-Cables",
+						"Path": "./v1/arcadian-parts/Female/Head/Mohawk-Data-Cables.png"
+					},
+					{
+						"Name": "Ombre-Green-Long",
+						"Path": "./v1/arcadian-parts/Female/Head/Ombre-Green-Long.png"
+					},
+					{
+						"Name": "Ombre-Green-Short",
+						"Path": "./v1/arcadian-parts/Female/Head/Ombre-Green-Short.png"
+					},
+					{
+						"Name": "Orange-Hair-with-Pink-Glasses",
+						"Path": "./v1/arcadian-parts/Female/Head/Orange-Hair-with-Pink-Glasses.png"
+					},
+					{
+						"Name": "Orange-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Orange-Hair.png"
+					},
+					{
+						"Name": "Pony-with-Black-Green-Razer-Cat-Headphones",
+						"Path": "./v1/arcadian-parts/Female/Head/Pony-with-Black-Green-Razer-Cat-Headphones.png"
+					},
+					{
+						"Name": "Rat-Tail",
+						"Path": "./v1/arcadian-parts/Female/Head/Rat-Tail.png"
+					},
+					{
+						"Name": "Red-Bandana",
+						"Path": "./v1/arcadian-parts/Female/Head/Red-Bandana.png"
+					},
+					{
+						"Name": "Red-Head-Pony",
+						"Path": "./v1/arcadian-parts/Female/Head/Red-Head-Pony.png"
+					},
+					{
+						"Name": "Sakura-Bandana",
+						"Path": "./v1/arcadian-parts/Female/Head/Sakura-Bandana.png"
+					},
+					{
+						"Name": "Samurai-Helmet",
+						"Path": "./v1/arcadian-parts/Female/Head/Samurai-Helmet.png"
+					},
+					{
+						"Name": "Short-White-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Short-White-Hair.png"
+					},
+					{
+						"Name": "Soldier-Blonde-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Soldier-Blonde-Hair.png"
+					},
+					{
+						"Name": "Soldier-Brow-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Soldier-Brow-Hair.png"
+					},
+					{
+						"Name": "Soldier-Brown-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Soldier-Brown-Hair.png"
+					},
+					{
+						"Name": "Tomb-Raider-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Tomb-Raider-Hair.png"
+					},
+					{
+						"Name": "Trinity-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Trinity-Hair.png"
+					},
+					{
+						"Name": "Viking-Helmet",
+						"Path": "./v1/arcadian-parts/Female/Head/Viking-Helmet.png"
+					},
+					{
+						"Name": "White-Elven-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/White-Elven-Hair.png"
+					},
+					{
+						"Name": "Wild-Hair",
+						"Path": "./v1/arcadian-parts/Female/Head/Wild-Hair.png"
+					}
+				]
+			},
+			{
+				"Name": "Left Hand",
+				"Files": [
+					{
+						"Name": "Axe-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Axe-L.png"
+					},
+					{
+						"Name": "Battle-Guitar-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Battle-Guitar-L.png"
+					},
+					{
+						"Name": "Book-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Book-L.png"
+					},
+					{
+						"Name": "Claws-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Claws-L.png"
+					},
+					{
+						"Name": "Crossbow-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Crossbow-L.png"
+					},
+					{
+						"Name": "Crystal-Sword-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Crystal-Sword-L.png"
+					},
+					{
+						"Name": "Cyberpunk-Gun-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Cyberpunk-Gun-L.png"
+					},
+					{
+						"Name": "Cyberpunk-Sword-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Cyberpunk-Sword-L.png"
+					},
+					{
+						"Name": "Elecktra-Sai-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Elecktra-Sai-L.png"
+					},
+					{
+						"Name": "Flying-Guillotine-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Flying-Guillotine-L.png"
+					},
+					{
+						"Name": "Gloves-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Gloves-L.png"
+					},
+					{
+						"Name": "Glowing-Scroll-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Glowing-Scroll-L.png"
+					},
+					{
+						"Name": "Gowing-Hands-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Gowing-Hands-L.png"
+					},
+					{
+						"Name": "Iron-Fan-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Iron-Fan-L.png"
+					},
+					{
+						"Name": "Knight-Cross-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Knight-Cross-L.png"
+					},
+					{
+						"Name": "Knight-Flaming-Sword-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Knight-Flaming-Sword-L.png"
+					},
+					{
+						"Name": "Knight-Sword-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Knight-Sword-L.png"
+					},
+					{
+						"Name": "Kunai-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Kunai-L.png"
+					},
+					{
+						"Name": "Mage-Staff-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Mage-Staff-L.png"
+					},
+					{
+						"Name": "Magical-Girl-Wand-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Magical-Girl-Wand-L.png"
+					},
+					{
+						"Name": "Magical-Quill-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Magical-Quill-L.png"
+					},
+					{
+						"Name": "Mechanic-Screwdriver-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Mechanic-Screwdriver-L.png"
+					},
+					{
+						"Name": "Mobile-Phone-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Mobile-Phone-L.png"
+					},
+					{
+						"Name": "None",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/None.png"
+					},
+					{
+						"Name": "Pistol-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Pistol-L.png"
+					},
+					{
+						"Name": "Poison-Sword-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Poison-Sword-L.png"
+					},
+					{
+						"Name": "Priestess-Chalice-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Priestess-Chalice-L.png"
+					},
+					{
+						"Name": "Ranger-Bow-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Ranger-Bow-L.png"
+					},
+					{
+						"Name": "Riffle-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Riffle-L.png"
+					},
+					{
+						"Name": "Rifle-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Rifle-L.png"
+					},
+					{
+						"Name": "Samurai-Katana-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Samurai-Katana-L.png"
+					},
+					{
+						"Name": "Scept-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Scept-L.png"
+					},
+					{
+						"Name": "Scythe-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Scythe-L.png"
+					},
+					{
+						"Name": "Shuriken-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Shuriken-L.png"
+					},
+					{
+						"Name": "Soldier-Riffle-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Soldier-Riffle-L.png"
+					},
+					{
+						"Name": "Soldier-Rifle-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Soldier-Rifle-L.png"
+					},
+					{
+						"Name": "Sword-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Sword-L.png"
+					},
+					{
+						"Name": "Tomb-Raider-Pistol-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Tomb-Raider-Pistol-L.png"
+					},
+					{
+						"Name": "Trident-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Trident-L.png"
+					},
+					{
+						"Name": "Wakizashi-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Wakizashi-L.png"
+					},
+					{
+						"Name": "Wrench-L",
+						"Path": "./v1/arcadian-parts/Female/Left Hand/Wrench-L.png"
+					}
+				]
+			},
+			{
+				"Name": "Mouth",
+				"Files": [
+					{
+						"Name": "Closed-Smile",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Closed-Smile.png"
+					},
+					{
+						"Name": "Flat",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Flat.png"
+					},
+					{
+						"Name": "Little-Smile",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Little-Smile.png"
+					},
+					{
+						"Name": "Okay",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Okay.png"
+					},
+					{
+						"Name": "One-Fang",
+						"Path": "./v1/arcadian-parts/Female/Mouth/One-Fang.png"
+					},
+					{
+						"Name": "Pucker",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Pucker.png"
+					},
+					{
+						"Name": "Sad",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Sad.png"
+					},
+					{
+						"Name": "Smile",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Smile.png"
+					},
+					{
+						"Name": "Smiling",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Smiling.png"
+					},
+					{
+						"Name": "Toothless",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Toothless.png"
+					},
+					{
+						"Name": "Uwu-Mouth",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Uwu-Mouth.png"
+					},
+					{
+						"Name": "Vampire-Fangs",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Vampire-Fangs.png"
+					},
+					{
+						"Name": "Very-Sad",
+						"Path": "./v1/arcadian-parts/Female/Mouth/Very-Sad.png"
+					}
+				]
+			},
+			{
+				"Name": "Right Hand",
+				"Files": [
+					{
+						"Name": "Arrow-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Arrow-R.png"
+					},
+					{
+						"Name": "Axe-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Axe-R.png"
+					},
+					{
+						"Name": "Battle-Guitar-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Battle-Guitar-R.png"
+					},
+					{
+						"Name": "Buster-Cannon-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Buster-Cannon-R.png"
+					},
+					{
+						"Name": "Chainsaw-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Chainsaw-R.png"
+					},
+					{
+						"Name": "Claws-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Claws-R.png"
+					},
+					{
+						"Name": "Crossbow-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Crossbow-R.png"
+					},
+					{
+						"Name": "Cursed-Katana-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Cursed-Katana-R.png"
+					},
+					{
+						"Name": "Cyberpunk-Sword-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Cyberpunk-Sword-R.png"
+					},
+					{
+						"Name": "Elecktra-Sai-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Elecktra-Sai-R.png"
+					},
+					{
+						"Name": "Flying-Guillotine-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Flying-Guillotine-R.png"
+					},
+					{
+						"Name": "Glowing-Hands-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Glowing-Hands-R.png"
+					},
+					{
+						"Name": "Glowing-Scroll-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Glowing-Scroll-R.png"
+					},
+					{
+						"Name": "Iron-Fan-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Iron-Fan-R.png"
+					},
+					{
+						"Name": "Knight-Shield-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Knight-Shield-R.png"
+					},
+					{
+						"Name": "Lance-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Lance-R.png"
+					},
+					{
+						"Name": "Laptop-Decker-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Laptop-Decker-R.png"
+					},
+					{
+						"Name": "Mace-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Mace-R.png"
+					},
+					{
+						"Name": "Mage-Book-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Mage-Book-R.png"
+					},
+					{
+						"Name": "Mage-Staff-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Mage-Staff-R.png"
+					},
+					{
+						"Name": "Magical-Quill-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Magical-Quill-R.png"
+					},
+					{
+						"Name": "Martini-Glass-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Martini-Glass-R.png"
+					},
+					{
+						"Name": "Metroid-Riffle-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Metroid-Riffle-R.png"
+					},
+					{
+						"Name": "Metroid-Rifle-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Metroid-Rifle-R.png"
+					},
+					{
+						"Name": "Mobile-Phone-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Mobile-Phone-R.png"
+					},
+					{
+						"Name": "None",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/None.png"
+					},
+					{
+						"Name": "Poison-Sword-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Poison-Sword-R.png"
+					},
+					{
+						"Name": "Priestess-Hammer-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Priestess-Hammer-R.png"
+					},
+					{
+						"Name": "Riffle-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Riffle-R.png"
+					},
+					{
+						"Name": "Rifle-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Rifle-R.png"
+					},
+					{
+						"Name": "Samurai-Katana-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Samurai-Katana-R.png"
+					},
+					{
+						"Name": "Scept-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Scept-R.png"
+					},
+					{
+						"Name": "Screwdriver-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Screwdriver-R.png"
+					},
+					{
+						"Name": "Scythe-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Scythe-R.png"
+					},
+					{
+						"Name": "Shuriken-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Shuriken-R.png"
+					},
+					{
+						"Name": "Snake-Staff-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Snake-Staff-R.png"
+					},
+					{
+						"Name": "Soldier-Riffle-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Soldier-Riffle-R.png"
+					},
+					{
+						"Name": "Soldier-Rifle-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Soldier-Rifle-R.png"
+					},
+					{
+						"Name": "Staves-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Staves-R.png"
+					},
+					{
+						"Name": "Strider-Sword-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Strider-Sword-R.png"
+					},
+					{
+						"Name": "Tomb-Raider-Pistol-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Tomb-Raider-Pistol-R.png"
+					},
+					{
+						"Name": "Trident-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Trident-R.png"
+					},
+					{
+						"Name": "War-Hammer-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/War-Hammer-R.png"
+					},
+					{
+						"Name": "Wrench-R",
+						"Path": "./v1/arcadian-parts/Female/Right Hand/Wrench-R.png"
+					}
+				]
+			},
+			{
+				"Name": "Shadow",
+				"Files": [
+					{
+						"Name": "Base",
+						"Path": "./v1/arcadian-parts/Female/Shadow/Base.png"
+					}
+				]
+			},
+			{
+				"Name": "Skin",
+				"Files": [
+					{
+						"Name": "Dark",
+						"Path": "./v1/arcadian-parts/Female/Skin/Dark.png"
+					},
+					{
+						"Name": "Gold",
+						"Path": "./v1/arcadian-parts/Female/Skin/Gold.png"
+					},
+					{
+						"Name": "Light",
+						"Path": "./v1/arcadian-parts/Female/Skin/Light.png"
+					},
+					{
+						"Name": "Metal",
+						"Path": "./v1/arcadian-parts/Female/Skin/Metal.png"
+					},
+					{
+						"Name": "Orc",
+						"Path": "./v1/arcadian-parts/Female/Skin/Orc.png"
+					},
+					{
+						"Name": "Zombie",
+						"Path": "./v1/arcadian-parts/Female/Skin/Zombie.png"
+					}
+				]
+			},
+			{
+				"Name": "Top",
+				"Files": [
+					{
+						"Name": "Alien-Queen-Top",
+						"Path": "./v1/arcadian-parts/Female/Top/Alien-Queen-Top.png"
+					},
+					{
+						"Name": "Amazon-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Amazon-Armor.png"
+					},
+					{
+						"Name": "Bandage-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Bandage-Armor.png"
+					},
+					{
+						"Name": "Barbarian-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Barbarian-Armor.png"
+					},
+					{
+						"Name": "Black-Hoodie-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Black-Hoodie-Armor.png"
+					},
+					{
+						"Name": "Black-Leather-Jacket",
+						"Path": "./v1/arcadian-parts/Female/Top/Black-Leather-Jacket.png"
+					},
+					{
+						"Name": "Bloodmage-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Bloodmage-Armor.png"
+					},
+					{
+						"Name": "Challenger-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Challenger-Armor.png"
+					},
+					{
+						"Name": "Challenger-Dominiel-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Challenger-Dominiel-Armor.png"
+					},
+					{
+						"Name": "Cyberpunk-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Cyberpunk-Armor.png"
+					},
+					{
+						"Name": "Deedlit-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Deedlit-Armor.png"
+					},
+					{
+						"Name": "Emo-Goth-Punk-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Emo-Goth-Punk-Armor.png"
+					},
+					{
+						"Name": "Formal-Tuxedo-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Formal-Tuxedo-Armor.png"
+					},
+					{
+						"Name": "Green-Hoodie-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Green-Hoodie-Armor.png"
+					},
+					{
+						"Name": "Green-Vest",
+						"Path": "./v1/arcadian-parts/Female/Top/Green-Vest.png"
+					},
+					{
+						"Name": "Kerrigan-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Kerrigan-Armor.png"
+					},
+					{
+						"Name": "Kimono-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Kimono-Armor.png"
+					},
+					{
+						"Name": "Kunimitsu-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Kunimitsu-Armor.png"
+					},
+					{
+						"Name": "Leather-Jacket",
+						"Path": "./v1/arcadian-parts/Female/Top/Leather-Jacket.png"
+					},
+					{
+						"Name": "Magical-Girl-Top",
+						"Path": "./v1/arcadian-parts/Female/Top/Magical-Girl-Top.png"
+					},
+					{
+						"Name": "Mechanic-Sports-Bra",
+						"Path": "./v1/arcadian-parts/Female/Top/Mechanic-Sports-Bra.png"
+					},
+					{
+						"Name": "Nier-Automata-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Nier-Automata-Armor.png"
+					},
+					{
+						"Name": "Orange-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Orange-Armor.png"
+					},
+					{
+						"Name": "Priestess-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Priestess-Armor.png"
+					},
+					{
+						"Name": "Priestess-Robe",
+						"Path": "./v1/arcadian-parts/Female/Top/Priestess-Robe.png"
+					},
+					{
+						"Name": "Ranger-Top",
+						"Path": "./v1/arcadian-parts/Female/Top/Ranger-Top.png"
+					},
+					{
+						"Name": "Ranger-Tunic",
+						"Path": "./v1/arcadian-parts/Female/Top/Ranger-Tunic.png"
+					},
+					{
+						"Name": "Red-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Red-Armor.png"
+					},
+					{
+						"Name": "Red-Priestess-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Red-Priestess-Armor.png"
+					},
+					{
+						"Name": "Samurai-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Samurai-Armor.png"
+					},
+					{
+						"Name": "Soldier-Sleeveless-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Soldier-Sleeveless-Armor.png"
+					},
+					{
+						"Name": "Sports-Bra",
+						"Path": "./v1/arcadian-parts/Female/Top/Sports-Bra.png"
+					},
+					{
+						"Name": "Tomb-Raider-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Tomb-Raider-Armor.png"
+					},
+					{
+						"Name": "Turtleneck-Armor",
+						"Path": "./v1/arcadian-parts/Female/Top/Turtleneck-Armor.png"
+					},
+					{
+						"Name": "Witcher-Tunic",
+						"Path": "./v1/arcadian-parts/Female/Top/Witcher-Tunic.png"
+					},
+					{
+						"Name": "Yellow-Robe",
+						"Path": "./v1/arcadian-parts/Female/Top/Yellow-Robe.png"
+					}
+				]
+			}
+		]
+	},
+	{
+		"Gender": "Male",
+		"Parts": [
+			{
+				"Name": "Bottom",
+				"Files": [
+					{
+						"Name": "13k-Leggings",
+						"Path": "./v1/arcadian-parts/Male/Bottom/13k-Leggings.png"
+					},
+					{
+						"Name": "Black-Muscle-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Black-Muscle-Pants.png"
+					},
+					{
+						"Name": "Black-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Black-Pants.png"
+					},
+					{
+						"Name": "Blue-Army",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Blue-Army.png"
+					},
+					{
+						"Name": "Blue-Sci-fi-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Blue-Sci-fi-Pants.png"
+					},
+					{
+						"Name": "Boxers",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Boxers.png"
+					},
+					{
+						"Name": "Camo-Army",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Camo-Army.png"
+					},
+					{
+						"Name": "Cargo-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Cargo-Pants.png"
+					},
+					{
+						"Name": "Conquest-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Conquest-Pants.png"
+					},
+					{
+						"Name": "Defold-Leggings",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Defold-Leggings.png"
+					},
+					{
+						"Name": "Denim-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Denim-Pants.png"
+					},
+					{
+						"Name": "Dragon-Boots",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Dragon-Boots.png"
+					},
+					{
+						"Name": "Dragon-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Dragon-Pants.png"
+					},
+					{
+						"Name": "Godot-Leggings",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Godot-Leggings.png"
+					},
+					{
+						"Name": "Gold-Boots",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Gold-Boots.png"
+					},
+					{
+						"Name": "Green-Army",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Green-Army.png"
+					},
+					{
+						"Name": "Green-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Green-Pants.png"
+					},
+					{
+						"Name": "Green-Tactical",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Green-Tactical.png"
+					},
+					{
+						"Name": "Greensocks",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Greensocks.png"
+					},
+					{
+						"Name": "Hero-Boots",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Hero-Boots.png"
+					},
+					{
+						"Name": "Ichigo-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Ichigo-Pants.png"
+					},
+					{
+						"Name": "Kirito-Leggings",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Kirito-Leggings.png"
+					},
+					{
+						"Name": "Knight-Boots",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Knight-Boots.png"
+					},
+					{
+						"Name": "Knight-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Knight-Pants.png"
+					},
+					{
+						"Name": "Lich-Bottom",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Lich-Bottom.png"
+					},
+					{
+						"Name": "Lich",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Lich.png"
+					},
+					{
+						"Name": "Master-Chief-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Master-Chief-Pants.png"
+					},
+					{
+						"Name": "Midnight-Army",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Midnight-Army.png"
+					},
+					{
+						"Name": "Niinja-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Niinja-Pants.png"
+					},
+					{
+						"Name": "Ninja-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Ninja-Pants.png"
+					},
+					{
+						"Name": "Orange-Army",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Orange-Army.png"
+					},
+					{
+						"Name": "ORCA-Leggings",
+						"Path": "./v1/arcadian-parts/Male/Bottom/ORCA-Leggings.png"
+					},
+					{
+						"Name": "Phaser-Bottom",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Phaser-Bottom.png"
+					},
+					{
+						"Name": "Primal-Leggings",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Primal-Leggings.png"
+					},
+					{
+						"Name": "Purple-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Purple-Pants.png"
+					},
+					{
+						"Name": "Racing-Bottom",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Racing-Bottom.png"
+					},
+					{
+						"Name": "Raging-Demon-Bottom",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Raging-Demon-Bottom.png"
+					},
+					{
+						"Name": "Red-Boots",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Red-Boots.png"
+					},
+					{
+						"Name": "Red-Ninja-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Red-Ninja-Pants.png"
+					},
+					{
+						"Name": "Sci-Fi--Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Sci-Fi--Pants.png"
+					},
+					{
+						"Name": "Sci-Fi-Pants-2",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Sci-Fi-Pants-2.png"
+					},
+					{
+						"Name": "Silver-Boots",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Silver-Boots.png"
+					},
+					{
+						"Name": "Slacks",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Slacks.png"
+					},
+					{
+						"Name": "Sports-Bottom",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Sports-Bottom.png"
+					},
+					{
+						"Name": "Travis-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Travis-Pants.png"
+					},
+					{
+						"Name": "Tuxedo-Pants",
+						"Path": "./v1/arcadian-parts/Male/Bottom/Tuxedo-Pants.png"
+					}
+				]
+			},
+			{
+				"Name": "Eyes",
+				"Files": [
+					{
+						"Name": "Angry",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Angry.png"
+					},
+					{
+						"Name": "Bright-Eyed",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Bright-Eyed.png"
+					},
+					{
+						"Name": "Bushy",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Bushy.png"
+					},
+					{
+						"Name": "Demonic-Stare",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Demonic-Stare.png"
+					},
+					{
+						"Name": "Fiery-Stare",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Fiery-Stare.png"
+					},
+					{
+						"Name": "Glasses",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Glasses.png"
+					},
+					{
+						"Name": "Happy",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Happy.png"
+					},
+					{
+						"Name": "Icy-Stare",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Icy-Stare.png"
+					},
+					{
+						"Name": "Poison-Stare",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Poison-Stare.png"
+					},
+					{
+						"Name": "Shades",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Shades.png"
+					},
+					{
+						"Name": "Shellshocked",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Shellshocked.png"
+					},
+					{
+						"Name": "Sneaky",
+						"Path": "./v1/arcadian-parts/Male/Eyes/Sneaky.png"
+					}
+				]
+			},
+			{
+				"Name": "Head",
+				"Files": [
+					{
+						"Name": "13k-Visor",
+						"Path": "./v1/arcadian-parts/Male/Head/13k-Visor.png"
+					},
+					{
+						"Name": "AR-Googles",
+						"Path": "./v1/arcadian-parts/Male/Head/AR-Googles.png"
+					},
+					{
+						"Name": "Beetle-Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Beetle-Helmet.png"
+					},
+					{
+						"Name": "Black-Bandana",
+						"Path": "./v1/arcadian-parts/Male/Head/Black-Bandana.png"
+					},
+					{
+						"Name": "Blonde-Bandana",
+						"Path": "./v1/arcadian-parts/Male/Head/Blonde-Bandana.png"
+					},
+					{
+						"Name": "Blonde-Buzzcut",
+						"Path": "./v1/arcadian-parts/Male/Head/Blonde-Buzzcut.png"
+					},
+					{
+						"Name": "Blonde-Hero",
+						"Path": "./v1/arcadian-parts/Male/Head/Blonde-Hero.png"
+					},
+					{
+						"Name": "Blonde",
+						"Path": "./v1/arcadian-parts/Male/Head/Blonde.png"
+					},
+					{
+						"Name": "Bomber-Helm",
+						"Path": "./v1/arcadian-parts/Male/Head/Bomber-Helm.png"
+					},
+					{
+						"Name": "Buzzcut",
+						"Path": "./v1/arcadian-parts/Male/Head/Buzzcut.png"
+					},
+					{
+						"Name": "Cap-and-Dreads",
+						"Path": "./v1/arcadian-parts/Male/Head/Cap-and-Dreads.png"
+					},
+					{
+						"Name": "Conquest-Ape",
+						"Path": "./v1/arcadian-parts/Male/Head/Conquest-Ape.png"
+					},
+					{
+						"Name": "Cool-Hair",
+						"Path": "./v1/arcadian-parts/Male/Head/Cool-Hair.png"
+					},
+					{
+						"Name": "Cyber-Mask",
+						"Path": "./v1/arcadian-parts/Male/Head/Cyber-Mask.png"
+					},
+					{
+						"Name": "Dark-Knight-Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Dark-Knight-Helmet.png"
+					},
+					{
+						"Name": "Deadly-Mohawk",
+						"Path": "./v1/arcadian-parts/Male/Head/Deadly-Mohawk.png"
+					},
+					{
+						"Name": "Defold-Helm",
+						"Path": "./v1/arcadian-parts/Male/Head/Defold-Helm.png"
+					},
+					{
+						"Name": "Dystopian-Mohawk",
+						"Path": "./v1/arcadian-parts/Male/Head/Dystopian-Mohawk.png"
+					},
+					{
+						"Name": "Elven-Hair",
+						"Path": "./v1/arcadian-parts/Male/Head/Elven-Hair.png"
+					},
+					{
+						"Name": "Floating-Crown",
+						"Path": "./v1/arcadian-parts/Male/Head/Floating-Crown.png"
+					},
+					{
+						"Name": "Godot-Head",
+						"Path": "./v1/arcadian-parts/Male/Head/Godot-Head.png"
+					},
+					{
+						"Name": "Gray-Hood",
+						"Path": "./v1/arcadian-parts/Male/Head/Gray-Hood.png"
+					},
+					{
+						"Name": "Green-Hood",
+						"Path": "./v1/arcadian-parts/Male/Head/Green-Hood.png"
+					},
+					{
+						"Name": "Helmet-Plume",
+						"Path": "./v1/arcadian-parts/Male/Head/Helmet-Plume.png"
+					},
+					{
+						"Name": "hood_green",
+						"Path": "./v1/arcadian-parts/Male/Head/hood_green.png"
+					},
+					{
+						"Name": "hood_purple",
+						"Path": "./v1/arcadian-parts/Male/Head/hood_purple.png"
+					},
+					{
+						"Name": "HOUWAR",
+						"Path": "./v1/arcadian-parts/Male/Head/HOUWAR.png"
+					},
+					{
+						"Name": "Ichigo-Mask",
+						"Path": "./v1/arcadian-parts/Male/Head/Ichigo-Mask.png"
+					},
+					{
+						"Name": "Knight-Helmet-2",
+						"Path": "./v1/arcadian-parts/Male/Head/Knight-Helmet-2.png"
+					},
+					{
+						"Name": "Knight-Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Knight-Helmet.png"
+					},
+					{
+						"Name": "Law-Helm",
+						"Path": "./v1/arcadian-parts/Male/Head/Law-Helm.png"
+					},
+					{
+						"Name": "Lich-Skull",
+						"Path": "./v1/arcadian-parts/Male/Head/Lich-Skull.png"
+					},
+					{
+						"Name": "Lich",
+						"Path": "./v1/arcadian-parts/Male/Head/Lich.png"
+					},
+					{
+						"Name": "Long-Blonde-Hair",
+						"Path": "./v1/arcadian-parts/Male/Head/Long-Blonde-Hair.png"
+					},
+					{
+						"Name": "Male-Closed-Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Male-Closed-Helmet.png"
+					},
+					{
+						"Name": "Male-Saiyan",
+						"Path": "./v1/arcadian-parts/Male/Head/Male-Saiyan.png"
+					},
+					{
+						"Name": "male_hood",
+						"Path": "./v1/arcadian-parts/Male/Head/male_hood.png"
+					},
+					{
+						"Name": "male_long_white_hair",
+						"Path": "./v1/arcadian-parts/Male/Head/male_long_white_hair.png"
+					},
+					{
+						"Name": "male_Sorcerer's-Hat",
+						"Path": "./v1/arcadian-parts/Male/Head/male_Sorcerer's-Hat.png"
+					},
+					{
+						"Name": "Master-Chief-Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Master-Chief-Helmet.png"
+					},
+					{
+						"Name": "Megaman_Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Megaman_Helmet.png"
+					},
+					{
+						"Name": "Messy-Black-Hair",
+						"Path": "./v1/arcadian-parts/Male/Head/Messy-Black-Hair.png"
+					},
+					{
+						"Name": "Ninja-Mask",
+						"Path": "./v1/arcadian-parts/Male/Head/Ninja-Mask.png"
+					},
+					{
+						"Name": "Oni-Mask",
+						"Path": "./v1/arcadian-parts/Male/Head/Oni-Mask.png"
+					},
+					{
+						"Name": "ORCA-Head",
+						"Path": "./v1/arcadian-parts/Male/Head/ORCA-Head.png"
+					},
+					{
+						"Name": "Phaser-Head",
+						"Path": "./v1/arcadian-parts/Male/Head/Phaser-Head.png"
+					},
+					{
+						"Name": "Powered-Up-Hair",
+						"Path": "./v1/arcadian-parts/Male/Head/Powered-Up-Hair.png"
+					},
+					{
+						"Name": "Primal-Hair",
+						"Path": "./v1/arcadian-parts/Male/Head/Primal-Hair.png"
+					},
+					{
+						"Name": "Protag-Hair",
+						"Path": "./v1/arcadian-parts/Male/Head/Protag-Hair.png"
+					},
+					{
+						"Name": "Purple-Hood",
+						"Path": "./v1/arcadian-parts/Male/Head/Purple-Hood.png"
+					},
+					{
+						"Name": "Racing-Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Racing-Helmet.png"
+					},
+					{
+						"Name": "Raging-Hair",
+						"Path": "./v1/arcadian-parts/Male/Head/Raging-Hair.png"
+					},
+					{
+						"Name": "Red-Cap",
+						"Path": "./v1/arcadian-parts/Male/Head/Red-Cap.png"
+					},
+					{
+						"Name": "Ryu",
+						"Path": "./v1/arcadian-parts/Male/Head/Ryu.png"
+					},
+					{
+						"Name": "Samurai-Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Samurai-Helmet.png"
+					},
+					{
+						"Name": "SAO-Hair",
+						"Path": "./v1/arcadian-parts/Male/Head/SAO-Hair.png"
+					},
+					{
+						"Name": "Sci-Fi-Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Sci-Fi-Helmet.png"
+					},
+					{
+						"Name": "scifi_helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/scifi_helmet.png"
+					},
+					{
+						"Name": "Skull-Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Skull-Helmet.png"
+					},
+					{
+						"Name": "Sorcerer-Hat",
+						"Path": "./v1/arcadian-parts/Male/Head/Sorcerer-Hat.png"
+					},
+					{
+						"Name": "Trafalgar-Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Trafalgar-Helmet.png"
+					},
+					{
+						"Name": "Trafalgar-Law-Helmet",
+						"Path": "./v1/arcadian-parts/Male/Head/Trafalgar-Law-Helmet.png"
+					},
+					{
+						"Name": "Travis-Head",
+						"Path": "./v1/arcadian-parts/Male/Head/Travis-Head.png"
+					},
+					{
+						"Name": "Visor",
+						"Path": "./v1/arcadian-parts/Male/Head/Visor.png"
+					},
+					{
+						"Name": "Wanderer",
+						"Path": "./v1/arcadian-parts/Male/Head/Wanderer.png"
+					}
+				]
+			},
+			{
+				"Name": "Left Hand",
+				"Files": [
+					{
+						"Name": "Ammo-Belt-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Ammo-Belt-L.png"
+					},
+					{
+						"Name": "Arnis-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Arnis-L.png"
+					},
+					{
+						"Name": "Atomizer-Bat-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Atomizer-Bat-L.png"
+					},
+					{
+						"Name": "Banana-Flag-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Banana-Flag-L.png"
+					},
+					{
+						"Name": "Broadsword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Broadsword-L.png"
+					},
+					{
+						"Name": "Champagne-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Champagne-L.png"
+					},
+					{
+						"Name": "Crystal-Sword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Crystal-Sword-L.png"
+					},
+					{
+						"Name": "Cyber-Punk-Katana-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Cyber-Punk-Katana-L.png"
+					},
+					{
+						"Name": "Cybernetic-Arm-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Cybernetic-Arm-L.png"
+					},
+					{
+						"Name": "Cypher-sword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Cypher-sword-L.png"
+					},
+					{
+						"Name": "Defold-Cross-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Defold-Cross-L.png"
+					},
+					{
+						"Name": "Diamond-Hands-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Diamond-Hands-L.png"
+					},
+					{
+						"Name": "Dungeon-Knights-Sword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Dungeon-Knights-Sword-L.png"
+					},
+					{
+						"Name": "Energy-Blade",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Energy-Blade.png"
+					},
+					{
+						"Name": "Energy-Sword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Energy-Sword-L.png"
+					},
+					{
+						"Name": "Flamethrower-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Flamethrower-L.png"
+					},
+					{
+						"Name": "Flying-Guillotine-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Flying-Guillotine-L.png"
+					},
+					{
+						"Name": "Frostmorne-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Frostmorne-L.png"
+					},
+					{
+						"Name": "Frostmourne-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Frostmourne-L.png"
+					},
+					{
+						"Name": "Gauntlet-Cannon-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Gauntlet-Cannon-L.png"
+					},
+					{
+						"Name": "Gauntlet-Canon-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Gauntlet-Canon-L.png"
+					},
+					{
+						"Name": "Godot-Hand-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Godot-Hand-L.png"
+					},
+					{
+						"Name": "Gold-Gloves-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Gold-Gloves-L.png"
+					},
+					{
+						"Name": "Grenade-Launcher-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Grenade-Launcher-L.png"
+					},
+					{
+						"Name": "Halo-Riffle-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Halo-Riffle-L.png"
+					},
+					{
+						"Name": "Halo-Rifle-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Halo-Rifle-L.png"
+					},
+					{
+						"Name": "Harry-Wand-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Harry-Wand-L.png"
+					},
+					{
+						"Name": "Kirito-Sword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Kirito-Sword-L.png"
+					},
+					{
+						"Name": "Knigh-Cross-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Knigh-Cross-L.png"
+					},
+					{
+						"Name": "Knight--Flaming-Sword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Knight--Flaming-Sword-L.png"
+					},
+					{
+						"Name": "Knight-Sword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Knight-Sword-L.png"
+					},
+					{
+						"Name": "Knight-Whip-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Knight-Whip-L.png"
+					},
+					{
+						"Name": "Kunai-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Kunai-L.png"
+					},
+					{
+						"Name": "Lich-Sword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Lich-Sword-L.png"
+					},
+					{
+						"Name": "Long-Sword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Long-Sword-L.png"
+					},
+					{
+						"Name": "Mage-Book-2-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Mage-Book-2-L.png"
+					},
+					{
+						"Name": "Mage-Book-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Mage-Book-L.png"
+					},
+					{
+						"Name": "Mage-Staff-Green-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Mage-Staff-Green-L.png"
+					},
+					{
+						"Name": "Mage-Staff-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Mage-Staff-L.png"
+					},
+					{
+						"Name": "None",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/None.png"
+					},
+					{
+						"Name": "Phaser-Alien-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Phaser-Alien-L.png"
+					},
+					{
+						"Name": "Pistol-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Pistol-L.png"
+					},
+					{
+						"Name": "Potion-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Potion-L.png"
+					},
+					{
+						"Name": "Primal-Sword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Primal-Sword-L.png"
+					},
+					{
+						"Name": "Raging-Fist-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Raging-Fist-L.png"
+					},
+					{
+						"Name": "Rifle-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Rifle-L.png"
+					},
+					{
+						"Name": "Rocket-Launcher-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Rocket-Launcher-L.png"
+					},
+					{
+						"Name": "Scythe-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Scythe-L.png"
+					},
+					{
+						"Name": "Shield-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Shield-L.png"
+					},
+					{
+						"Name": "Shuriken-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Shuriken-L.png"
+					},
+					{
+						"Name": "Snake-Staff-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Snake-Staff-L.png"
+					},
+					{
+						"Name": "Soda-Popper-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Soda-Popper-L.png"
+					},
+					{
+						"Name": "Sonic-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Sonic-L.png"
+					},
+					{
+						"Name": "Spellbook-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Spellbook-L.png"
+					},
+					{
+						"Name": "Sword-Ichigo-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Sword-Ichigo-L.png"
+					},
+					{
+						"Name": "Sword-Right-R",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Sword-Right-R.png"
+					},
+					{
+						"Name": "Tool-Hand-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Tool-Hand-L.png"
+					},
+					{
+						"Name": "Travis-Sword-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Travis-Sword-L.png"
+					},
+					{
+						"Name": "Wand-L",
+						"Path": "./v1/arcadian-parts/Male/Left Hand/Wand-L.png"
+					}
+				]
+			},
+			{
+				"Name": "Mouth",
+				"Files": [
+					{
+						"Name": "Beard",
+						"Path": "./v1/arcadian-parts/Male/Mouth/Beard.png"
+					},
+					{
+						"Name": "Cigar",
+						"Path": "./v1/arcadian-parts/Male/Mouth/Cigar.png"
+					},
+					{
+						"Name": "Flat",
+						"Path": "./v1/arcadian-parts/Male/Mouth/Flat.png"
+					},
+					{
+						"Name": "Frowning",
+						"Path": "./v1/arcadian-parts/Male/Mouth/Frowning.png"
+					},
+					{
+						"Name": "Fullbeard",
+						"Path": "./v1/arcadian-parts/Male/Mouth/Fullbeard.png"
+					},
+					{
+						"Name": "Moustache",
+						"Path": "./v1/arcadian-parts/Male/Mouth/Moustache.png"
+					},
+					{
+						"Name": "Screaming",
+						"Path": "./v1/arcadian-parts/Male/Mouth/Screaming.png"
+					},
+					{
+						"Name": "Shouting",
+						"Path": "./v1/arcadian-parts/Male/Mouth/Shouting.png"
+					},
+					{
+						"Name": "Smiling",
+						"Path": "./v1/arcadian-parts/Male/Mouth/Smiling.png"
+					}
+				]
+			},
+			{
+				"Name": "Right Hand",
+				"Files": [
+					{
+						"Name": "Arnis-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Arnis-R.png"
+					},
+					{
+						"Name": "Atomizer-Bat-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Atomizer-Bat-R.png"
+					},
+					{
+						"Name": "AWP-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/AWP-R.png"
+					},
+					{
+						"Name": "Broadsword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Broadsword-R.png"
+					},
+					{
+						"Name": "Buster-Cannon-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Buster-Cannon-R.png"
+					},
+					{
+						"Name": "Buster-Sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Buster-Sword-R.png"
+					},
+					{
+						"Name": "Conquest-Gun-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Conquest-Gun-R.png"
+					},
+					{
+						"Name": "Crystal-Sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Crystal-Sword-R.png"
+					},
+					{
+						"Name": "Cyber-Punk-Katana-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Cyber-Punk-Katana-R.png"
+					},
+					{
+						"Name": "Cybernetic-Arm-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Cybernetic-Arm-R.png"
+					},
+					{
+						"Name": "Cypher-sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Cypher-sword-R.png"
+					},
+					{
+						"Name": "Defold-Cross-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Defold-Cross-R.png"
+					},
+					{
+						"Name": "Desert-Eagle-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Desert-Eagle-R.png"
+					},
+					{
+						"Name": "Diamond-Hands-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Diamond-Hands-R.png"
+					},
+					{
+						"Name": "Disaster-Gun-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Disaster-Gun-R.png"
+					},
+					{
+						"Name": "Dungeon-Knights-Sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Dungeon-Knights-Sword-R.png"
+					},
+					{
+						"Name": "Energy-Blade-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Energy-Blade-R.png"
+					},
+					{
+						"Name": "Energy-Sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Energy-Sword-R.png"
+					},
+					{
+						"Name": "Flying-Guillotine-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Flying-Guillotine-R.png"
+					},
+					{
+						"Name": "Frostmorne-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Frostmorne-R.png"
+					},
+					{
+						"Name": "Frostmourne-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Frostmourne-R.png"
+					},
+					{
+						"Name": "Godot-Hand-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Godot-Hand-R.png"
+					},
+					{
+						"Name": "Gold-Bracelet-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Gold-Bracelet-R.png"
+					},
+					{
+						"Name": "Gold-Gloves-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Gold-Gloves-R.png"
+					},
+					{
+						"Name": "gunlance-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/gunlance-R.png"
+					},
+					{
+						"Name": "Halo-beam-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Halo-beam-R.png"
+					},
+					{
+						"Name": "Heavy-Machine-Gun-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Heavy-Machine-Gun-R.png"
+					},
+					{
+						"Name": "Ichigo-sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Ichigo-sword-R.png"
+					},
+					{
+						"Name": "Kirito-Sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Kirito-Sword-R.png"
+					},
+					{
+						"Name": "Knight-Shield-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Knight-Shield-R.png"
+					},
+					{
+						"Name": "Knight-Sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Knight-Sword-R.png"
+					},
+					{
+						"Name": "Lance-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Lance-R.png"
+					},
+					{
+						"Name": "Lich-Sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Lich-Sword-R.png"
+					},
+					{
+						"Name": "Lightning-Axe",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Lightning-Axe.png"
+					},
+					{
+						"Name": "Long-Sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Long-Sword-R.png"
+					},
+					{
+						"Name": "Longsword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Longsword-R.png"
+					},
+					{
+						"Name": "Mage-Book-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Mage-Book-R.png"
+					},
+					{
+						"Name": "Mage-Staff-Green-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Mage-Staff-Green-R.png"
+					},
+					{
+						"Name": "Mage-Staff-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Mage-Staff-R.png"
+					},
+					{
+						"Name": "Mage-Wand-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Mage-Wand-R.png"
+					},
+					{
+						"Name": "Martiini-Glass-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Martiini-Glass-R.png"
+					},
+					{
+						"Name": "None",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/None.png"
+					},
+					{
+						"Name": "Phaser-Alien-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Phaser-Alien-R.png"
+					},
+					{
+						"Name": "Phaser-Gun-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Phaser-Gun-R.png"
+					},
+					{
+						"Name": "Potion-Bottle-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Potion-Bottle-R.png"
+					},
+					{
+						"Name": "Primal-Gun-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Primal-Gun-R.png"
+					},
+					{
+						"Name": "Raging-Fist-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Raging-Fist-R.png"
+					},
+					{
+						"Name": "Rail-Gun-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Rail-Gun-R.png"
+					},
+					{
+						"Name": "Rifle-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Rifle-R.png"
+					},
+					{
+						"Name": "Scythe-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Scythe-R.png"
+					},
+					{
+						"Name": "Shuriken-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Shuriken-R.png"
+					},
+					{
+						"Name": "Snake-Staff-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Snake-Staff-R.png"
+					},
+					{
+						"Name": "Soda-Popper-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Soda-Popper-R.png"
+					},
+					{
+						"Name": "Sonic-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Sonic-R.png"
+					},
+					{
+						"Name": "Spellbook-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Spellbook-R.png"
+					},
+					{
+						"Name": "Strider-Sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Strider-Sword-R.png"
+					},
+					{
+						"Name": "Sword-Kight-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Sword-Kight-R.png"
+					},
+					{
+						"Name": "Travis-Sword-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Travis-Sword-R.png"
+					},
+					{
+						"Name": "Trophy-R",
+						"Path": "./v1/arcadian-parts/Male/Right Hand/Trophy-R.png"
+					}
+				]
+			},
+			{
+				"Name": "Shadow",
+				"Files": [
+					{
+						"Name": "Base",
+						"Path": "./v1/arcadian-parts/Male/Shadow/Base.png"
+					}
+				]
+			},
+			{
+				"Name": "Skin",
+				"Files": [
+					{
+						"Name": "Dark",
+						"Path": "./v1/arcadian-parts/Male/Skin/Dark.png"
+					},
+					{
+						"Name": "Gold",
+						"Path": "./v1/arcadian-parts/Male/Skin/Gold.png"
+					},
+					{
+						"Name": "Light",
+						"Path": "./v1/arcadian-parts/Male/Skin/Light.png"
+					},
+					{
+						"Name": "Metal",
+						"Path": "./v1/arcadian-parts/Male/Skin/Metal.png"
+					},
+					{
+						"Name": "Orc",
+						"Path": "./v1/arcadian-parts/Male/Skin/Orc.png"
+					},
+					{
+						"Name": "Zombie",
+						"Path": "./v1/arcadian-parts/Male/Skin/Zombie.png"
+					}
+				]
+			},
+			{
+				"Name": "Top",
+				"Files": [
+					{
+						"Name": "13k-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/13k-Armor.png"
+					},
+					{
+						"Name": "13k-Top",
+						"Path": "./v1/arcadian-parts/Male/Top/13k-Top.png"
+					},
+					{
+						"Name": "Academy-Robe",
+						"Path": "./v1/arcadian-parts/Male/Top/Academy-Robe.png"
+					},
+					{
+						"Name": "Akatsuki-Robe",
+						"Path": "./v1/arcadian-parts/Male/Top/Akatsuki-Robe.png"
+					},
+					{
+						"Name": "BB-Jersey",
+						"Path": "./v1/arcadian-parts/Male/Top/BB-Jersey.png"
+					},
+					{
+						"Name": "Black-Muscle-Shirt",
+						"Path": "./v1/arcadian-parts/Male/Top/Black-Muscle-Shirt.png"
+					},
+					{
+						"Name": "Black-Tank",
+						"Path": "./v1/arcadian-parts/Male/Top/Black-Tank.png"
+					},
+					{
+						"Name": "Blue-Sci-Fi-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Blue-Sci-Fi-Armor.png"
+					},
+					{
+						"Name": "Blue-Shirt",
+						"Path": "./v1/arcadian-parts/Male/Top/Blue-Shirt.png"
+					},
+					{
+						"Name": "Blue-Tank",
+						"Path": "./v1/arcadian-parts/Male/Top/Blue-Tank.png"
+					},
+					{
+						"Name": "Brown-Shirt",
+						"Path": "./v1/arcadian-parts/Male/Top/Brown-Shirt.png"
+					},
+					{
+						"Name": "BTC-Chain",
+						"Path": "./v1/arcadian-parts/Male/Top/BTC-Chain.png"
+					},
+					{
+						"Name": "Common-Robe",
+						"Path": "./v1/arcadian-parts/Male/Top/Common-Robe.png"
+					},
+					{
+						"Name": "Conquest-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Conquest-Armor.png"
+					},
+					{
+						"Name": "Cracked-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Cracked-Armor.png"
+					},
+					{
+						"Name": "Defold-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Defold-Armor.png"
+					},
+					{
+						"Name": "Dragon-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Dragon-Armor.png"
+					},
+					{
+						"Name": "Godot-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Godot-Armor.png"
+					},
+					{
+						"Name": "Gold-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Gold-Armor.png"
+					},
+					{
+						"Name": "Green-Tank",
+						"Path": "./v1/arcadian-parts/Male/Top/Green-Tank.png"
+					},
+					{
+						"Name": "Hogwards-Robe",
+						"Path": "./v1/arcadian-parts/Male/Top/Hogwards-Robe.png"
+					},
+					{
+						"Name": "Ichigo-Robe",
+						"Path": "./v1/arcadian-parts/Male/Top/Ichigo-Robe.png"
+					},
+					{
+						"Name": "Kirito-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Kirito-Armor.png"
+					},
+					{
+						"Name": "Knight-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Knight-Armor.png"
+					},
+					{
+						"Name": "Lich-Robe",
+						"Path": "./v1/arcadian-parts/Male/Top/Lich-Robe.png"
+					},
+					{
+						"Name": "Litch",
+						"Path": "./v1/arcadian-parts/Male/Top/Litch.png"
+					},
+					{
+						"Name": "Mage-Robe",
+						"Path": "./v1/arcadian-parts/Male/Top/Mage-Robe.png"
+					},
+					{
+						"Name": "Master-Chief",
+						"Path": "./v1/arcadian-parts/Male/Top/Master-Chief.png"
+					},
+					{
+						"Name": "Ninja-Armor-2",
+						"Path": "./v1/arcadian-parts/Male/Top/Ninja-Armor-2.png"
+					},
+					{
+						"Name": "Ninja-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Ninja-Armor.png"
+					},
+					{
+						"Name": "Orange-Tank",
+						"Path": "./v1/arcadian-parts/Male/Top/Orange-Tank.png"
+					},
+					{
+						"Name": "ORCA-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/ORCA-Armor.png"
+					},
+					{
+						"Name": "Phaser-Top",
+						"Path": "./v1/arcadian-parts/Male/Top/Phaser-Top.png"
+					},
+					{
+						"Name": "Primal-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Primal-Armor.png"
+					},
+					{
+						"Name": "Purple-Robe",
+						"Path": "./v1/arcadian-parts/Male/Top/Purple-Robe.png"
+					},
+					{
+						"Name": "Racing-Top",
+						"Path": "./v1/arcadian-parts/Male/Top/Racing-Top.png"
+					},
+					{
+						"Name": "Raging-Demon-Top",
+						"Path": "./v1/arcadian-parts/Male/Top/Raging-Demon-Top.png"
+					},
+					{
+						"Name": "Red-Ninja-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Red-Ninja-Armor.png"
+					},
+					{
+						"Name": "Red-Shirt",
+						"Path": "./v1/arcadian-parts/Male/Top/Red-Shirt.png"
+					},
+					{
+						"Name": "Sci-Fi-Armor-2",
+						"Path": "./v1/arcadian-parts/Male/Top/Sci-Fi-Armor-2.png"
+					},
+					{
+						"Name": "Sci-Fi-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Sci-Fi-Armor.png"
+					},
+					{
+						"Name": "Shirt",
+						"Path": "./v1/arcadian-parts/Male/Top/Shirt.png"
+					},
+					{
+						"Name": "Silver-Armor",
+						"Path": "./v1/arcadian-parts/Male/Top/Silver-Armor.png"
+					},
+					{
+						"Name": "Starcraft-Marine",
+						"Path": "./v1/arcadian-parts/Male/Top/Starcraft-Marine.png"
+					},
+					{
+						"Name": "Tank-Top-Gold-Chain",
+						"Path": "./v1/arcadian-parts/Male/Top/Tank-Top-Gold-Chain.png"
+					},
+					{
+						"Name": "Travis-Jacket",
+						"Path": "./v1/arcadian-parts/Male/Top/Travis-Jacket.png"
+					},
+					{
+						"Name": "Tuxedo",
+						"Path": "./v1/arcadian-parts/Male/Top/Tuxedo.png"
+					},
+					{
+						"Name": "Tuxedo_(007)_top",
+						"Path": "./v1/arcadian-parts/Male/Top/Tuxedo_(007)_top.png"
+					},
+					{
+						"Name": "Vest",
+						"Path": "./v1/arcadian-parts/Male/Top/Vest.png"
+					},
+					{
+						"Name": "White-Ribe",
+						"Path": "./v1/arcadian-parts/Male/Top/White-Ribe.png"
+					},
+					{
+						"Name": "White-Robe",
+						"Path": "./v1/arcadian-parts/Male/Top/White-Robe.png"
+					}
+				]
+			}
+		]
+	}
+]
