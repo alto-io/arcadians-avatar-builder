@@ -1,14 +1,23 @@
-/**
- * Run with node
- * 
- * Part pngs must be arranged in ./v1/arcadian-parts as:
- * [Gender]/[BodyPart]/[PartName].png
- * */
+//Run with node
+
+//Part pngs must be arranged in ./v1/arcadian-parts as:
+//[Gender]/[BodyPart]/[PartName].png
 
 const arcadianPartsPath = "./v1/arcadian-parts";
+const partsConfigPath = "./src/partsConfig.json";
 const fs = require('fs');
 
-let output = getAvatarFiles();
+generatePartsConfig();
+
+/**Run with node*/
+function generatePartsConfig() {
+	let output = getAvatarFiles();
+	let json = JSON.stringify(output);
+	fs.writeFile(partsConfigPath, json, function (error) {
+		if (error) throw error;
+		console.log("Saved at " + partsConfigPath);
+	});
+}
 
 function getAvatarFiles() {
 	// Sample Format of output
@@ -79,7 +88,6 @@ function getAllFiles(partPath) {
 		returnVal.push(newFile);
 	}
 
-	console.log(returnVal);
 	return returnVal;
 }
 
