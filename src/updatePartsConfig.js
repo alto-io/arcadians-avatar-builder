@@ -5,14 +5,14 @@
 
 const arcadianPartsPath = "./v1/arcadian-parts";
 const partsConfigPath = "./src/partsConfig.json";
-const fs = require('fs');
+const fs = require("fs");
 
 generatePartsConfig();
 
 /**Run with node*/
 function generatePartsConfig() {
 	let output = getAvatarFiles();
-	let json = JSON.stringify(output);
+	let json = JSON.stringify(output, null, "\t");
 	fs.writeFile(partsConfigPath, json, function (error) {
 		if (error) throw error;
 		console.log("Saved at " + partsConfigPath);
@@ -30,12 +30,12 @@ function getAvatarFiles() {
 					Files: [
 						{
 							Name: "Alien-Queen-Bottom",
-							Path: "v1/arcadian-parts/Female/Bottom/Alien-Queen-Bottom.png"
-						}
-					]
-				}
-			]
-		}
+							Path: "v1/arcadian-parts/Female/Bottom/Alien-Queen-Bottom.png",
+						},
+					],
+				},
+			],
+		},
 	];
 	returnVal.length = 0;
 
@@ -43,7 +43,7 @@ function getAvatarFiles() {
 	for (let genderName of allGenders) {
 		let newGender = {
 			Gender: genderName,
-			Parts: []
+			Parts: [],
 		};
 
 		let genderPath = arcadianPartsPath + "/" + genderName;
@@ -63,7 +63,7 @@ function getAllParts(genderPath) {
 	for (let partName of allParts) {
 		let newPart = {
 			Name: partName,
-			Files: []
+			Files: [],
 		};
 
 		let partPath = genderPath + "/" + partName;
@@ -82,7 +82,7 @@ function getAllFiles(partPath) {
 	for (let fileName of allFiles) {
 		let newFile = {
 			Name: fileName.slice(0, -4), // remove file extension
-			Path: partPath + "/" + fileName
+			Path: partPath + "/" + fileName,
 		};
 
 		returnVal.push(newFile);
@@ -98,7 +98,8 @@ function getSubdirectories(path) {
 }
 
 function getFileNames(path) {
-	return fs.readdirSync(path, { withFileTypes: true })
-		.filter(item => !item.isDirectory())
-		.map(item => item.name)
+	return fs
+		.readdirSync(path, { withFileTypes: true })
+		.filter((item) => !item.isDirectory())
+		.map((item) => item.name);
 }
