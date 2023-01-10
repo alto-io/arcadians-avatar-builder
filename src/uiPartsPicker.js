@@ -5,42 +5,59 @@ window.onload = function () {
 	ui.init();
 };
 
+function showPartsList(id, matName) {
+	if (g_config == null) return;
+
+	var div = document.getElementById("list-pick");
+	if (div == null) return;
+
+	div.innerHTML = "";
+
+	var files = [];
+	for (var i of g_fileList.List) {
+		if (i.Gender == id && i.Part == matName) {
+			files = i.Files;
+		}
+	}
+
+	var header = document.createElement("H2");
+	var text = document.createTextNode(matName);
+	header.appendChild(text);
+	div.append(header);
+
+	for (var i of files) {
+		console.log("Create " + i);
+		var button = document.createElement("button");
+		button.innerText = i;
+		button.innerHTML = `<img src='${i}' />`;
+		button.setAttribute(
+			"onClick",
+			`replaceParts('${matName}', '${i}')`
+		);
+		div.appendChild(button);
+	}
+}
+
 class UIPartsPicker {
 	init() {
+		if (g_config == null) return;
 		if (g_config.list <= 0) return;
 
-		var avatar = g_config.list[0];
-		for (var mat of avatar.materials) {
-			this.#addCategory(avatar.id, mat.name);
-		}
-	}
+		var id = "Male";
 
-	#addCategory(id, matName) {
-		var div = document.getElementById("category");
-		var files = this.#getFiles(id, matName);
+		var avatar = g_config.list.find((x) => x.id == id);
+		if(avatar == null) return;
 
-		var header = document.createElement("H2");
-		var text = document.createTextNode(matName);
-		header.appendChild(text);
-		div.append(header);
+		var div = document.getElementById("parts-pick");
+		if (div == null) return;
 
-		for (var i of files) {
+		div.innerHTML = "";
+
+		for (var m of avatar.materials) {
 			var button = document.createElement("button");
-			button.innerText = i;
-			button.innerHTML = `<img src='${i}' />`;
-			button.setAttribute(
-				"onClick",
-				`replaceParts('${matName}', '${i}')`
-			);
+			button.innerText = m.name;
+			button.setAttribute("onClick", `showPartsList('${id}', '${m.name}')`);
 			div.appendChild(button);
-		}
-	}
-
-	#getFiles(id, matName) {
-		for (var i of g_fileList.List) {
-			if (i.Gender == id && i.Part == matName) {
-				return i.Files;
-			}
 		}
 	}
 }
