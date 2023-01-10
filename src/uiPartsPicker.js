@@ -30,10 +30,7 @@ function showPartsList(id, matName) {
 		var button = document.createElement("button");
 		button.innerText = i;
 		button.innerHTML = `<img src='${i}' />`;
-		button.setAttribute(
-			"onClick",
-			`replaceParts('${matName}', '${i}')`
-		);
+		button.setAttribute("onClick", `replaceParts('${matName}', '${i}')`);
 		div.appendChild(button);
 	}
 }
@@ -46,7 +43,7 @@ class UIPartsPicker {
 		var id = "Male";
 
 		var avatar = g_config.list.find((x) => x.id == id);
-		if(avatar == null) return;
+		if (avatar == null) return;
 
 		var div = document.getElementById("parts-pick");
 		if (div == null) return;
@@ -56,7 +53,10 @@ class UIPartsPicker {
 		for (var m of avatar.materials) {
 			var button = document.createElement("button");
 			button.innerText = m.name;
-			button.setAttribute("onClick", `showPartsList('${id}', '${m.name}')`);
+			button.setAttribute(
+				"onClick",
+				`showPartsList('${id}', '${m.name}')`
+			);
 			div.appendChild(button);
 		}
 	}
