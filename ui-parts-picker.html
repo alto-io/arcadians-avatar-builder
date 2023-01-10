@@ -4,7 +4,7 @@
 		<style>
 			html,
 			body {
-				overflow: hidden;
+				overflow: visible;
 				width: 100%;
 				height: 100%;
 				margin: 0;
@@ -35,35 +35,22 @@
 
 	<body>
 		<div>
-			<h2>Animations</h2>
-			<div id="animations">
-				<!-- added dynamically in partsLoader -->
-			</div>
-
-			<h2>Gender</h2>
-			<div id="gender">
-				<!-- added dynamically in index.js -->
-			</div>
-
-			<h2>Parts</h2>
-			<div id="parts">
-				<!-- added dynamically in partsLoader -->
-			</div>
+			<canvas id="renderCanvas"></canvas>
 
 			<br />
 			<button onclick="createSpritesheet()">Create Spritesheet</button>
-			<br /><br />
 		</div>
 
 		<div>
-			<canvas id="renderCanvas"></canvas>
+			<div id="category"></div>
 		</div>
 
-		<script src="src/config-v2.js"></script>
+		<script src="src/config.js"></script>
 		<script src="src/screenshotHandler.js"></script>
 		<script src="src/keyboardHandler.js"></script>
 		<script src="src/partsLoader.js"></script>
 		<script src="src/index.js"></script>
+		<script src="src/uiPartsPicker.js"></script>
 
 		<footer>
 			<br />
