@@ -3,7 +3,7 @@
 //Part pngs must be arranged in ./v1/arcadian-parts as:
 //[Gender]/[BodyPart]/[PartName].png
 
-const arcadianPartsPath = "./v1/arcadian-parts";
+const arcadianPartsPath = "./v2/arcadian-parts";
 const partsConfigPath = "./src/partsConfig.json";
 const fs = require("fs");
 
