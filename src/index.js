@@ -15,9 +15,44 @@ var g_partsLoader = new PartsLoader();
 var g_animPrev = null;
 
 /**
+ * List of files per avatar part. Contents are generated at runtime, based on g_config.partsConfigPath
+ * Initial value is sample format for reference.
+ * */
+var g_fileList = [
+	{
+		Gender: "Female",
+		Parts: [
+			{
+				Name: "Bottom",
+				Files: [
+					{
+						Name: "Alien-Queen-Bottom",
+						Path: "v1/arcadian-parts/Female/Bottom/Alien-Queen-Bottom.png",
+					},
+				],
+			},
+		],
+	},
+];
+
+/**
  * Main initialize function.
  */
 function initialize() {
+	waitForLoading();
+}
+
+async function waitForLoading() {
+	g_fileList.length = 0;
+
+	await fetch(g_config.partsConfigPath)
+		.then((response) => response.json())
+		.then((json) => (g_fileList = json));
+
+	afterLoading();
+}
+
+function afterLoading() {
 	g_engine = new BABYLON.Engine(g_canvas, true, {
 		preserveDrawingBuffer: true, // for screenshots
 		stencil: true,

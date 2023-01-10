@@ -201,11 +201,18 @@ class PartsLoader {
 	 * @returns Array of string
 	 */
 	#getFiles(id, matName) {
-		for (var i of g_fileList.List) {
-			if (i.Gender == id && i.Part == matName) {
-				return i.Files;
-			}
+		let gender = g_fileList.find((x) => x.Gender == id);
+		if (gender == null) return null;
+
+		let part = gender.Parts.find((x) => x.Name == matName);
+		if (part == null) return null;
+
+		let allPaths = [];
+		for (let fileConfig of part.Files) {
+			allPaths.push(fileConfig.Path);
 		}
+
+		return allPaths;
 	}
 
 	/**
