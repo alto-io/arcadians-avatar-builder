@@ -1,4 +1,6 @@
 /**
+ * Run with node
+ * 
  * Part pngs must be arranged in ./v1/arcadian-parts as:
  * [Gender]/[BodyPart]/[PartName].png
  * */
