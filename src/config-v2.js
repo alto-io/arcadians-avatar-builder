@@ -23,7 +23,7 @@ g_config = {
 	list: [
 		{
 			id: "Male",
-			gltfPath: "./v2/male/gltf/",
+			gltfPath: "./v2/gltf/",
 			gltfFileName: "arcadian.gltf",
 			position: { x: 0, y: -1, z: 0 },
 			scaling: { x: 4, y: 4, z: -4 },
@@ -42,57 +42,6 @@ g_config = {
 			],
 		},
 	],
-};
 
-g_fileList = {
-	List: [
-		{
-			Gender: "Male",
-			Part: "Bottom",
-			Files: [
-				"v2/male/parts/bottom/bottom0.png",
-				"v2/male/parts/bottom/bottom1.png",
-			],
-		},
-		{
-			Gender: "Male",
-			Part: "Head",
-			Files: [
-				"v2/male/parts/head/head0.png",
-				"v2/male/parts/head/head1.png",
-			],
-		},
-		{
-			Gender: "Male",
-			Part: "Left",
-			Files: [
-				"v2/male/parts/left/left0.png",
-				"v2/male/parts/left/left1.png",
-				"v2/male/parts/left/left2.png",
-			],
-		},
-		{
-			Gender: "Male",
-			Part: "Right",
-			Files: [
-				"v2/male/parts/right/right0.png",
-				"v2/male/parts/right/right1.png",
-				"v2/male/parts/right/right2.png",
-			],
-		},
-		{
-			Gender: "Male",
-			Part: "Skin",
-			Files: [
-				"v2/male/parts/skin/skin0.png",
-				"v2/male/parts/skin/skin1.png",
-				"v2/male/parts/skin/skin2.png",
-			],
-		},
-		{
-			Gender: "Male",
-			Part: "Top",
-			Files: ["v2/male/parts/top/top0.png", "v2/male/parts/top/top1.png"],
-		},
-	],
+	partsConfigPath: "./v2/arcadian-parts/partsConfig.json",
 };
