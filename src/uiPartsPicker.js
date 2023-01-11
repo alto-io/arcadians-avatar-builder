@@ -1,10 +1,7 @@
 window.onload = function () {
-	if (g_config == null) return;
-	if (g_config.list <= 0) return;
+	initialize();
 
-	var avatar = g_config.list[0];
-
-	initPartsUI(avatar.id);
+	initPartsUI("Male");
 };
 
 function showPartsList(id, matName) {
@@ -42,13 +39,11 @@ function showPartsList(id, matName) {
 }
 
 function changeGender(id) {
-	initPartsUI(id);
 	loadAvatar(id);
+	initPartsUI(id);
 }
 
-async function initPartsUI(id) {
-	await waitForLoading();
-
+function initPartsUI(id) {
 	if (g_config == null) return;
 	if (g_config.list <= 0) return;
 
