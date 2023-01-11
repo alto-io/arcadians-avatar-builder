@@ -4,7 +4,7 @@
 //	[Gender]/[BodyPart]/[PartName].png
 //	Output is at arcadianPartsPath/partsConfigFileName
 
-const arcadianPartsPath = "./v2/arcadian-parts";
+const arcadianPartsPath = "./v1/arcadian-parts";
 const partsConfigFileName = "partsConfig.json";
 const fs = require("fs");
 
