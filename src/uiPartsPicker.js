@@ -3,7 +3,7 @@ window.onload = function () {
 	if (g_config.list <= 0) return;
 
 	var avatar = g_config.list[0];
-	
+
 	initPartsUI(avatar.id);
 };
 
@@ -17,8 +17,8 @@ function showPartsList(id, matName) {
 
 	var files = [];
 	var avatar = g_fileList.find((x) => x.Gender == id);
-	if(avatar == null) return;
-	for(var i of avatar.Parts) {
+	if (avatar == null) return;
+	for (var i of avatar.Parts) {
 		if (i.Name == matName) {
 			files = i.Files;
 		}
@@ -33,7 +33,10 @@ function showPartsList(id, matName) {
 		var button = document.createElement("button");
 		button.innerText = i.Name;
 		button.innerHTML = `<img src='${i.Path}' />`;
-		button.setAttribute("onClick", `replaceParts('${matName}', '${i.Path}')`);
+		button.setAttribute(
+			"onClick",
+			`replaceParts('${matName}', '${i.Path}')`
+		);
 		div.appendChild(button);
 	}
 }
@@ -55,7 +58,7 @@ async function initPartsUI(id) {
 	// Load Gender buttons
 	var genderDiv = document.getElementById("gender-pick");
 	if (genderDiv == null) return;
-		
+
 	genderDiv.innerHTML = "";
 	for (var g of g_config.list) {
 		var button = document.createElement("button");
@@ -72,10 +75,7 @@ async function initPartsUI(id) {
 	for (var m of avatar.materials) {
 		var button = document.createElement("button");
 		button.innerText = m.name;
-		button.setAttribute(
-			"onClick",
-			`showPartsList('${id}', '${m.name}')`
-		);
+		button.setAttribute("onClick", `showPartsList('${id}', '${m.name}')`);
 		partsDiv.appendChild(button);
 	}
 
