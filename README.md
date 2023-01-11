@@ -31,11 +31,13 @@ This project will be embedded to the Arcadians v2 mint site. It shows an animate
 New pngs can be added in the selection by copying the pngs to their appropriate folder in ['v1/arcadian-parts'](v1/arcadian-parts).
 
 Directories here as structured as:
+
 > arcadian-parts/[Gender]/[Part]/[FileName].png
 
 Take care to keep the directory structure as is.
 
 Once all the desired pngs have been added, run ['updatePartsConfig.js'](src/updatePartsConfig.js) via node in the terminal. E.g. if you have the terminal open in the root directory, the command would be:
+
 > node src/updatePartsConfig.js
 
 If no errors pop up, then the config has been updated and the new parts can be viewed in the html.
