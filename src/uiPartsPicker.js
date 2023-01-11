@@ -32,7 +32,7 @@ function showPartsList(id, matName) {
 	for (var i of files) {
 		var button = document.createElement("button");
 		button.innerText = i.Name;
-		button.innerHTML = `<img src='${i.Path}' />`;
+		button.innerHTML = `<button class="img-size"><img src='${i.Path}' /></button>`;
 		button.setAttribute(
 			"onClick",
 			`replaceParts('${matName}', '${i.Path}')`
