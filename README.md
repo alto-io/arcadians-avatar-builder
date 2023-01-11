@@ -40,7 +40,7 @@ Once all the desired pngs have been added, run ['updatePartsConfig.js'](src/upda
 
 > node src/updatePartsConfig.js
 
-If no errors pop up, then the config has been updated and the new parts can be viewed in the html.
+If no errors pop up, then the config has been updated and the new parts can be viewed in the html on refresh.
 
 ## Avatar Canvas Game Lego
 
