@@ -1,8 +1,10 @@
 window.onload = function () {
-	initialize();
+	if (g_config == null) return;
+	if (g_config.list <= 0) return;
 
-	var ui = new UIPartsPicker();
-	ui.init();
+	var avatar = g_config.list[0];
+	
+	initPartsUI(avatar.id);
 };
 
 function showPartsList(id, matName) {
@@ -14,8 +16,10 @@ function showPartsList(id, matName) {
 	div.innerHTML = "";
 
 	var files = [];
-	for (var i of g_fileList.List) {
-		if (i.Gender == id && i.Part == matName) {
+	var avatar = g_fileList.find((x) => x.Gender == id);
+	if(avatar == null) return;
+	for(var i of avatar.Parts) {
+		if (i.Name == matName) {
 			files = i.Files;
 		}
 	}
@@ -26,38 +30,55 @@ function showPartsList(id, matName) {
 	div.append(header);
 
 	for (var i of files) {
-		console.log("Create " + i);
 		var button = document.createElement("button");
-		button.innerText = i;
-		button.innerHTML = `<img src='${i}' />`;
-		button.setAttribute("onClick", `replaceParts('${matName}', '${i}')`);
+		button.innerText = i.Name;
+		button.innerHTML = `<img src='${i.Path}' />`;
+		button.setAttribute("onClick", `replaceParts('${matName}', '${i.Path}')`);
 		div.appendChild(button);
 	}
 }
 
-class UIPartsPicker {
-	init() {
-		if (g_config == null) return;
-		if (g_config.list <= 0) return;
+function changeGender(id) {
+	initPartsUI(id);
+	loadAvatar(id);
+}
 
-		var id = "Male";
+async function initPartsUI(id) {
+	await waitForLoading();
 
-		var avatar = g_config.list.find((x) => x.id == id);
-		if (avatar == null) return;
+	if (g_config == null) return;
+	if (g_config.list <= 0) return;
 
-		var div = document.getElementById("parts-pick");
-		if (div == null) return;
+	var avatar = g_config.list.find((x) => x.id == id);
+	if (avatar == null) return;
 
-		div.innerHTML = "";
-
-		for (var m of avatar.materials) {
-			var button = document.createElement("button");
-			button.innerText = m.name;
-			button.setAttribute(
-				"onClick",
-				`showPartsList('${id}', '${m.name}')`
-			);
-			div.appendChild(button);
-		}
+	// Load Gender buttons
+	var genderDiv = document.getElementById("gender-pick");
+	if (genderDiv == null) return;
+		
+	genderDiv.innerHTML = "";
+	for (var g of g_config.list) {
+		var button = document.createElement("button");
+		button.innerHTML = g.id;
+		button.setAttribute("onClick", `changeGender('${g.id}')`);
+		genderDiv.appendChild(button);
 	}
+
+	// Load Parts buttons
+	var partsDiv = document.getElementById("parts-pick");
+	if (partsDiv == null) return;
+
+	partsDiv.innerHTML = "";
+	for (var m of avatar.materials) {
+		var button = document.createElement("button");
+		button.innerText = m.name;
+		button.setAttribute(
+			"onClick",
+			`showPartsList('${id}', '${m.name}')`
+		);
+		partsDiv.appendChild(button);
+	}
+
+	// Default to the first material
+	showPartsList(id, avatar.materials[0].name);
 }
