@@ -30,3 +30,7 @@ button {
 	overflow: auto;
 	margin: auto;
 }
+
+#button-group {
+	display: inline-block;
+}
