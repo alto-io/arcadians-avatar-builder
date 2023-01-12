@@ -3132,7 +3132,7 @@
             "alphaCutoff" : 0.5,
             "alphaMode" : "MASK",
             "doubleSided" : true,
-            "name" : "Right",
+            "name" : "Right Hand",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "index" : 4
@@ -3145,7 +3145,7 @@
             "alphaCutoff" : 0.5,
             "alphaMode" : "MASK",
             "doubleSided" : true,
-            "name" : "Left",
+            "name" : "Left Hand",
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
                     "index" : 5

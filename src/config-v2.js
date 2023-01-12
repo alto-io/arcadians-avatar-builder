@@ -32,8 +32,8 @@ g_config = {
 				{ id: "Head", name: "Head" },
 				{ id: "Top", name: "Top" },
 				{ id: "Bottom", name: "Bottom" },
-				{ id: "Left", name: "Left" },
-				{ id: "Right", name: "Right" },
+				{ id: "Left Hand", name: "Left Hand" },
+				{ id: "Right Hand", name: "Right Hand" },
 			],
 			animations: [
 				{ id: "Idle", name: "Idle" },
