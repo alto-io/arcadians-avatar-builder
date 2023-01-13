@@ -1,8 +1,12 @@
 window.onload = function () {
-	initialize();
-
-	initPartsUI("Male");
+	initUI();
 };
+
+async function initUI() {
+	await waitForLoading();
+
+	initParts("Male");
+}
 
 function showPartsList(id, matName) {
 	if (g_config == null) return;
@@ -24,9 +28,15 @@ function showPartsList(id, matName) {
 	var header = document.createElement("H2");
 	var text = document.createTextNode(matName);
 	header.appendChild(text);
-	div.append(header);
+	div.appendChild(header);
 
 	for (var i of files) {
+		var group = document.createElement("div");
+		group.id = "button-group";
+
+		var text = document.createElement("p");
+		text.innerText = i.Name;
+
 		var button = document.createElement("button");
 		button.innerText = i.Name;
 		button.innerHTML = `<button class="img-size"><img src='${i.Path}' /></button>`;
@@ -34,16 +44,24 @@ function showPartsList(id, matName) {
 			"onClick",
 			`replaceParts('${matName}', '${i.Path}')`
 		);
-		div.appendChild(button);
+
+		// Add button to group
+		group.appendChild(button);
+
+		// Add text to group;
+		group.appendChild(text);
+
+		// Add group to grid div
+		div.appendChild(group);
 	}
 }
 
 function changeGender(id) {
 	loadAvatar(id);
-	initPartsUI(id);
+	initParts(id);
 }
 
-function initPartsUI(id) {
+function initParts(id) {
 	if (g_config == null) return;
 	if (g_config.list <= 0) return;
 
