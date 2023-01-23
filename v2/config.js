@@ -32,7 +32,36 @@ g_config = {
 	list: [
 		{
 			id: "Male",
-			gltfPath: "./v2/gltf/",          /** folder to the gltf */
+			gltfPath: "./v2/gltf/Male/",      /** folder to the gltf */
+			gltfFileName: "arcadian.gltf",   /** filename of the gltf */
+			position: { x: 0, y: -1, z: 0 }, /** Position on the scene */
+			scaling: { x: 4, y: 4, z: -4 },  /** Scale of the avatar */
+			materials: [
+				/**
+				 * id - material names defined in Blender
+				 * name - friendly name to be shown on the html page.
+				 *      - also the name of the parts folder
+				 */
+				{ id: "Skin", name: "Skin" },
+				{ id: "Head", name: "Head" },
+				{ id: "Top", name: "Top" },
+				{ id: "Bottom", name: "Bottom" },
+				{ id: "Left Hand", name: "Left Hand" },
+				{ id: "Right Hand", name: "Right Hand" },
+			],
+			animations: [
+				/**
+				 * id - animation names defined in Blender
+				 * name - friendly name to be shown on the html page
+				 */
+				{ id: "Idle", name: "Idle" },
+				{ id: "Cheer", name: "Cheer" },
+				{ id: "Attack", name: "Attack" },
+			],
+		},
+		{
+			id: "Female",
+			gltfPath: "./v2/gltf/Female/",   /** folder to the gltf */
 			gltfFileName: "arcadian.gltf",   /** filename of the gltf */
 			position: { x: 0, y: -1, z: 0 }, /** Position on the scene */
 			scaling: { x: 4, y: 4, z: -4 },  /** Scale of the avatar */

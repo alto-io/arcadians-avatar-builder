@@ -1,17 +1,30 @@
 [
 	{
-		"Gender": "Male",
+		"Gender": "Female",
 		"Parts": [
 			{
 				"Name": "Bottom",
 				"Files": [
 					{
 						"Name": "bottom0",
-						"Path": "./v2/arcadian-parts/Male/Bottom/bottom0.png"
+						"Path": "v2/arcadian-parts/Female/Bottom/bottom0.png"
 					},
 					{
 						"Name": "bottom1",
-						"Path": "./v2/arcadian-parts/Male/Bottom/bottom1.png"
+						"Path": "v2/arcadian-parts/Female/Bottom/bottom1.png"
+					}
+				]
+			},
+			{
+				"Name": "Hairstyle",
+				"Files": [
+					{
+						"Name": "head0",
+						"Path": "v2/arcadian-parts/Female/Hairstyle/head0.png"
+					},
+					{
+						"Name": "head1",
+						"Path": "v2/arcadian-parts/Female/Hairstyle/head1.png"
 					}
 				]
 			},
@@ -20,11 +33,11 @@
 				"Files": [
 					{
 						"Name": "head0",
-						"Path": "./v2/arcadian-parts/Male/Head/head0.png"
+						"Path": "v2/arcadian-parts/Female/Head/head0.png"
 					},
 					{
 						"Name": "head1",
-						"Path": "./v2/arcadian-parts/Male/Head/head1.png"
+						"Path": "v2/arcadian-parts/Female/Head/head1.png"
 					}
 				]
 			},
@@ -33,15 +46,15 @@
 				"Files": [
 					{
 						"Name": "left0",
-						"Path": "./v2/arcadian-parts/Male/Left Hand/left0.png"
+						"Path": "v2/arcadian-parts/Female/Left Hand/left0.png"
 					},
 					{
 						"Name": "left1",
-						"Path": "./v2/arcadian-parts/Male/Left Hand/left1.png"
+						"Path": "v2/arcadian-parts/Female/Left Hand/left1.png"
 					},
 					{
 						"Name": "left2",
-						"Path": "./v2/arcadian-parts/Male/Left Hand/left2.png"
+						"Path": "v2/arcadian-parts/Female/Left Hand/left2.png"
 					}
 				]
 			},
@@ -50,15 +63,15 @@
 				"Files": [
 					{
 						"Name": "right0",
-						"Path": "./v2/arcadian-parts/Male/Right Hand/right0.png"
+						"Path": "v2/arcadian-parts/Female/Right Hand/right0.png"
 					},
 					{
 						"Name": "right1",
-						"Path": "./v2/arcadian-parts/Male/Right Hand/right1.png"
+						"Path": "v2/arcadian-parts/Female/Right Hand/right1.png"
 					},
 					{
 						"Name": "right2",
-						"Path": "./v2/arcadian-parts/Male/Right Hand/right2.png"
+						"Path": "v2/arcadian-parts/Female/Right Hand/right2.png"
 					}
 				]
 			},
@@ -67,15 +80,15 @@
 				"Files": [
 					{
 						"Name": "skin0",
-						"Path": "./v2/arcadian-parts/Male/Skin/skin0.png"
+						"Path": "v2/arcadian-parts/Female/Skin/skin0.png"
 					},
 					{
 						"Name": "skin1",
-						"Path": "./v2/arcadian-parts/Male/Skin/skin1.png"
+						"Path": "v2/arcadian-parts/Female/Skin/skin1.png"
 					},
 					{
 						"Name": "skin2",
-						"Path": "./v2/arcadian-parts/Male/Skin/skin2.png"
+						"Path": "v2/arcadian-parts/Female/Skin/skin2.png"
 					}
 				]
 			},
@@ -84,11 +97,119 @@
 				"Files": [
 					{
 						"Name": "top0",
-						"Path": "./v2/arcadian-parts/Male/Top/top0.png"
+						"Path": "v2/arcadian-parts/Female/Top/top0.png"
 					},
 					{
 						"Name": "top1",
-						"Path": "./v2/arcadian-parts/Male/Top/top1.png"
+						"Path": "v2/arcadian-parts/Female/Top/top1.png"
+					}
+				]
+			}
+		]
+	},
+	{
+		"Gender": "Male",
+		"Parts": [
+			{
+				"Name": "Bottom",
+				"Files": [
+					{
+						"Name": "bottom0",
+						"Path": "v2/arcadian-parts/Male/Bottom/bottom0.png"
+					},
+					{
+						"Name": "bottom1",
+						"Path": "v2/arcadian-parts/Male/Bottom/bottom1.png"
+					}
+				]
+			},
+			{
+				"Name": "Hairstyle",
+				"Files": [
+					{
+						"Name": "head0",
+						"Path": "v2/arcadian-parts/Male/Hairstyle/head0.png"
+					},
+					{
+						"Name": "head1",
+						"Path": "v2/arcadian-parts/Male/Hairstyle/head1.png"
+					}
+				]
+			},
+			{
+				"Name": "Head",
+				"Files": [
+					{
+						"Name": "head0",
+						"Path": "v2/arcadian-parts/Male/Head/head0.png"
+					},
+					{
+						"Name": "head1",
+						"Path": "v2/arcadian-parts/Male/Head/head1.png"
+					}
+				]
+			},
+			{
+				"Name": "Left Hand",
+				"Files": [
+					{
+						"Name": "left0",
+						"Path": "v2/arcadian-parts/Male/Left Hand/left0.png"
+					},
+					{
+						"Name": "left1",
+						"Path": "v2/arcadian-parts/Male/Left Hand/left1.png"
+					},
+					{
+						"Name": "left2",
+						"Path": "v2/arcadian-parts/Male/Left Hand/left2.png"
+					}
+				]
+			},
+			{
+				"Name": "Right Hand",
+				"Files": [
+					{
+						"Name": "right0",
+						"Path": "v2/arcadian-parts/Male/Right Hand/right0.png"
+					},
+					{
+						"Name": "right1",
+						"Path": "v2/arcadian-parts/Male/Right Hand/right1.png"
+					},
+					{
+						"Name": "right2",
+						"Path": "v2/arcadian-parts/Male/Right Hand/right2.png"
+					}
+				]
+			},
+			{
+				"Name": "Skin",
+				"Files": [
+					{
+						"Name": "skin0",
+						"Path": "v2/arcadian-parts/Male/Skin/skin0.png"
+					},
+					{
+						"Name": "skin1",
+						"Path": "v2/arcadian-parts/Male/Skin/skin1.png"
+					},
+					{
+						"Name": "skin2",
+						"Path": "v2/arcadian-parts/Male/Skin/skin2.png"
+					}
+				]
+			},
+			{
+				"Name": "Top",
+				"Files": [
+					{
+						"Name": "top0",
+						"Path": "v2/arcadian-parts/Male/Top/top0.png"
+					},
+					{
+						"Name": "top1",
+						"Path": "v2/arcadian-parts/Male/Top/top1.png"
 					}
 				]
 			}
