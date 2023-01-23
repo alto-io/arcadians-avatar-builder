@@ -38,7 +38,7 @@ Take care to keep the directory structure as is.
 
 Once all the desired pngs have been added, run ['updatePartsConfig.js'](src/updatePartsConfig.js) via node in the terminal. E.g. if you have the terminal open in the root directory, the command would be:
 
-To run for V1 - `node src/updatePartsConfig.js`
+To run for V1 - `node src/updatePartsConfig.js`  
 To run for V2 - `node src/updatePartsConfig.js v2`
 
 If no errors pop up, then the config has been updated and the new parts can be viewed in the html on refresh.
