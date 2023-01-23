@@ -4,12 +4,17 @@ class ScreenshotHandler {
 	prevBgColor;
 	postProcess;
 
+	spriteSize;
+
 	/**Used by BABYLON screenshot API*/
 	screenshotSet = [];
 
 	startScreenshotsCr = function* (canvas, engine, scene, camera) {
 		// Nested array, separating screenshot sets by animation
 		let allScreenshotData = [];
+
+		let select = document.getElementById("selectResolution");
+		this.spriteSize = select.value;
 
 		// wait for post processing to finish
 		this.setupScreenshots(canvas, scene, camera);
@@ -64,8 +69,8 @@ class ScreenshotHandler {
 					engine,
 					camera,
 					{
-						width: this.CONFIG.spriteWidth,
-						height: this.CONFIG.spriteWidth,
+						width: this.spriteSize,
+						height: this.spriteSize,
 						precision: 1,
 					},
 					(imgData) => {
@@ -97,7 +102,7 @@ class ScreenshotHandler {
 		this.prevBgColor = scene.clearColor;
 		scene.clearColor = new BABYLON.Color4(0, 0, 0, 0);
 
-		var postProcessScale = this.CONFIG.spriteWidth / canvas.width;
+		var postProcessScale = this.spriteSize / canvas.width;
 		this.postProcess = new BABYLON.PassPostProcess(
 			"Scene copy",
 			postProcessScale,
@@ -142,8 +147,8 @@ class ScreenshotHandler {
 			) {
 				arrangedImageData.push({
 					src: allScreenshotData[animIdx][imgIdx],
-					x: imgIdx * this.CONFIG.spriteWidth,
-					y: animIdx * this.CONFIG.spriteHeight,
+					x: imgIdx * this.spriteSize,
+					y: animIdx * this.spriteSize,
 				});
 			}
 		}
@@ -155,8 +160,8 @@ class ScreenshotHandler {
 
 		let finalImage;
 		await mergeImages(arrangedImageData, {
-			width: longestSet * this.CONFIG.spriteWidth,
-			height: allScreenshotData.length * this.CONFIG.spriteHeight,
+			width: longestSet * this.spriteSize,
+			height: allScreenshotData.length * this.spriteSize,
 		}).then((output) => {
 			finalImage = output;
 		});
@@ -170,8 +175,8 @@ class ScreenshotHandler {
 
 	createPropertiesJson(allScreenshotData) {
 		let properties = {
-			spriteWidth: this.CONFIG.spriteWidth,
-			spriteHeight: this.CONFIG.spriteHeight,
+			spriteWidth: this.spriteSize,
+			spriteHeight: this.spriteSize,
 			framesPerSec:
 				this.CONFIG.defaultFrameRate / (this.CONFIG.framesToSkip + 1),
 			animations: [],

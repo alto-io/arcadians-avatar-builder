@@ -80,6 +80,7 @@ function afterLoading() {
 
 	initEvents();
 	initGender();
+	initSelectResolution();
 
 	g_engine.runRenderLoop(() => {
 		g_scene.render();
@@ -126,6 +127,14 @@ function initGender() {
 		button.innerText = g.id;
 		button.setAttribute("onClick", `loadAvatar('${g.id}')`);
 		element.appendChild(button);
+	}
+}
+
+function initSelectResolution() {
+	let select = document.getElementById("selectResolution");
+	for (let size of g_config.spritesheet.sizes) {
+		let optionName = size + "x" + size;
+		select.add(new Option(optionName, size), undefined);
 	}
 }
 
