@@ -132,6 +132,8 @@ function initGender() {
 
 function initSelectResolution() {
 	let select = document.getElementById("selectResolution");
+	if (select == null) return;
+
 	for (let size of g_config.spritesheet.sizes) {
 		let optionName = size + "x" + size;
 		select.add(new Option(optionName, size), undefined);

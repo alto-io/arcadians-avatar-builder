@@ -4,7 +4,8 @@
 //	[Gender]/[BodyPart]/[PartName].png
 //	Output is at arcadianPartsPath/partsConfigFileName
 
-const arcadianPartsPath = "./v1/arcadian-parts";
+var arcadianPartsPath = "./v1/arcadian-parts";
+
 const partsConfigFileName = "partsConfig.json";
 const fs = require("fs");
 
@@ -12,9 +13,15 @@ generatePartsConfig();
 
 /**Run with node*/
 function generatePartsConfig() {
+	var dir = "v1";
+	if (process.argv.length >= 3) {
+		dir = process.argv[2];
+	}
+
+	arcadianPartsPath = dir + "/arcadian-parts";
+
 	let output = getAvatarFiles();
 	let json = JSON.stringify(output, null, "\t");
-
 	let path = arcadianPartsPath + "/" + partsConfigFileName;
 
 	fs.writeFile(path, json, function (error) {
