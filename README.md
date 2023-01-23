@@ -19,7 +19,7 @@ This project will be embedded to the Arcadians v2 mint site. It shows an animate
 
 ## Config file
 
--   [`config.js`](src/config.js) has been provided as a starting point that contains the v1 Arcadians data
+-   [`config.js`](v1/config.js) has been provided as a starting point that contains the v1 Arcadians data
 -   It contains settings on the following:
     -   exporting the sprite sheet
     -   list of gltf files, materials and animations
@@ -56,8 +56,15 @@ For each body part, you will have to do the following steps:
 	1. Assign faces that would use this new material
 	1. Export to GLTF  
 	![screenshot](docs/images/gltf-export.png)
-1. Update src/config-v2.js to add the new material name
+1. Update [v2/config.js](v2/config.js) to add the new material name
 1. After these steps, the new body part should be usable
+
+## Adding a new gender
+
+1. Duplicate the Male folders inside `arcadian-parts` and `gltf` folders
+1. Update the config.js file by copying the male block and pasting it at the bottom. Remember to check the syntax of the json.
+1. See if it shows up in the html page
+1. Add/replace the images for the body parts
 
 ## Avatar Canvas Game Lego
 
