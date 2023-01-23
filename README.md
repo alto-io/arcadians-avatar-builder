@@ -57,8 +57,9 @@ For each body part, you will have to do the following steps:
 	1. Place the PNGs there
 	1. Run parts config script. `node src/updatePartsConfig.js v2`
 1. Update the Blender file by adding new polygons that would be used for that new part
-	1. Duplicate an existing material
+	1. [Duplicate an existing material](docs/dup-material.md)
 	1. Assign faces that would use this new material
-	1. Export to GLTF
+	1. Export to GLTF ![screenshot](docs/images/gltf-export.png)
 1. Update src/config-v2.js to add the new material name
+1. After these steps, the new body part should be usable
 
