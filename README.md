@@ -26,7 +26,7 @@ This project will be embedded to the Arcadians v2 mint site. It shows an animate
     -   list of parts
 -   The config file contains documentation comments on the important sections
 
-## Adding Arcadian Parts
+## Adding new pngs to existing parts
 
 New pngs can be added in the selection by copying the pngs to their appropriate folder in ['v1/arcadian-parts'](v1/arcadian-parts).
 
@@ -38,15 +38,10 @@ Take care to keep the directory structure as is.
 
 Once all the desired pngs have been added, run ['updatePartsConfig.js'](src/updatePartsConfig.js) via node in the terminal. E.g. if you have the terminal open in the root directory, the command would be:
 
-To run for V1 - `node src/updatePartsConfig.js`
+To run for V1 - `node src/updatePartsConfig.js`  
 To run for V2 - `node src/updatePartsConfig.js v2`
 
 If no errors pop up, then the config has been updated and the new parts can be viewed in the html on refresh.
-
-## Avatar Canvas Game Lego
-
--   [`avatarCanvas.js`](src/avatarCanvas.js) is a reusable game lego for drawing and playing animations from the exported sprite sheet
--   [Demo page](test-avatar-canvas.html) has been provided as a sample how to use this class
 
 ## Adding new body parts
 
@@ -59,7 +54,12 @@ For each body part, you will have to do the following steps:
 1. Update the Blender file by adding new polygons that would be used for that new part
 	1. [Duplicate an existing material](docs/dup-material.md)
 	1. Assign faces that would use this new material
-	1. Export to GLTF ![screenshot](docs/images/gltf-export.png)
+	1. Export to GLTF  
+	![screenshot](docs/images/gltf-export.png)
 1. Update src/config-v2.js to add the new material name
 1. After these steps, the new body part should be usable
 
+## Avatar Canvas Game Lego
+
+-   [`avatarCanvas.js`](src/avatarCanvas.js) is a reusable game lego for drawing and playing animations from the exported sprite sheet
+-   [Demo page](test-avatar-canvas.html) has been provided as a sample how to use this class
