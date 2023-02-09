@@ -14,6 +14,9 @@ var g_screenshotHandler = new ScreenshotHandler();
 var g_partsLoader = new PartsLoader();
 var g_animPrev = null;
 
+// jsora vars
+var g_jsoraProject = jsora.JSOra();
+
 /**
  * List of files per avatar part. Contents are generated at runtime, based on g_config.partsConfigPath
  * Initial value is sample format for reference.
@@ -42,12 +45,23 @@ function initialize() {
 	waitForLoading();
 }
 
+async function loadOraFile() {
+
+	const loadedFile = await fetch("parts/parts.ora").then(r => r.blob());
+	await g_jsoraProject.load(loadedFile);
+
+	console.log(g_jsoraProject);
+
+}
+
 async function waitForLoading() {
 	g_fileList.length = 0;
 
 	await fetch(g_config.partsConfigPath)
 		.then((response) => response.json())
 		.then((json) => (g_fileList = json));
+
+	await loadOraFile();
 
 	afterLoading();
 }
