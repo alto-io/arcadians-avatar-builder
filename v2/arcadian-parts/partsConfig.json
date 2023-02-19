@@ -111,6 +111,19 @@
 		"Gender": "Male",
 		"Parts": [
 			{
+				"Name": "BG",
+				"Files": [
+					{
+						"Name": "blue",
+						"Path": "v2/arcadian-parts/Male/BG/blue.png"
+					},
+					{
+						"Name": "red",
+						"Path": "v2/arcadian-parts/Male/BG/red.png"
+					}
+				]
+			},
+			{
 				"Name": "Bottom",
 				"Files": [
 					{
@@ -120,32 +133,49 @@
 					{
 						"Name": "bottom1",
 						"Path": "v2/arcadian-parts/Male/Bottom/bottom1.png"
+					},
+					{
+						"Name": "bottom_test",
+						"Path": "v2/arcadian-parts/Male/Bottom/bottom_test.png"
 					}
 				]
 			},
 			{
-				"Name": "Hairstyle",
+				"Name": "Eyes",
 				"Files": [
 					{
-						"Name": "head0",
-						"Path": "v2/arcadian-parts/Male/Hairstyle/head0.png"
+						"Name": "blue_eyes",
+						"Path": "v2/arcadian-parts/Male/Eyes/blue_eyes.png"
 					},
 					{
-						"Name": "head1",
-						"Path": "v2/arcadian-parts/Male/Hairstyle/head1.png"
+						"Name": "red",
+						"Path": "v2/arcadian-parts/Male/Eyes/red.png"
 					}
 				]
 			},
 			{
-				"Name": "Head",
+				"Name": "Hair Style",
+				"Files": [
+					{
+						"Name": "blonde",
+						"Path": "v2/arcadian-parts/Male/Hair Style/blonde.png"
+					},
+					{
+						"Name": "Protag_hair",
+						"Path": "v2/arcadian-parts/Male/Hair Style/Protag_hair.png"
+					}
+				]
+			},
+			{
+				"Name": "Head Gear",
 				"Files": [
 					{
 						"Name": "head0",
-						"Path": "v2/arcadian-parts/Male/Head/head0.png"
+						"Path": "v2/arcadian-parts/Male/Head Gear/head0.png"
 					},
 					{
-						"Name": "head1",
-						"Path": "v2/arcadian-parts/Male/Head/head1.png"
+						"Name": "law_head",
+						"Path": "v2/arcadian-parts/Male/Head Gear/law_head.png"
 					}
 				]
 			},
@@ -163,12 +193,33 @@
 					{
 						"Name": "left2",
 						"Path": "v2/arcadian-parts/Male/Left Hand/left2.png"
+					},
+					{
+						"Name": "left_3",
+						"Path": "v2/arcadian-parts/Male/Left Hand/left_3.png"
+					}
+				]
+			},
+			{
+				"Name": "Mouth",
+				"Files": [
+					{
+						"Name": "beard1",
+						"Path": "v2/arcadian-parts/Male/Mouth/beard1.png"
+					},
+					{
+						"Name": "beard2",
+						"Path": "v2/arcadian-parts/Male/Mouth/beard2.png"
 					}
 				]
 			},
 			{
 				"Name": "Right Hand",
 				"Files": [
+					{
+						"Name": "Katana",
+						"Path": "v2/arcadian-parts/Male/Right Hand/Katana.png"
+					},
 					{
 						"Name": "right0",
 						"Path": "v2/arcadian-parts/Male/Right Hand/right0.png"
@@ -187,16 +238,28 @@
 				"Name": "Skin",
 				"Files": [
 					{
-						"Name": "skin0",
-						"Path": "v2/arcadian-parts/Male/Skin/skin0.png"
+						"Name": "Skin_dark",
+						"Path": "v2/arcadian-parts/Male/Skin/Skin_dark.png"
 					},
 					{
-						"Name": "skin1",
-						"Path": "v2/arcadian-parts/Male/Skin/skin1.png"
+						"Name": "Skin_gold",
+						"Path": "v2/arcadian-parts/Male/Skin/Skin_gold.png"
 					},
 					{
-						"Name": "skin2",
-						"Path": "v2/arcadian-parts/Male/Skin/skin2.png"
+						"Name": "Skin_light",
+						"Path": "v2/arcadian-parts/Male/Skin/Skin_light.png"
+					},
+					{
+						"Name": "Skin_metal",
+						"Path": "v2/arcadian-parts/Male/Skin/Skin_metal.png"
+					},
+					{
+						"Name": "Skin_Orc",
+						"Path": "v2/arcadian-parts/Male/Skin/Skin_Orc.png"
+					},
+					{
+						"Name": "Skin_zombie",
+						"Path": "v2/arcadian-parts/Male/Skin/Skin_zombie.png"
 					}
 				]
 			},
@@ -210,6 +273,10 @@
 					{
 						"Name": "top1",
 						"Path": "v2/arcadian-parts/Male/Top/top1.png"
+					},
+					{
+						"Name": "top_test",
+						"Path": "v2/arcadian-parts/Male/Top/top_test.png"
 					}
 				]
 			}

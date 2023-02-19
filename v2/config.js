@@ -43,11 +43,15 @@ g_config = {
 				 *      - also the name of the parts folder
 				 */
 				{ id: "Skin", name: "Skin" },
-				{ id: "Head", name: "Head" },
+				{ id: "Head Gear", name: "Head Gear" },
+				{ id: "Hair Style", name: "Hair Style" },
 				{ id: "Top", name: "Top" },
 				{ id: "Bottom", name: "Bottom" },
 				{ id: "Left Hand", name: "Left Hand" },
 				{ id: "Right Hand", name: "Right Hand" },
+				{ id: "BG", name: "BG" },
+				{ id: "Eyes", name: "Eyes" },
+				{ id: "Mouth", name: "Mouth" }
 			],
 			animations: [
 				/**
