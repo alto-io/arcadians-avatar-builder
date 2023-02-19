@@ -70,3 +70,8 @@ For each body part, you will have to do the following steps:
 
 -   [`avatarCanvas.js`](src/avatarCanvas.js) is a reusable game lego for drawing and playing animations from the exported sprite sheet
 -   [Demo page](test-avatar-canvas.html) has been provided as a sample how to use this class
+
+## References
+
+* https://github.com/polats/game-lego-nft-avatars
+* https://gitlab.com/inklabapp/jsora

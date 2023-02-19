@@ -1,5 +1,6 @@
 window.onload = function () {
 	initUI();
+	loadScript("../lib/jsora.min.js", loadOraFile);
 };
 
 // Search List sample format
@@ -17,6 +18,10 @@ var searchList = {
 	],
 }
 var currId = null;
+
+// jsora files
+var jsoraProject = null;
+
 
 async function initUI() {
 	await waitForLoading();
@@ -180,4 +185,32 @@ function linearSearch() {
 			div.appendChild(group);
 		}
 	}
+}
+
+async function loadOraFile() {
+
+	jsoraProject = jsora.JSOra();
+	
+	const loadedFile = await fetch("parts/parts.ora").then(r => r.blob());
+	await jsoraProject.load(loadedFile);
+
+	console.log(jsoraProject);
+}
+
+// https://stackoverflow.com/questions/950087/how-do-i-include-a-javascript-file-in-another-javascript-file
+function loadScript(url, callback)
+{
+    // Adding the script tag to the head as suggested before
+    var head = document.head;
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+
+    // Then bind the event to the callback function.
+    // There are several events for cross browser compatibility.
+    script.onreadystatechange = callback;
+    script.onload = callback;
+
+    // Fire the loading
+    head.appendChild(script);
 }
