@@ -8,5 +8,3 @@
 ![dup-material-3](images/dup-material-3.png)
 7. Change the images  
 ![dup-material-4](images/dup-material-4.png)
-
-
