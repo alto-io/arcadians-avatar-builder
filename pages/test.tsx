@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import * as AvatarBuilder from "../avatar/index.js";
+import * as AvatarBuilder from "../avatar";
 import SceneComponent from "../components/SceneComponent";
 import Image from "next/legacy/image";
 // uses above component in same directory

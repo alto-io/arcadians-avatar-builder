@@ -1,6 +1,6 @@
-import { ScreenshotHandler } from "./screenshotHandler.js";
-import { PartsLoader } from "./partsLoader.js";
-import * as Config from "./config.js";
+import { ScreenshotHandler } from "./screenshotHandler";
+import { PartsLoader } from "./partsLoader";
+import * as Config from "./config";
 import * as BABYLON from "@babylonjs/core/Legacy/legacy";
 
 import * as jsora from "./jsora";
@@ -82,10 +82,9 @@ export async function initializeOra(canvas) {
 }
 
 async function renderAvatar() {
+
     const rend = new jsora.Renderer(g_jsoraProject);
     var renderCanvas = await rend.make_merged_image();
-
-    console.log(renderCanvas.width, renderCanvas.height);
 
     var sourceImageData = renderCanvas.toDataURL("image/png");
     var destCanvasContext = g_oraCanvas.getContext('2d');
