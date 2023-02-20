@@ -3,7 +3,7 @@ import { PartsLoader } from "./partsLoader";
 import * as Config from "./config";
 import * as BABYLON from "@babylonjs/core/Legacy/legacy";
 
-import * as jsora from "./jsora";
+// import * as jsora from "./jsora";
 
 // global variables
 var g_config = Config.g_config;
@@ -17,20 +17,16 @@ var g_screenshotHandler = new ScreenshotHandler();
 var g_partsLoader = new PartsLoader();
 var g_animPrev = null;
 
-var g_jsoraProject = jsora.JSOra();
+var g_jsoraProject = null;
 var g_oraCanvas = null;
 
 async function loadOraFile() {
-	const loadedFile = await fetch(g_config.oraConfigPath).then(r => r.blob());
+
+    g_jsoraProject = window.jsora.JSOra();
+
+    const loadedFile = await fetch(g_config.oraConfigPath).then(r => r.blob());
 
     await g_jsoraProject.load(loadedFile);
-
-    // const cb = (e) => {
-    //     console.log(e.name);
-    //     e.children && e.children.forEach(cb);
-    // }
-    
-    // g_jsoraProject.children.forEach(cb);
 }
 
 
@@ -41,6 +37,27 @@ async function loadOraFile() {
 var g_fileList = [
     {
         Gender: "Female",
+        Parts: [
+            {
+                Name: "Bottom",
+                Files: [
+                    {
+                        Name: "Alien-Queen-Bottom",
+                        Path: "v1/arcadian-parts/Female/Bottom/Alien-Queen-Bottom.png",
+                    },
+                ],
+            },
+        ],
+    },
+];
+
+/**
+ * Map ora data into a structure similar to g_fileList so we can use it for rendering via babel.
+ * Contents are generated at runtime, based on g_config.oraConfigPath. Initial value is expected format.
+ * Each part type (top, bottom, etc) is defined as an array, and each part file is composed of name and path.
+ * */
+var g_OrafileList = [
+    {
         Parts: [
             {
                 Name: "Bottom",
@@ -73,14 +90,38 @@ export function initialize(canvas, scene) {
     waitForLoading();
 }
 
-export async function initializeOra(canvas) {
-    g_oraCanvas = canvas;
-    await loadOraFile();
+async function initializeVariablesFromOra() {
 
-    // wait for ora file to load
-    setTimeout(renderAvatar, 50);
+    var start_layer = 0;
+
+    const recurseOverParts = (e) => {
+        console.log(e.name);
+        e.children && e.children.forEach(recurseOverParts);
+    }
+
+   
+    g_jsoraProject.children.forEach(recurseOverParts);
 }
 
+export async function initializeOra(canvas) {
+    g_oraCanvas = canvas;
+    
+    await loadOraFile();
+
+    await initializeVariablesFromOra();
+
+    renderAvatar();
+}
+
+// TODO: 
+// Loading from jsora source does not currently work on production build due to 
+// next compile + gpu.js issues. We hack a fix for this by loading jsora via Script in _app.js
+//
+//
+// see: 
+// https://github.com/gpujs/gpu.js/issues/776
+// https://stackoverflow.com/questions/43017000/babel-ignores-es6-inside-react-dangerouslysetinnerhtml-script-tag
+// 
 async function renderAvatar() {
 
     const rend = new jsora.Renderer(g_jsoraProject);
