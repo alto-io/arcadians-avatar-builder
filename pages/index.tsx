@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import * as AvatarBuilder from "../avatar/index.js";
+
 import SceneComponent from "../components/SceneComponent";
+import OraViewerComponent from "../components/OraViewerComponent";
+
 import Image from "next/legacy/image";
 // uses above component in same directory
 // import SceneComponent from 'babylonjs-hook'; // if you install 'babylonjs-hook' NPM.
@@ -10,6 +13,12 @@ const onSceneReady = (scene: any) => {
     const canvas = scene.getEngine().getRenderingCanvas();
     AvatarBuilder.initialize(canvas, scene);
 };
+
+// initialize ora viewer
+const onCanvasReady = (canvas: any) => {
+    console.log("onCanvasReady");
+    AvatarBuilder.initializeOra(canvas);
+}
 
 /**
  * Will run on every frame render.  We are spinning the box on y-axis.
@@ -21,6 +30,7 @@ export default function Test() {
     const [arcadiansParts, setArcadiansParts] = React.useState<any>(null);
     const [arcadianGender, setArcadianGender] = React.useState<any>("Male");
     const [arcadianSelectedPart, setArcadianSelectedPart] = React.useState<any>("Bottom");
+
 
     useEffect(() => {
         const getArcadiansParts = async () => {
@@ -84,11 +94,22 @@ export default function Test() {
                     WALK
                 </button>
             </div>
+            {/*
             <SceneComponent
                 antialias={true}
                 onSceneReady={onSceneReady}
                 onRender={onRender}
                 id="my-canvas"
+                engineOptions={undefined}
+                adaptToDeviceRatio={undefined}
+                sceneOptions={undefined}
+            />
+            */}
+            <OraViewerComponent
+                antialias={true}
+                onCanvasReady={onCanvasReady}
+                onRender={onRender}
+                id="ora-canvas"
                 engineOptions={undefined}
                 adaptToDeviceRatio={undefined}
                 sceneOptions={undefined}

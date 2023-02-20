@@ -18,12 +18,21 @@ var g_partsLoader = new PartsLoader();
 var g_animPrev = null;
 
 var g_jsoraProject = jsora.JSOra();
+var g_oraCanvas = null;
 
 async function loadOraFile() {
 	const loadedFile = await fetch(g_config.oraConfigPath).then(r => r.blob());
 
     await g_jsoraProject.load(loadedFile);
+
+    // const cb = (e) => {
+    //     console.log(e.name);
+    //     e.children && e.children.forEach(cb);
+    // }
+    
+    // g_jsoraProject.children.forEach(cb);
 }
+
 
 /**
  * List of files per avatar part. Contents are generated at runtime, based on g_config.partsConfigPath
@@ -64,6 +73,37 @@ export function initialize(canvas, scene) {
     waitForLoading();
 }
 
+export async function initializeOra(canvas) {
+    g_oraCanvas = canvas;
+    await loadOraFile();
+
+    // wait for ora file to load
+    setTimeout(renderAvatar, 50);
+}
+
+async function renderAvatar() {
+    const rend = new jsora.Renderer(g_jsoraProject);
+    var renderCanvas = await rend.make_merged_image();
+
+    console.log(renderCanvas.width, renderCanvas.height);
+
+    var sourceImageData = renderCanvas.toDataURL("image/png");
+    var destCanvasContext = g_oraCanvas.getContext('2d');
+    var destinationImage = new Image;
+    destinationImage.onload = function () {
+
+        var scaleFactor = Math.min(g_oraCanvas.width / destinationImage.width, 
+        g_oraCanvas.height / destinationImage.height);
+        var newWidth = destinationImage.width * scaleFactor;
+        var newHeight = destinationImage.height * scaleFactor;
+        var x = (g_oraCanvas.width / 2) - (newWidth / 2);
+        var y = (g_oraCanvas.height / 2) - (newHeight / 2);
+
+        destCanvasContext.drawImage(destinationImage, x, y, newWidth, newHeight);
+    };
+    destinationImage.src = sourceImageData;
+}
+
 async function waitForLoading() {
     g_fileList.length = 0;
 
@@ -74,8 +114,6 @@ async function waitForLoading() {
     //	g_screenshotHandler.initialize(g_config);
 
     g_partsLoader.initialize(g_scene, g_config, g_fileList);
-
-   await loadOraFile();
 
     afterLoading();
 }
