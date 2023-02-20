@@ -1,0 +1,44 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "sourceMap": true,
+        "allowJs": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "incremental": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "noImplicitAny": false,    
+        "rootDirs": [".", "../common/src"],
+        "baseUrl": ".",
+        "jsx": "preserve",
+        "paths": {
+          "~~/*": ["./src/*"],
+          "~common/*": ["../common/src/*"]
+        }
+    },
+    "include": [
+        "src", 
+        "../common/src", 
+        "next-env.ts", 
+        "next-env.d.ts",
+        "**/*.ts", 
+        "**/*.tsx", 
+        "components/SceneComponent.js"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/node_modules",
+    ],
+    "types": [
+        "babylonjs",
+        "vitest/globals"
+    ]
+}
