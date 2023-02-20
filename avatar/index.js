@@ -20,12 +20,9 @@ var g_animPrev = null;
 var g_jsoraProject = jsora.JSOra();
 
 async function loadOraFile() {
-
-	const loadedFile = await fetch("parts/parts.ora").then(r => r.blob());
+	const loadedFile = await fetch(g_config.oraConfigPath).then(r => r.blob());
 
     await g_jsoraProject.load(loadedFile);
-	console.log(g_jsoraProject);
-
 }
 
 /**
