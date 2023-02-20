@@ -3,6 +3,8 @@ import { PartsLoader } from "./partsLoader.js";
 import * as Config from "./config.js";
 import * as BABYLON from "@babylonjs/core/Legacy/legacy";
 
+import * as jsora from "./jsora";
+
 // global variables
 var g_config = Config.g_config;
 var g_canvas = null;
@@ -14,6 +16,17 @@ var g_partsIdx = 0;
 var g_screenshotHandler = new ScreenshotHandler();
 var g_partsLoader = new PartsLoader();
 var g_animPrev = null;
+
+var g_jsoraProject = jsora.JSOra();
+
+async function loadOraFile() {
+
+	const loadedFile = await fetch("parts/parts.ora").then(r => r.blob());
+
+    await g_jsoraProject.load(loadedFile);
+	console.log(g_jsoraProject);
+
+}
 
 /**
  * List of files per avatar part. Contents are generated at runtime, based on g_config.partsConfigPath
@@ -64,6 +77,9 @@ async function waitForLoading() {
     //	g_screenshotHandler.initialize(g_config);
 
     g_partsLoader.initialize(g_scene, g_config, g_fileList);
+
+   await loadOraFile();
+
     afterLoading();
 }
 
