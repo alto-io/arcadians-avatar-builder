@@ -51,26 +51,7 @@ var g_fileList = [
     },
 ];
 
-/**
- * Map ora data into a structure similar to g_fileList so we can use it for rendering via babel.
- * Contents are generated at runtime, based on g_config.oraConfigPath. Initial value is expected format.
- * Each part type (top, bottom, etc) is defined as an array, and each part file is composed of name and path.
- * */
-var g_OrafileList = [
-    {
-        Parts: [
-            {
-                Name: "Bottom",
-                Files: [
-                    {
-                        Name: "Alien-Queen-Bottom",
-                        Path: "v1/arcadian-parts/Female/Bottom/Alien-Queen-Bottom.png",
-                    },
-                ],
-            },
-        ],
-    },
-];
+var g_OraPartsList = { PartsList: {} };
 
 /**
  * Main initialize function.
@@ -92,15 +73,59 @@ export function initialize(canvas, scene) {
 
 async function initializeVariablesFromOra() {
 
-    var start_layer = 0;
+    function recursivelyCreateNodes(partArray) {
+        if (partArray.length <= 1) {
+          return partArray[0];
+        } else {
+          var node = {};
+          var nodeName = partArray.pop();
+          node[nodeName] = recursivelyCreateNodes(partArray);
+          return node;
+        }
+    }
+    
+    function addToPartsList(partString) {
+        const objectToAdd = recursivelyCreateNodes(partString.split(".").reverse());
+        const partStringArray = partString.split(".");
+    
+        const name = partStringArray[partStringArray.length - 1];
 
-    const recurseOverParts = (e) => {
-        console.log(e.name);
-        e.children && e.children.forEach(recurseOverParts);
+        const partToAdd = {
+          name,
+          path: partString.split("PartsList.")[1]
+        };
+    
+        var partCategory = partString.slice(0, partString.lastIndexOf("."));
+    
+        // check if object should be added to array
+        var currentPartSet = _.get(g_OraPartsList, partCategory);
+        if (currentPartSet == undefined) {
+          currentPartSet = [partToAdd];
+        } else {
+          if (Array.isArray(currentPartSet)) {
+            currentPartSet.push(partToAdd);
+          } else {
+            console.warn(`Incorrect partString: ${partString}, not an array`);
+          }
+        }
+    
+        _.set(objectToAdd, partCategory, currentPartSet);
+    
+        g_OraPartsList = _.merge(g_OraPartsList, objectToAdd);
+      }
+
+    function recurseOverParts(obj, parent) {
+        for (let child of obj.children) {
+            if (child.children != undefined) {
+            recurseOverParts(child, parent + "." + child.name);
+            } else {
+            addToPartsList(parent + "." + child.name);
+            }
+        }
     }
 
-   
-    g_jsoraProject.children.forEach(recurseOverParts);
+    g_OraPartsList = { PartsList: {} };
+    recurseOverParts(g_jsoraProject, "PartsList");   
 }
 
 export async function initializeOra(canvas) {
@@ -110,7 +135,7 @@ export async function initializeOra(canvas) {
 
     await initializeVariablesFromOra();
 
-    renderAvatar();
+    setTimeout(renderAvatar, 50);
 }
 
 // TODO: 
