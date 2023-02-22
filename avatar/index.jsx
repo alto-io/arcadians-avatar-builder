@@ -52,6 +52,7 @@ var g_fileList = [
 ];
 
 var g_OraPartsList = { PartsList: {} };
+var g_OraPartsCategoryArray = [];
 
 /**
  * Main initialize function.
@@ -108,9 +109,11 @@ async function initializeVariablesFromOra() {
             console.warn(`Incorrect partString: ${partString}, not an array`);
           }
         }
-    
+        
         _.set(objectToAdd, partCategory, currentPartSet);
     
+        var newItem = partCategory.split(".").pop();
+        g_OraPartsCategoryArray.indexOf(newItem) === -1 ? g_OraPartsCategoryArray.push(newItem) : 0;
         g_OraPartsList = _.merge(g_OraPartsList, objectToAdd);
       }
 
@@ -125,6 +128,8 @@ async function initializeVariablesFromOra() {
     }
 
     g_OraPartsList = { PartsList: {} };
+    g_OraPartsCategoryArray = [];
+
     recurseOverParts(g_jsoraProject, "PartsList");   
 }
 
@@ -138,10 +143,8 @@ export async function initializeOra(canvas) {
     setTimeout(renderAvatar, 50);
 }
 
-export function getOraPartsList() {
-    console.log(g_OraPartsList);
-
-    return [1,2,3];
+export function getOraPartsCategories() {
+    return g_OraPartsCategoryArray;
 }
 
 // TODO: 
