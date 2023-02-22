@@ -1,36 +1,21 @@
-import React, { useEffect } from "react";
+import React, { createContext, useEffect } from "react";
 import * as AvatarBuilder from "../avatar/";
 
-import SceneComponent from "../components/SceneComponent";
 import OraViewerComponent from "../components/OraViewerComponent";
 
-import Image from "next/legacy/image";
-// uses above component in same directory
-// import SceneComponent from 'babylonjs-hook'; // if you install 'babylonjs-hook' NPM.
-
-const onSceneReady = (scene: any) => {
-    console.log("onSceneReady");
-    const canvas = scene.getEngine().getRenderingCanvas();
-    AvatarBuilder.initialize(canvas, scene);
-};
-
-// initialize ora viewer
-const onCanvasReady = (canvas: any) => {
-    console.log("onCanvasReady");
-    AvatarBuilder.initializeOra(canvas);
-}
-
-/**
- * Will run on every frame render.  We are spinning the box on y-axis.
- */
-const onRender = (scene: any) => {};
+const OraDataContext = createContext(null);
 
 export default function Test() {
     const parts = ["Bottom", "Head", "Eyes", "Left Hand", "Right Hand", "Skin", "Mouth", "Top", "Shadow"];
+   
     const [arcadiansParts, setArcadiansParts] = React.useState<any>(null);
     const [arcadianGender, setArcadianGender] = React.useState<any>("Male");
     const [arcadianSelectedPart, setArcadianSelectedPart] = React.useState<any>("Bottom");
 
+    // initialize ora viewer
+    const onCanvasReady = async (canvas: any) => {
+        console.log("onCanvasReady");
+    }
 
     useEffect(() => {
         const getArcadiansParts = async () => {
@@ -94,28 +79,12 @@ export default function Test() {
                     WALK
                 </button>
             </div>
-            {/*
-            <SceneComponent
-                antialias={true}
-                onSceneReady={onSceneReady}
-                onRender={onRender}
-                id="my-canvas"
-                engineOptions={undefined}
-                adaptToDeviceRatio={undefined}
-                sceneOptions={undefined}
-            />
-            */}
             <OraViewerComponent
-                antialias={true}
                 onCanvasReady={onCanvasReady}
-                onRender={onRender}
                 id="ora-canvas"
-                engineOptions={undefined}
-                adaptToDeviceRatio={undefined}
-                sceneOptions={undefined}
             />
             <div className="flex w-full items-center justify-evenly gap-2">
-                {parts.map((item: any, index: number) => {
+                {parts && parts.map((item: any, index: number) => {
                     return (
                         <button
                             key={index}

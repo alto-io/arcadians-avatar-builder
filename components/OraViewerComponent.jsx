@@ -1,8 +1,11 @@
-import { useEffect, useRef } from "react";
-import { Engine, Scene } from "@babylonjs/core";
+import { createContext, useEffect, useRef, useState } from "react";
+import * as AvatarBuilder from "../avatar/";
 
-export default ({ antialias, engineOptions, adaptToDeviceRatio, sceneOptions, onRender, onCanvasReady, ...rest }) => {
+export const OraDataContext = createContext(null);
+
+export default ({ onCanvasReady, ...rest }) => {
     const reactCanvas = useRef(null);
+    const [partsList, setPartsList] = useState(null);
 
     useEffect(() => {
         const { current: canvas } = reactCanvas;
@@ -10,19 +13,28 @@ export default ({ antialias, engineOptions, adaptToDeviceRatio, sceneOptions, on
         if (!canvas) return;
 
         // wait for jsora to be loaded
-        const waitForJsOra = () => {
+        const waitForJsOra = async () => {
             if (window.jsora == null) {
                 setTimeout(waitForJsOra, 50);
             }
 
-            else onCanvasReady(canvas);
+            else {
+                await AvatarBuilder.initializeOra(canvas);
+                setPartsList(AvatarBuilder.getOraPartsList());
+                onCanvasReady(canvas);
+            }
         }
 
         setTimeout(waitForJsOra, 50);
 
         return () => {
         };
-    }, [antialias, engineOptions, adaptToDeviceRatio, sceneOptions, onRender, onCanvasReady]);
+    }, [ onCanvasReady ]);
 
-    return <canvas className="w-[512px]" ref={reactCanvas} {...rest} />;
+    return (
+    <>
+        {partsList}
+        <canvas className="w-[512px]" ref={reactCanvas} {...rest} />
+    </>
+    )
 };

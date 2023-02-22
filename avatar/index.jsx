@@ -138,6 +138,12 @@ export async function initializeOra(canvas) {
     setTimeout(renderAvatar, 50);
 }
 
+export function getOraPartsList() {
+    console.log(g_OraPartsList);
+
+    return [1,2,3];
+}
+
 // TODO: 
 // Loading from jsora source does not currently work on production build due to 
 // next compile + gpu.js issues. We hack a fix for this by loading jsora via Script in _app.js
