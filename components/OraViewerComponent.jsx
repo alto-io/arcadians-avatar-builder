@@ -73,8 +73,7 @@ export default ({ onCanvasReady, ...rest }) => {
                         <div
                             className="hover:cursor-pointer relative p-1 rounded-md aspect-square h-[100px] hover:border-[#AA54FF] hover:border-2 bg-[#EEBD92]"
                             onClick={() => {
-                                // AvatarBuilder.replaceParts(item.Name, part.Path);
-                                console.log(item)
+                                AvatarBuilder.displayPart(item);
                             }}                            
                             key={index}
                         >

@@ -163,6 +163,20 @@ export async function getItemImage(itemPath) {
     return imageData;
 }
 
+export function displayPart(itemPath) {
+    var partLayer = g_jsoraProject.get_by_path(itemPath);
+
+    // hide same layer parts
+    partLayer.parent && partLayer.parent.children.map((child) =>
+        {
+            child.hidden = true;   
+        }
+    )
+
+    partLayer.hidden = false;
+    renderAvatar();
+}
+
 // TODO: 
 // Loading from jsora source does not currently work on production build due to 
 // next compile + gpu.js issues. We hack a fix for this by loading jsora via Script in _app.js
@@ -172,7 +186,7 @@ export async function getItemImage(itemPath) {
 // https://github.com/gpujs/gpu.js/issues/776
 // https://stackoverflow.com/questions/43017000/babel-ignores-es6-inside-react-dangerouslysetinnerhtml-script-tag
 // 
-async function renderAvatar() {
+export async function renderAvatar() {
 
     const rend = new jsora.Renderer(g_jsoraProject);
     var renderCanvas = await rend.make_merged_image();
@@ -189,6 +203,7 @@ async function renderAvatar() {
         var x = (g_oraCanvas.width / 2) - (newWidth / 2);
         var y = (g_oraCanvas.height / 2) - (newHeight / 2);
 
+        destCanvasContext.clearRect(0, 0, g_oraCanvas.width, g_oraCanvas.height);
         destCanvasContext.drawImage(destinationImage, x, y, newWidth, newHeight);
     };
     destinationImage.src = sourceImageData;

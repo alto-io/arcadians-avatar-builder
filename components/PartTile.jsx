@@ -6,7 +6,7 @@ const dotBase64 = "data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAA
 
 export default function PartTile(props){
     const {partPath, renderTrigger} = props  
-    const [imgSrc, setImgSrc] = useState(dotBase64); // here is the hook for the url
+    const [imgSrc, setImgSrc] = useState(dotBase64);
      
     useEffect(() => {
       const getPartImage = async (path) =>{          
