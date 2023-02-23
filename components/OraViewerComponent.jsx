@@ -64,25 +64,38 @@ export default ({ onCanvasReady, ...rest }) => {
         <div className="flex flex-col gap-2">
             <div className="flex flex-col w-full gap-2 mx-auto">
                 <div className="flex w-full flex-wrap gap-2 items-center justify-center">
-                    {parts && parts
+                    {parts ?
+                        parts
                         .filter(
                         (val) => val.includes(selectedCategory)
                         )
                         .map( (item, index) => {
-                        return (
-                        <div
-                            className="hover:cursor-pointer relative p-1 rounded-md aspect-square h-[100px] hover:border-[#AA54FF] hover:border-2 bg-[#EEBD92]"
-                            onClick={() => {
-                                AvatarBuilder.displayPart(item);
-                            }}                            
-                            key={index}
-                        >
-                            <PartTile partPath={item} renderTrigger={renderTrigger}></PartTile>
-                        </div>
-                        )
-                    })
+                            return (
+                            <div
+                                className="hover:cursor-pointer relative p-1 rounded-md aspect-square h-[100px] hover:border-[#AA54FF] hover:border-2 bg-[#EEBD92]"
+                                onClick={() => {
+                                    AvatarBuilder.displayPart(item);
+                                }}                            
+                                key={index}
+                            >
+                                <PartTile partPath={item} renderTrigger={renderTrigger}></PartTile>
+                            </div>
+                            )
+                        })
+                        :
+                        <p className={`font-bold text-[#AA54FF]`}>
+                        ⌛ Loading categories... ⌛                       
+                        </p>
                     }
-                </div>        
+                </div>
+                {
+                    parts && parts.filter((val) => val.includes(selectedCategory)).length > 0 ?
+                    <></> 
+                    : 
+                    <p className={`font-bold text-[#AA54FF]`}>
+                        👆 Select a category 👆                         
+                    </p>
+                }        
             </div>        
         </div>        
   
