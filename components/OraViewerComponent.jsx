@@ -6,7 +6,8 @@ export const OraDataContext = createContext(null);
 export default ({ onCanvasReady, ...rest }) => {
     const reactCanvas = useRef(null);
     const [partsCategories, setPartsCategories] = useState(null);
-    const [selectedCategory, setSelectedCategory] = useState("");
+    const [parts, setParts] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState("XYZ");
 
 
     useEffect(() => {
@@ -23,6 +24,7 @@ export default ({ onCanvasReady, ...rest }) => {
             else {
                 await AvatarBuilder.initializeOra(canvas);
                 setPartsCategories(AvatarBuilder.getOraPartsCategories());
+                setParts(AvatarBuilder.getArrayOfAllParts());
                 onCanvasReady(canvas);
             }
         }
@@ -37,24 +39,52 @@ export default ({ onCanvasReady, ...rest }) => {
     <>
         <canvas className="w-[512px]" ref={reactCanvas} {...rest} />
         <div className="flex w-full items-center justify-evenly gap-2">
-                {partsCategories && partsCategories.map((item, index) => {
-                    return (
-                        <button
+            {partsCategories && partsCategories.map((item, index) => {
+                return (
+                    <button
+                        key={index}
+                        onClick={
+                            () => {
+                                    setSelectedCategory(item)
+                            }
+                        }
+                        className={
+                            `font-bold ${item === selectedCategory ? "text-[#AA54FF]" : ""}`
+                        }
+                    >
+                        {item}
+                    </button>
+                );
+            })}
+        </div>
+        <div className="flex flex-col gap-2">
+            <div className="flex flex-col w-full gap-2 mx-auto">
+                <div className="flex w-full flex-wrap gap-2 items-center justify-center">
+                    {parts && parts
+                        .filter(
+                        (val) => val.includes(selectedCategory)
+                        )
+                        .map( (item, index) => {
+                        return (
+                        <div
+                            className="hover:cursor-pointer relative p-1 rounded-md aspect-square h-[100px] hover:border-[#AA54FF] hover:border-2 bg-[#EEBD92]"
                             key={index}
-                            onClick={
-                                () => {
-                                     setSelectedCategory(item)
-                                }
-                            }
-                            className={
-                                `font-bold ${item === selectedCategory ? "text-[#AA54FF]" : ""}`
-                            }
                         >
-                            {item}
-                        </button>
-                    );
-                })}
+                            <p className="absolute text-xs">{item.split(".").pop()}</p>
+                            <img
+                                onClick={() => {
+                                    // AvatarBuilder.replaceParts(item.Name, part.Path);
+                                }}
+                            ></img>
+                        </div>
+                        )
+                    })
+                    }
+                </div>        
             </div>        
+        </div>        
+  
     </>
+
     )
 };

@@ -53,7 +53,7 @@ var g_fileList = [
 
 var g_OraPartsList = { PartsList: {} };
 var g_OraPartsCategoryArray = [];
-
+var g_ArrayOfAllParts = [];
 /**
  * Main initialize function.
  */
@@ -90,10 +90,11 @@ async function initializeVariablesFromOra() {
         const partStringArray = partString.split(".");
     
         const name = partStringArray[partStringArray.length - 1];
+        const path = partString.split("PartsList.")[1];
 
         const partToAdd = {
           name,
-          path: partString.split("PartsList.")[1]
+          path
         };
     
         var partCategory = partString.slice(0, partString.lastIndexOf("."));
@@ -114,6 +115,7 @@ async function initializeVariablesFromOra() {
     
         var newItem = partCategory.split(".").pop();
         g_OraPartsCategoryArray.indexOf(newItem) === -1 ? g_OraPartsCategoryArray.push(newItem) : 0;
+        g_ArrayOfAllParts.push(path);
         g_OraPartsList = _.merge(g_OraPartsList, objectToAdd);
       }
 
@@ -129,8 +131,11 @@ async function initializeVariablesFromOra() {
 
     g_OraPartsList = { PartsList: {} };
     g_OraPartsCategoryArray = [];
+    g_ArrayOfAllParts = [];
 
-    recurseOverParts(g_jsoraProject, "PartsList");   
+    recurseOverParts(g_jsoraProject, "PartsList");  
+    
+    g_ArrayOfAllParts.reverse(); // to display in proper order in frontend
 }
 
 export async function initializeOra(canvas) {
@@ -145,6 +150,10 @@ export async function initializeOra(canvas) {
 
 export function getOraPartsCategories() {
     return g_OraPartsCategoryArray;
+}
+
+export function getArrayOfAllParts() {
+    return g_ArrayOfAllParts;
 }
 
 // TODO: 
