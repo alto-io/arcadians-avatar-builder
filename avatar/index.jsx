@@ -86,18 +86,18 @@ async function initializeVariablesFromOra() {
     }
     
     function addToPartsList(partString) {
-        const objectToAdd = recursivelyCreateNodes(partString.split(".").reverse());
-        const partStringArray = partString.split(".");
+        const objectToAdd = recursivelyCreateNodes(partString.split("/").reverse());
+        const partStringArray = partString.split("/");
     
         const name = partStringArray[partStringArray.length - 1];
-        const path = partString.split("PartsList.")[1];
+        const path = partString.split("PartsList/")[1];
 
         const partToAdd = {
           name,
           path
         };
     
-        var partCategory = partString.slice(0, partString.lastIndexOf("."));
+        var partCategory = partString.slice(0, partString.lastIndexOf("/"));
     
         // check if object should be added to array
         var currentPartSet = _.get(g_OraPartsList, partCategory);
@@ -113,7 +113,7 @@ async function initializeVariablesFromOra() {
         
         _.set(objectToAdd, partCategory, currentPartSet);
     
-        var newItem = partCategory.split(".").pop();
+        var newItem = partCategory.split("/").pop();
         g_OraPartsCategoryArray.indexOf(newItem) === -1 ? g_OraPartsCategoryArray.push(newItem) : 0;
         g_ArrayOfAllParts.push(path);
         g_OraPartsList = _.merge(g_OraPartsList, objectToAdd);
@@ -122,9 +122,9 @@ async function initializeVariablesFromOra() {
     function recurseOverParts(obj, parent) {
         for (let child of obj.children) {
             if (child.children != undefined) {
-            recurseOverParts(child, parent + "." + child.name);
+            recurseOverParts(child, parent + "/" + child.name);
             } else {
-            addToPartsList(parent + "." + child.name);
+            addToPartsList(parent + "/" + child.name);
             }
         }
     }
@@ -154,6 +154,13 @@ export function getOraPartsCategories() {
 
 export function getArrayOfAllParts() {
     return g_ArrayOfAllParts;
+}
+
+export async function getItemImage(itemPath) {
+    
+    var imageData = await g_jsoraProject.get_by_path(itemPath).get_base64();
+
+    return imageData;
 }
 
 // TODO: 

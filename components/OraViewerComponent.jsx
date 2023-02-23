@@ -1,6 +1,8 @@
 import { createContext, useEffect, useRef, useState } from "react";
 import * as AvatarBuilder from "../avatar/";
 
+import PartTile from "./PartTile";
+
 export const OraDataContext = createContext(null);
 
 export default ({ onCanvasReady, ...rest }) => {
@@ -8,6 +10,7 @@ export default ({ onCanvasReady, ...rest }) => {
     const [partsCategories, setPartsCategories] = useState(null);
     const [parts, setParts] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState("XYZ");
+    const [renderTrigger, setRenderTrigger] = useState(false); // to force tile to rerender
 
 
     useEffect(() => {
@@ -46,6 +49,7 @@ export default ({ onCanvasReady, ...rest }) => {
                         onClick={
                             () => {
                                     setSelectedCategory(item)
+                                    setRenderTrigger(!renderTrigger)
                             }
                         }
                         className={
@@ -68,14 +72,13 @@ export default ({ onCanvasReady, ...rest }) => {
                         return (
                         <div
                             className="hover:cursor-pointer relative p-1 rounded-md aspect-square h-[100px] hover:border-[#AA54FF] hover:border-2 bg-[#EEBD92]"
+                            onClick={() => {
+                                // AvatarBuilder.replaceParts(item.Name, part.Path);
+                                console.log(item)
+                            }}                            
                             key={index}
                         >
-                            <p className="absolute text-xs">{item.split(".").pop()}</p>
-                            <img
-                                onClick={() => {
-                                    // AvatarBuilder.replaceParts(item.Name, part.Path);
-                                }}
-                            ></img>
+                            <PartTile partPath={item} renderTrigger={renderTrigger}></PartTile>
                         </div>
                         )
                     })
