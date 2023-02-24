@@ -81,7 +81,7 @@ export default ({ onCanvasReady, ...rest }) => {
             style={{display: 'none'}} 
             />            
             </div>
-        <canvas className="w-[512px]" ref={reactCanvas} {...rest} />
+        <canvas className="w-[768px]" ref={reactCanvas} {...rest} />
         <div className="flex w-full items-center justify-evenly gap-2">
             {partsCategories && partsCategories.map((item, index) => {
                 return (

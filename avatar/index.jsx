@@ -185,11 +185,14 @@ export function displayPart(itemPath) {
     // hide same layer parts
     partLayer.parent && partLayer.parent.children.map((child) =>
         {
-            child.hidden = true;   
+            if (child != partLayer) {
+                child.hidden = true;   
+            }
         }
     )
 
-    partLayer.hidden = false;
+    // toggle visibility
+    partLayer.hidden = !partLayer.hidden;
     renderAvatar();
 }
 
