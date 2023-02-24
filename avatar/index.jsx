@@ -29,6 +29,20 @@ async function loadOraFile() {
     await g_jsoraProject.load(loadedFile);
 }
 
+export async function loadLocalOraFile(fileblob) {
+    try {
+    await g_jsoraProject.load(fileblob);
+    } catch (e) {
+        alert("invalid .ora file");
+        return false;
+    }
+    await initializeVariablesFromOra();
+
+    await renderAvatar();
+
+    return true;
+}
+
 
 /**
  * List of files per avatar part. Contents are generated at runtime, based on g_config.partsConfigPath
