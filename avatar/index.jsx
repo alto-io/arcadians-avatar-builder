@@ -136,6 +136,8 @@ async function initializeVariablesFromOra() {
     function recurseOverParts(obj, parent) {
         for (let child of obj.children) {
             if (child.children != undefined) {
+            // unhide parent layers
+            child.hidden = false;
             recurseOverParts(child, parent + "/" + child.name);
             } else {
             addToPartsList(parent + "/" + child.name);

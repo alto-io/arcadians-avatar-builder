@@ -119,5 +119,5 @@ export var g_config = {
 	],
 
 	partsConfigPath: "./v1/arcadian-parts/partsConfig.json",
-	oraConfigPath: "./parts/example_portraits.ora"
+	oraConfigPath: "./parts/female_arcadians.ora"
 };
