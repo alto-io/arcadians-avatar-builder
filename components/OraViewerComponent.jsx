@@ -6,7 +6,7 @@ import PartTile from "./PartTile";
 import { Engine, Scene } from "@babylonjs/core";
 
 export const OraDataContext = createContext(null);
-export const DISPLAY_ORA = true;
+export const DISPLAY_ORA = false;
 
 export default ({ onCanvasReady, ...rest }) => {
 

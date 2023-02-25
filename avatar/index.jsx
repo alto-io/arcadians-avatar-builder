@@ -320,7 +320,7 @@ export function replaceParts(key, fileName) {
 }
 
 export async function updateBabylonParts(key, oraPath) {
-    var base64Image = await g_jsoraProject.get_by_path(oraPath).get_base64();
+    var base64Image = await g_jsoraProject.get_by_path(oraPath).get_base64(false);
     g_partsLoader.replaceParts(key, base64Image);
 }
 
