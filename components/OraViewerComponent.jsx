@@ -9,6 +9,18 @@ export const OraDataContext = createContext(null);
 export const DISPLAY_ORA = true;
 
 export default ({ onCanvasReady, ...rest }) => {
+
+    const animationList = [
+        "Idle",
+        "Walk",
+        "Talk",
+        "Hit",
+        "Stun",
+        "Win",
+        "Attack - Knight",
+        "Attack - Gunner"
+    ]
+
     const reactCanvasOra = useRef(null);
     const reactCanvasBabylon = useRef(null);
     const [oraFileName, setOraFileName] = useState(Config.g_config.oraConfigPath)
@@ -161,7 +173,23 @@ export default ({ onCanvasReady, ...rest }) => {
                 {...rest} />
             <canvas className="aspect-square h-[256px]" ref={reactCanvasBabylon} {...rest} />
         </div>
-        
+
+        <div className="flex w-full gap-2 items-center justify-center">
+                {
+                    animationList.map( (item) => {
+                        return (
+                            <button
+                            onClick={ () => {
+                                AvatarBuilder.playAnim(item);
+                                }}
+                            >
+                            {item}
+                            </button>
+                        )
+                    })
+                }                
+            </div>
+
         <div className="flex w-full items-center justify-evenly gap-2">
             {partsCategories && partsCategories.map((item, index) => {
                 return (
@@ -196,6 +224,7 @@ export default ({ onCanvasReady, ...rest }) => {
                                 className="hover:cursor-pointer relative p-1 rounded-md aspect-square h-[100px] hover:border-[#AA54FF] hover:border-2 bg-[#EEBD92]"
                                 onClick={() => {
                                     DISPLAY_ORA && AvatarBuilder.displayPart(item);
+                                    AvatarBuilder.updateBabylonParts(selectedCategory, item);
                                 }}                            
                                 key={index}
                             >

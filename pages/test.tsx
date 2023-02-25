@@ -122,6 +122,7 @@ export default function Test() {
                                                     <p className="absolute text-xs">{part.Name}</p>
                                                     <img
                                                         onClick={() => {
+                                                            console.log(item.Name, part.Path);
                                                             AvatarBuilder.replaceParts(item.Name, part.Path);
                                                         }}
                                                         src={part.Path}
