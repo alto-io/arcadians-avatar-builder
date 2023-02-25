@@ -214,7 +214,6 @@ export async function renderAvatar() {
     var destCanvasContext = g_oraCanvas.getContext('2d');
     var destinationImage = new Image;
     destinationImage.onload = function () {
-
         var scaleFactor = Math.min(g_oraCanvas.width / destinationImage.width, 
         g_oraCanvas.height / destinationImage.height);
         var newWidth = destinationImage.width * scaleFactor;
@@ -224,6 +223,7 @@ export async function renderAvatar() {
 
         destCanvasContext.clearRect(0, 0, g_oraCanvas.width, g_oraCanvas.height);
         destCanvasContext.drawImage(destinationImage, x, y, newWidth, newHeight);
+        // destCanvasContext.drawImage(destinationImage, 0, 0);
     };
     destinationImage.src = sourceImageData;
 }

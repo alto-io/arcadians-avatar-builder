@@ -40,5 +40,5 @@ export default ({ antialias, engineOptions, adaptToDeviceRatio, sceneOptions, on
         };
     }, [antialias, engineOptions, adaptToDeviceRatio, sceneOptions, onRender, onSceneReady]);
 
-    return <canvas className="aspect-square h-[512px]" ref={reactCanvas} {...rest} />;
+    return <canvas className="aspect-square h-[256px]" ref={reactCanvas} {...rest} />;
 };

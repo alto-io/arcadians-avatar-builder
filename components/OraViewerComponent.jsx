@@ -3,11 +3,14 @@ import * as AvatarBuilder from "../avatar/";
 import * as Config from "../avatar/config";
 
 import PartTile from "./PartTile";
+import { Engine, Scene } from "@babylonjs/core";
 
 export const OraDataContext = createContext(null);
+export const DISPLAY_ORA = true;
 
 export default ({ onCanvasReady, ...rest }) => {
-    const reactCanvas = useRef(null);
+    const reactCanvasOra = useRef(null);
+    const reactCanvasBabylon = useRef(null);
     const [oraFileName, setOraFileName] = useState(Config.g_config.oraConfigPath)
     const [partsCategories, setPartsCategories] = useState(null);
     const [parts, setParts] = useState(null);
@@ -15,32 +18,102 @@ export default ({ onCanvasReady, ...rest }) => {
     const [renderTrigger, setRenderTrigger] = useState(false); // to force tile to rerender
 
     const hiddenFileInput = useRef(null);
+    const [arcadiansParts, setArcadiansParts] = useState(null);
 
 
+    const onSceneReady = (scene) => {
+        console.log("onSceneReady");
+        const canvas = scene.getEngine().getRenderingCanvas();
+        AvatarBuilder.initialize(canvas, scene);
+    };
+
+    /**
+     * Will run on every frame render.  We are spinning the box on y-axis.
+     */
+    const onRender = (scene) => {
+
+    };    
+
+    // initialize jsora canvas
+        useEffect(() => {
+            const { current: canvas } = reactCanvasOra;
+
+            if (!canvas) return;
+
+            // wait for jsora to be loaded
+            const waitForJsOra = async () => {
+                if (window.jsora == null) {
+                    setTimeout(waitForJsOra, 50);
+                }
+
+                else {
+                    await AvatarBuilder.initializeOra(canvas);
+                    setPartsCategories(AvatarBuilder.getOraPartsCategories());
+                    setParts(AvatarBuilder.getArrayOfAllParts());
+                }
+            }
+
+            setTimeout(waitForJsOra, 50);
+
+            return () => {
+            };
+        }, [ onCanvasReady ]);
+
+    // initialize babylonjs canvas
+    // useEffect(() => {
+    //     const getArcadiansParts = async () => {
+    //         const data = await fetch("./v1/arcadian-parts/partsConfig.json", {
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //                 Accept: "application/json",
+    //             },
+    //         });
+    //         const json = await data.json();
+    //         setArcadiansParts(json);
+    //     };
+
+    //     getArcadiansParts().catch((err) => {
+    //         console.log(err);
+    //     });
+    // }, []);
+
+    // initialize babylonjs canvas
+    // set up basic engine and scene
     useEffect(() => {
-        const { current: canvas } = reactCanvas;
+        const { current: canvas } = reactCanvasBabylon;
 
         if (!canvas) return;
 
-        // wait for jsora to be loaded
-        const waitForJsOra = async () => {
-            if (window.jsora == null) {
-                setTimeout(waitForJsOra, 50);
-            }
-
-            else {
-                await AvatarBuilder.initializeOra(canvas);
-                setPartsCategories(AvatarBuilder.getOraPartsCategories());
-                setParts(AvatarBuilder.getArrayOfAllParts());
-                onCanvasReady(canvas);
-            }
+        const engine = new Engine(canvas);
+        const scene = new Scene(engine);
+        if (scene.isReady()) {
+            onSceneReady(scene);
+        } else {
+            scene.onReadyObservable.addOnce((scene) => onSceneReady(scene));
         }
 
-        setTimeout(waitForJsOra, 50);
+        engine.runRenderLoop(() => {
+            if (typeof onRender === "function") onRender(scene);
+            scene.render();
+        });
+
+        const resize = () => {
+            scene.getEngine().resize();
+        };
+
+        if (window) {
+            window.addEventListener("resize", resize);
+        }
 
         return () => {
+            scene.getEngine().dispose();
+
+            if (window) {
+                window.removeEventListener("resize", resize);
+            }
         };
-    }, [ onCanvasReady ]);
+    }, []);
+
 
     const handleFileUploadClick = (event) => {
         hiddenFileInput.current.click()
@@ -81,7 +154,14 @@ export default ({ onCanvasReady, ...rest }) => {
             style={{display: 'none'}} 
             />            
             </div>
-        <canvas className="w-[768px]" ref={reactCanvas} {...rest} />
+        <div className="flex w-full gap-2 items-center justify-center">
+            <canvas 
+                className={`w-[512px] ${DISPLAY_ORA ? "": "hidden"}`}
+                ref={reactCanvasOra} 
+                {...rest} />
+            <canvas className="aspect-square h-[256px]" ref={reactCanvasBabylon} {...rest} />
+        </div>
+        
         <div className="flex w-full items-center justify-evenly gap-2">
             {partsCategories && partsCategories.map((item, index) => {
                 return (
@@ -115,7 +195,7 @@ export default ({ onCanvasReady, ...rest }) => {
                             <div
                                 className="hover:cursor-pointer relative p-1 rounded-md aspect-square h-[100px] hover:border-[#AA54FF] hover:border-2 bg-[#EEBD92]"
                                 onClick={() => {
-                                    AvatarBuilder.displayPart(item);
+                                    DISPLAY_ORA && AvatarBuilder.displayPart(item);
                                 }}                            
                                 key={index}
                             >
