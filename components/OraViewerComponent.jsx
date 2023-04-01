@@ -3,6 +3,8 @@ import * as AvatarBuilder from "../avatar/";
 import * as Config from "../avatar/config";
 
 import PartTile from "./PartTile";
+import UnequipTile from "./UnequipTile";
+
 import { Engine, Scene } from "@babylonjs/core";
 
 export const OraDataContext = createContext(null);
@@ -213,6 +215,17 @@ export default ({ onCanvasReady, ...rest }) => {
         <div className="flex flex-col gap-2">
             <div className="flex flex-col w-full gap-2 mx-auto">
                 <div className="flex w-full flex-wrap gap-2 items-center justify-center">
+
+                    <div
+                            className="hover:cursor-pointer relative p-1 rounded-md aspect-square h-[100px] hover:border-[#AA54FF] hover:border-2 bg-[#EEBD92]"
+                            onClick={() => {
+                                    AvatarBuilder.unequipPart(selectedCategory);
+                                }}                            
+                                key={"unequipTile"}
+                            >
+                        <UnequipTile partPath={""}></UnequipTile>
+                    </div>
+
                     {parts ?
                         parts
                         .filter(

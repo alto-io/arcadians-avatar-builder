@@ -324,6 +324,11 @@ export async function updateBabylonParts(key, oraPath) {
     g_partsLoader.replaceParts(key, base64Image);
 }
 
+export async function unequipPart(key) {
+    const blankBase64= "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+    g_partsLoader.replaceParts(key, blankBase64);
+}
+
 /**
  * Loads the avatar and the list of materials and the collection of parts, additionally sets the animation to 'Idle' by default
  * @param {string} id - ID of the avatar this is defined in config.js
