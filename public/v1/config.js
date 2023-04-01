@@ -33,7 +33,7 @@ g_config = {
 	list: [
 		{
 			id: "Male",
-			gltfPath: "./v1/gltf/Male/",         /** folder to the gltf */
+			gltfPath: "./gltf/",         /** folder to the gltf */
 			gltfFileName: "ArcadianAvatar.gltf", /** filename of the gltf */
 			position: { x: 0, y: -1, z: 0 },     /** Position on the scene */
 			scaling: { x: 1, y: 1, z: -1 },      /** Scale of the avatar */
