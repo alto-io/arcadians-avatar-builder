@@ -45,13 +45,16 @@ export var g_config = {
 				 */
 				{ id: "Skin", name: "Skin" },
 				{ id: "Eyes", name: "Eyes" },
-				{ id: "Head", name: "Head" },
+				{ id: "Accessory", name: "Accessory" },
+				{ id: "Headgear", name: "Headgear" },
+				{ id: "Hairstyle", name: "Hairstyle" },
 				{ id: "Mouth", name: "Mouth" },
 				{ id: "Top", name: "Top" },
 				{ id: "Left Hand", name: "Left Hand" },
 				{ id: "Right Hand", name: "Right Hand" },
 				{ id: "Bottom", name: "Bottom" },
 				{ id: "Shadow", name: "Shadow" },
+				{ id: "BG", name: "BG" },
 			],
 			animations: [
 				/**
