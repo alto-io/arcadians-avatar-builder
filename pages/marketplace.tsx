@@ -18,7 +18,7 @@ export default function Marketplace() {
         if (itemId > totalSupply) return; 
 
 		return (
-			<div className="flex flex-col items-center">
+			<div key={itemId} className="flex flex-col items-center">
 				<div className="border-2 w-28 h-28 rounded-md flex items-center flex-col gap-2">
 					<img
 						className=""
