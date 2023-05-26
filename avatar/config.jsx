@@ -55,6 +55,7 @@ export var g_config = {
 				{ id: "Bottom", name: "Bottom" },
 				{ id: "Shadow", name: "Shadow" },
 				{ id: "BG", name: "BG" },
+				{ id: "Background", name: "Background" },
 			],
 			animations: [
 				/**
